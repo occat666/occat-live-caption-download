@@ -4,7 +4,7 @@
 
 A Windows desktop application for local captions from system audio or a microphone, with optional English/Japanese/Korean to Chinese translation. It provides reading assistance for videos, courses, games, streams and personal meetings.
 
-**Release preparation only. The installation candidate is GATED. No public Release or approved installer is available yet. Independent Windows validation, final binary license review and confirmation of the added CUDA distribution scope remain pending.**
+**Release preparation only. The installation candidate is GATED. No public Release or approved installer is available yet. OCCAT has confirmed the added CUDA distribution scope, and the current candidate's notices, corresponding sources and actual assets have been reviewed. Independent Windows installation and key-function acceptance remain pending.**
 
 This is the public download page for OCCAT Live Caption, separate from the private development repository. Development history, private configuration, audio and caption logs remain private. Approved releases will include installers, checksums, reviewed source and applicable license materials in this repository's GitHub Releases.
 
