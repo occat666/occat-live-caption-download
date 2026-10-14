@@ -6,14 +6,14 @@ Local Windows captions from system audio or a microphone, with optional English/
 
 ## Download and install
 
-**[Open Releases](https://github.com/occat666/occat-live-caption-download/releases)**. The prepared release is **0.1.0 RC13, a public preview**. Availability is determined by the actual published release and its assets.
+**[Open the RC13 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.13)**. **0.1.0 RC13 is published as a public preview.**
 
 Download **one installer**; there is no need to download the whole repository or every archive:
 
 | File | Purpose |
 | --- | --- |
-| `OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe` | English installer |
-| `OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe` | Simplified Chinese installer |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.13/OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe) | English installer |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.13/OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe) | Simplified Chinese installer |
 | `SHA256SUMS.txt` | Optional download integrity verification |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and notices; not required for ordinary installation |
 

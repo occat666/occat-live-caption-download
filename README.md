@@ -6,14 +6,14 @@ Windows 本地实时字幕工具：识别电脑正在播放的声音或麦克风
 
 ## 下载与安装
 
-**[打开公开下载页](https://github.com/occat666/occat-live-caption-download/releases)**。当前准备发布的是 **0.1.0 RC13 公开测试版**；以页面中实际可见的 Release 和附件为准。
+**[打开 RC13 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.13)**。已发布 **0.1.0 RC13 公开测试版**。
 
 普通用户只需下载 **一个安装包**，不用下载整个仓库或所有 ZIP：
 
 | 文件 | 选择方式 |
 | --- | --- |
-| `OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe` | 中文安装器，推荐中文用户选择 |
-| `OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe` | 英文安装器 |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.13/OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe) | 中文安装器，推荐中文用户选择 |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.13/OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe) | 英文安装器 |
 | `SHA256SUMS.txt` | 可选，用于检查下载完整性 |
 | `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`Third-Party-Notices.zip` | 第三方源码与许可材料，普通安装无需逐个下载 |
 
