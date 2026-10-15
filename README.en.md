@@ -6,23 +6,23 @@ Local Windows captions from system audio or a microphone, with optional English/
 
 ## Download and install
 
-**[Open the RC14 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.14)**. **0.1.0 RC14 is published as a public preview.**
+**[Open the RC15 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.15)**. **0.1.0 RC15 is published as a public preview.**
 
 Download **one installer**; there is no need to download the whole repository or every archive:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.14/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe) | One installer: 中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.15/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe) | One installer: 中文 / English / 日本語 / 한국어 |
 | `SHA256SUMS.txt` | Optional download integrity verification |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and notices; not required for ordinary installation |
 
-1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If missing, the installer directs you to [Microsoft's official instructions](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/). Install that prerequisite and rerun the caption installer.
+1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If missing or outdated, setup asks permission to download it directly from Microsoft, verifies Microsoft's signature, and opens its installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. Internet access is needed for this download. Setup never restarts Windows automatically; if required, save your work, restart, and rerun caption setup.
 2. Download the single EXE, verify its origin and SHA-256, choose Chinese, English, Japanese or Korean, then follow the setup wizard. The installer does not have a commercial code-signing certificate.
 3. Launch the application, select the actual output device or microphone, wait for the bundled **Whisper base** model, and start captions. Initial recognition needs no model download.
 4. Download/import the compatible **M2M100** model before enabling real-time translation. Leave translation off for original captions only.
 5. Customize fonts, smooth outlines, soft shadows, position and backdrop. Interface language and recognition language are separate; the interface can be changed between 中文, English, 日本語 and 한국어 after installation.
 
-**RC13 users must manually download and run the unified EXE for the first upgrade**; the old updater does not recognize the unified asset name. RC13 remains available in older Releases. Preview builds are not delivered by the stable latest endpoint. The in-app version remains 0.1.0; use the Release tag to identify candidates. Japanese/Korean setup displays the reviewed original English component terms.
+**RC13 users must manually download and run the unified EXE for the first upgrade**; the old updater does not recognize the unified asset name. RC14 and RC13 remain available in older Releases. Preview builds are not delivered by the stable latest endpoint. The in-app version remains 0.1.0; use the Release tag to identify candidates. Japanese/Korean setup displays the reviewed original English component terms.
 
 Installation is per user. Existing settings take priority. User data lives under `%LOCALAPPDATA%/OCCATLiveCaption` and is retained on uninstall.
 
@@ -36,7 +36,7 @@ Settings pages use short smooth wheel movement and direct touchpad pixel input. 
 
 The update button checks published stable releases. GitHub's latest-release endpoint excludes previews; obtain preview builds manually from Releases.
 
-RC14 passed 97 related regression tests. The same installer passed isolated installation, offline startup and uninstall checks for Chinese, English, Japanese and Korean on the development computer, including bundled base offline CPU inference and interface switching. **This four-language candidate has not completed a fresh independent Windows acceptance run and remains a prerelease.** All GPU, monitor and operating-system combinations are not certified.
+RC15 passed 56 related tests covering runtime decisions, signature rejection, cancellation and restart handling. The same installer passed isolated installation, offline startup and uninstall checks for Chinese, English, Japanese and Korean on the development computer, including bundled base offline CPU inference and interface switching. **This candidate has not been tested on a fresh Windows system without the runtime and remains a prerelease.** All GPU, monitor and operating-system combinations are not certified.
 
 Recognition and translation run locally. Model downloads and explicit update checks need network access. **Caption text is saved locally by default**; disable logging in advanced settings if preferred. Uninstall retains user data. Important captions need manual verification; obtain permission when capturing others' speech.
 
