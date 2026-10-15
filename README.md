@@ -6,22 +6,23 @@ Windows 本地实时字幕工具：识别电脑正在播放的声音或麦克风
 
 ## 下载与安装
 
-**[打开 RC13 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.13)**。已发布 **0.1.0 RC13 公开测试版**。
+**[打开 RC14 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.14)**。已发布 **0.1.0 RC14 公开测试版**。
 
 普通用户只需下载 **一个安装包**，不用下载整个仓库或所有 ZIP：
 
 | 文件 | 选择方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.13/OCCAT-Live-Caption-0.1.0-windows-x64-setup-zh-CN.exe) | 中文安装器，推荐中文用户选择 |
-| [OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.13/OCCAT-Live-Caption-0.1.0-windows-x64-setup-en.exe) | 英文安装器 |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.14/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe) | 唯一安装包：中文 / English / 日本語 / 한국어 |
 | `SHA256SUMS.txt` | 可选，用于检查下载完整性 |
 | `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`Third-Party-Notices.zip` | 第三方源码与许可材料，普通安装无需逐个下载 |
 
 1. 使用 **Windows 10/11 x64**。Microsoft Visual C++ x64 运行库须为 **14.44.35211 或更新版**；已满足条件可直接安装。缺失时安装器会提示前往[微软官方页面](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist/)，安装运行库后重新运行字幕安装器。
-2. 下载上表中的中文或英文 EXE，二选一，双击并按安装向导完成。安装包未进行商业代码签名；请核对来源和 SHA-256，不要运行来源不明的副本。
+2. 下载上表中的唯一 EXE，双击后选择中文、英文、日文或韩文，按安装向导完成。安装包未进行商业代码签名；请核对来源和 SHA-256，不要运行来源不明的副本。
 3. 启动“猫猫本地实时字幕”，选择实际播放声音的系统设备或麦克风，等待内置 **Whisper base** 就绪后点击“开始字幕”。首次识别无需另行下载模型。
 4. 要翻译时下载或导入兼容的 **M2M100** 翻译模型，再开启“实时翻译”；只看原文字幕时保持关闭。
-5. 在“字幕外观”设置字体、描边、阴影和底衬，在“窗口与待机”调整位置与穿透。语言菜单切换中文或 English 界面，识别语言单独设置。
+5. 在“字幕外观”设置字体、描边、阴影和底衬，在“窗口与待机”调整位置与穿透。语言菜单可切换中文、English、日本語、한국어 界面，识别语言单独设置。
+
+**RC13 用户首次升级请手动下载并运行上面的统一 EXE**，旧更新器不识别新的单安装包命名。RC13 在历史 Releases 中保留。测试版不经 latest 正式版本接口推送；软件内版本号仍为 0.1.0，候选版以 Release 标签区分。日文、韩文安装向导使用已审阅的英文组件条款原文。
 
 按用户安装；已有设置优先。设置、模型和字幕记录位于 `%LOCALAPPDATA%/OCCATLiveCaption`，卸载保留用户数据。
 
@@ -32,12 +33,13 @@ Windows 本地实时字幕工具：识别电脑正在播放的声音或麦克风
 - 字体、字重、字号、颜色、位置、底衬留白、透明度与圆角可调；圆滑描边与柔和阴影保留连续透明度。
 - 黑夜、白天、跟随系统、自定义主题；背景图与玻璃设置仅在自定义模式提供。
 - 暂停、预览、隐藏字幕；保存外观版本、恢复默认、托盘入口、版本号及 GitHub 链接。
+- 修复滚轮经过输入框、下拉框及改完选项后残留白色边框；键盘导航保留焦点提示。
 - 页面滚轮平滑移动、触控板直接跟随，顶部与底部停靠；反向、拖动滚动条或切换页面即时接管。
 - 点击自动更新按钮检查正式版本；**公开测试版不会通过 GitHub 的 latest 正式版本接口推送**，请从 Releases 手动获取测试版。
 
 ## 验证范围与注意事项
 
-RC13 已通过开发电脑上的中英文安装、离线启动与卸载检查，以及字幕描边、阴影、透明度、拖动、隐藏和多种字号/缩放检查。相关 123 项测试中 122 项通过，1 项因缺少副屏跳过。**这版尚未重新完成独立干净 Windows 验收，属于预发布候选**；不保证所有 GPU、多屏与系统组合均已验证。
+RC14 的 97 项相关回归测试通过。同一安装包已在开发电脑上分别按中文、英文、日文、韩文完成隔离安装、离线启动和卸载检查，内置 base 离线 CPU 推理及界面切换检查通过。**本次四语言候选包尚未重新完成独立干净 Windows 验收，属于预发布版本**；不保证所有 GPU、多屏与系统组合均已验证。
 
 字幕及翻译可能有误，重要内容请人工核对。本工具用于辅助阅读，不替代专业无障碍服务或正式记录。仅处理有权使用的内容，采集他人发言时请取得必要授权。
 
@@ -52,4 +54,3 @@ RC13 已通过开发电脑上的中英文安装、离线启动与卸载检查，
 同版 Release 附准确第三方对应源码、构建材料、原始版权通知和校验清单。[第三方许可说明](THIRD_PARTY_NOTICE_PUBLIC.md)与[共享库修改/替换指引](LIBRARY_REPLACEMENT.zh-CN.md)提供完整入口；合法修改、替换 LGPL 库及必要调试的权利保持不变。
 
 反馈请使用本仓库 [Issues](https://github.com/occat666/occat-live-caption-download/issues)，附版本、系统、模型及复现步骤，删除私人目录、账号、录音和真实对话内容。
-

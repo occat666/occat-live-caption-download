@@ -1,6 +1,6 @@
 # Modifying and replacing Qt, FFmpeg and PyAV libraries
 
-Scope: the Maomao Local Live Captions 0.1.0 RC13 binary artifacts. This supplemental guide corrects resource and path descriptions in the earlier candidate documentation. It does not change the original third-party licenses, source archives or binaries.
+Scope: the Maomao Local Live Captions 0.1.0 RC14 binary artifacts. This supplemental guide corrects resource and path descriptions in the earlier candidate documentation. It does not change the original third-party licenses, source archives or binaries.
 
 This distribution uses replaceable shared libraries. Qt is distributed under LGPLv3; the rebuilt FFmpeg in these artifacts uses LGPL-2.1-or-later. The project's MIT license and identified Intel/NVIDIA component terms do not restrict the applicable rights to modify or replace these open-source libraries, or perform reverse engineering necessary to debug such modifications. The application's own source repository remains Private. Access to that Private source is not a prerequisite for replacing installed shared libraries. The Public repository is a software download repository, not a claim that all application source has been published.
 
