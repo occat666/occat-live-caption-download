@@ -14,6 +14,6 @@ Same-version source assets / 同版第三方源码附件：
 
 Original notices are retained in the application's `_internal/licenses/` and this notice bundle. Qt notices are under `_internal/licenses/qt/upstream/`; FFmpeg/PyAV notices are under `_internal/licenses/ffmpeg-8.1.3/` and `_internal/licenses/pyav-18.1.0/`. Upstream authors' copyright names and license contact information remain intact.
 
-Microsoft Visual C++ x64 Redistributable is obtained directly from Microsoft and is not bundled with these RC15 installers or these public materials. Windows repair images, Microsoft installation media, testing fixtures, personal audio, private configuration and the application's own main Source.zip are excluded.
+Microsoft Visual C++ x64 Redistributable is obtained directly from Microsoft and is not bundled with these RC16 installers or these public materials. Windows repair images, Microsoft installation media, testing fixtures, personal audio, private configuration and the application's own main Source.zip are excluded.
 
-RC15 uses one installer with Chinese, English, Japanese and Korean UI. The Qt 6.11.2 corresponding-source archive includes qttranslations sources for the bundled Chinese/Japanese/Korean translation resources. Japanese and Korean setup use the reviewed original English component terms.
+RC16 uses one installer with Chinese, English, Japanese and Korean UI. The Qt 6.11.2 corresponding-source archive includes qttranslations sources for the bundled Chinese/Japanese/Korean translation resources. Japanese and Korean setup use the reviewed original English component terms.

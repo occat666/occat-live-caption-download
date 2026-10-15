@@ -6,13 +6,13 @@ Local Windows captions from system audio or a microphone, with optional English/
 
 ## Download and install
 
-**[Open the RC15 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.15)**. **0.1.0 RC15 is published as a public preview.**
+**[Open the RC16 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.16)**. **0.1.0 RC16 is published as a public preview.**
 
 Download **one installer**; there is no need to download the whole repository or every archive:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.15/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe) | One installer: 中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.16/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe) | One installer: 中文 / English / 日本語 / 한국어 |
 | `SHA256SUMS.txt` | Optional download integrity verification |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and notices; not required for ordinary installation |
 
@@ -22,13 +22,21 @@ Download **one installer**; there is no need to download the whole repository or
 4. Download/import the compatible **M2M100** model before enabling real-time translation. Leave translation off for original captions only.
 5. Customize fonts, smooth outlines, soft shadows, position and backdrop. Interface language and recognition language are separate; the interface can be changed between 中文, English, 日本語 and 한국어 after installation.
 
-**RC13 users must manually download and run the unified EXE for the first upgrade**; the old updater does not recognize the unified asset name. RC14 and RC13 remain available in older Releases. Preview builds are not delivered by the stable latest endpoint. The in-app version remains 0.1.0; use the Release tag to identify candidates. Japanese/Korean setup displays the reviewed original English component terms.
+**RC13 users must manually download and run the unified EXE for the first upgrade**; the old updater does not recognize the unified asset name. RC15, RC14 and RC13 remain available in older Releases. Preview builds are not delivered by the stable latest endpoint. The in-app version remains 0.1.0; use the Release tag to identify candidates. Japanese/Korean setup displays the reviewed original English component terms.
 
 Installation is per user. Existing settings take priority. User data lives under `%LOCALAPPDATA%/OCCATLiveCaption` and is retained on uninstall.
+
+## Custom theme example
+
+![Custom theme with a background image and glass settings](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.16/custom-theme-example.png)
+
+Open Page appearance, select Custom, then choose a background image. This user-provided screenshot illustrates a custom theme; the original wallpaper is not bundled with the official installer.
 
 ## Features and validation
 
 Model-aware Chinese, English, Japanese, Korean and automatic recognition; optional translation and original text; local model/font import; caption typography, continuous alpha edges, backdrop, positioning and click-through; dark/day/system/custom themes; appearance versions, reset, tray, pause, preview and hide controls.
+
+Window corners use antialiased edges. The three caption buttons leave no white border after the pointer moves away; the close button uses the current theme accent on hover and press.
 
 Input and dropdown controls no longer show lingering white focus borders after mouse editing or while scrolling past; keyboard navigation retains focus feedback.
 
@@ -36,7 +44,7 @@ Settings pages use short smooth wheel movement and direct touchpad pixel input. 
 
 The update button checks published stable releases. GitHub's latest-release endpoint excludes previews; obtain preview builds manually from Releases.
 
-RC15 passed 56 related tests covering runtime decisions, signature rejection, cancellation and restart handling. The same installer passed isolated installation, offline startup and uninstall checks for Chinese, English, Japanese and Korean on the development computer, including bundled base offline CPU inference and interface switching. **This candidate has not been tested on a fresh Windows system without the runtime and remains a prerelease.** All GPU, monitor and operating-system combinations are not certified.
+RC16 passed 111 unique related tests covering window edges, caption-button states and interface interactions; display scaling checks passed at 125%, 150% and 200%. The same installer passed isolated installation, offline startup and uninstall checks for Chinese, English, Japanese and Korean on the development computer, including bundled base offline CPU inference and interface switching. **This candidate has not been tested on a fresh Windows system without the runtime and remains a prerelease.** All GPU, monitor and operating-system combinations are not certified.
 
 Recognition and translation run locally. Model downloads and explicit update checks need network access. **Caption text is saved locally by default**; disable logging in advanced settings if preferred. Uninstall retains user data. Important captions need manual verification; obtain permission when capturing others' speech.
 
