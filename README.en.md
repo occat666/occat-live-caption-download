@@ -6,46 +6,62 @@ I'm **OCCAT**, and this is my local live caption tool for Windows. It turns audi
 
 ## What you can do
 
-- **Caption system audio or a microphone.** Select the sound device you use and start recognition. Chinese, English, Japanese, Korean and automatic detection are available according to the languages supported by your current caption model.
-- **Turn on local translation when needed.** Translate English, Japanese or Korean into Chinese, with the option to keep the original text visible too. Leave translation off for original captions only.
-- **Make captions your own.** Adjust the font, weight, size, color, outline, shadow, position and backdrop. You can also import local TTF, OTF and TTC fonts.
-- **Choose a page theme.** Use dark, light, system or custom mode. Custom mode lets you choose your own background image and adjust glass transparency and blur.
-- **Control the floating captions.** Pause, hide or preview captions, enable click-through, and access the app from the tray. Save appearance presets, switch between them or restore defaults.
-- **Choose models and interface languages.** Import compatible local recognition and translation models. The interface supports 中文, English, 日本語 and 한국어; its language is separate from the recognition language.
+- System-audio and microphone input, with model-dependent Chinese, English, Japanese, Korean and automatic recognition, displayed as floating captions.
+- Optional real-time translation with original text; recognition engines, translation and model management share the Recognition and translation page.
+- Short model descriptions and recommendations, official and mirror links, one-click downloads, resumable transfers, verification and local model import.
+- Caption fonts, weights, size, color, outlines, shadows, placement and backdrop controls, with saved appearance versions.
+- HarmonyOS Sans, MiSans, Source Han Sans and Source Han Serif interface fonts with their original weight choices, plus local TTF, OTF and TTC font import.
+- Dark, day, system and custom themes. Custom backgrounds share glass opacity, blur and dimming controls; idle navigation icons follow text color and pressed or selected icons use the accent.
+- Five icon entries with floating names and one moving indicator, Tab navigation, Ctrl+1–5 page shortcuts and optional interface motion.
+- Pause, preview, hide, click-through, standby, tray access, stable-release update checks, mouse-wheel scrolling and direct touchpad input.
 
-## Download and get started
+Changes and fixes belong in the [RC29 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.29).
 
-**[Download the Windows x64 installer](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.16/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe)**
+## Download and install
 
-The current build is **0.1.0 RC16, a public preview**. You only need this one EXE for normal use; there is no need to download the repository or the source archives. The same installer offers Chinese, English, Japanese and Korean.
+**[Open the 0.1.0 RC29 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.29)**. This is a **prerelease**. [RC16](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.16) remains available for rollback.
 
-1. Use **Windows 10/11 x64** and follow the setup wizard. Microsoft Visual C++ x64 Runtime **14.44.35211 or newer** is required. If it is missing or outdated, setup asks to download and install it directly from Microsoft. Confirm Microsoft's license and the Windows administrator prompt, then caption setup continues. If Microsoft requires a restart, save your work, restart Windows and run caption setup again.
-2. Open the app, select the actual system output device or microphone, wait for the bundled **Whisper base** model, then start captions. You do not need another model download for initial recognition.
-3. To use translation, download or import a compatible **M2M100** translation model, then enable real-time translation.
-4. Use Caption appearance for caption styling, Window and standby for positioning and click-through, and Page appearance for themes.
+Choose **either the installer or the portable archive**. You do not need the entire repository or every ZIP:
 
-The installer does not currently have a commercial code-signing certificate. Download it from the repository link above; the same Release includes `SHA256SUMS.txt` for checking file integrity.
+| File | Purpose |
+| --- | --- |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/OCCAT-Live-Caption-0.1.0-windows-x64-setup.exe) | One installer with 中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.0-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/OCCAT-Live-Caption-0.1.0-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/SHA256SUMS.txt) | Optional integrity checks for this release's public assets |
+| Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
-**[Latest version and release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.16)**: each Release lists its additions, changes and fixes. Download preview builds manually from Releases; the in-app update check is for stable releases.
+1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
+2. Run the installer and choose Chinese, English, Japanese or Korean, or fully extract the portable ZIP before starting it. Do not copy out the EXE alone. The installer has no commercial code-signing certificate; verify the download source and SHA-256.
+3. Select the actual system output device or microphone, wait for the bundled **Whisper base** model, and start captions. Initial recognition requires no model download.
+4. For translation, download or import a compatible **M2M100** model from Recognition and translation, then enable real-time translation. Leave it off for original captions only.
+5. Adjust caption styling in Caption appearance and positioning, click-through and standby options in Window and standby. The footer language menu supports 中文, English, 日本語 and 한국어; recognition language is a separate setting.
+
+The in-app version remains **0.1.0**; use the Release tag to identify each candidate. **Previews are not delivered through GitHub's stable latest-release endpoint. Download them manually from Releases.** RC13 users need the unified installer for their first upgrade. Japanese and Korean setup retain the reviewed original English component terms.
+
+Installation is per user and preserves existing preferences. Both versions store settings, downloaded models and caption records under `%LOCALAPPDATA%/OCCATLiveCaption`; uninstall retains that data. The portable version does not store preferences alongside the extracted EXE.
 
 ## Custom theme example
 
-![Custom theme with a background image and glass settings](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.16/custom-theme-example.png)
+![RC29 custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/custom-theme-example.png)
 
-Here is one example of a custom theme. Open Page appearance, select Custom, choose your own background image, then adjust blur and transparency. The wallpaper in this example is not bundled with the installer.
+This user-provided screenshot previews a custom theme. Select Custom in Page appearance to choose your own background image; the original wallpaper is not distributed with the installer.
 
-## Local data and a few things to know
+## Validation and use
 
-Recognition and translation run on your computer. Downloading additional models and checking for updates need internet access. **Caption text is saved locally by default.** You can turn this off in Advanced settings; existing records must be deleted separately.
+RC29 passed **121 related regression tests**. Independent Qt checks covered **48 configurations and 528 actual icon-state checks**. The same candidate passed isolated installation, offline startup and uninstall checks in Chinese, English, Japanese and Korean on the development computer, including loading the four interface font families' 30 original weight files.
 
-Settings, models and caption records are stored in `%LOCALAPPDATA%/OCCATLiveCaption`. Installation is per user, upgrades keep existing settings, and uninstalling retains user data. Your own background images, models and fonts do not become part of the official installer.
+**It has not been tested on a clean Windows system without the runtime and remains a prerelease.** I do not treat these checks as certification for every GPU, monitor, audio device or Windows configuration.
 
-Captions and translations can be wrong, so please check important content yourself. The release notes describe what has been tested for the current preview.
+Recognition and translation run locally. Additional model downloads and update checks use the network. **Caption text is saved locally by default**; disable logging in Advanced settings if preferred. Disabling it does not remove previous records. Personal backgrounds and user-imported models or fonts are not bundled with official downloads.
 
-## Licenses and project scope
+Captions and translations can be wrong; verify important content yourself. This is a reading aid, not a substitute for professional accessibility services or formal records. Process content you are entitled to use and obtain permission before capturing other people's speech.
 
-My own code and these documents use the [MIT license](LICENSE), credited to **OCCAT**. The development source repository remains private; this repository is the public download page.
+## Licenses and publication scope
 
-Fonts, models and third-party components keep their own licenses. I include their notices, corresponding sources and build materials with each Release. You can find the details in the [third-party notices](THIRD_PARTY_NOTICE_PUBLIC.md) and [library modification and replacement guide](LIBRARY_REPLACEMENT.en.md).
+My own code and these download-repository documents use [MIT](LICENSE), copyright **OCCAT**. **The application development source repository remains Private. This public repository provides downloads and distribution materials; it does not claim that all application source has been published.**
 
-If something goes wrong, tell me in [Issues](https://github.com/occat666/occat-live-caption-download/issues), including your version, system, model and steps to reproduce it. Remove private paths, account details, recordings and real conversations from screenshots or logs before posting.
+The complete package is not MIT-only. Fonts, Whisper base, Qt, FFmpeg/PyAV, Sherpa ASR and vendor components retain their respective licenses and terms. Original font licenses are included in the same-version notice archive.
+
+Same-version releases provide third-party corresponding sources, build resources, original copyright notices and checksums. See [third-party notices](THIRD_PARTY_NOTICE_PUBLIC.md) and the [library modification/replacement guide](LIBRARY_REPLACEMENT.en.md). Applicable rights to modify, replace and debug LGPL libraries remain intact. Public assets exclude the application's own Source.zip, build reports and user data.
+
+Please report issues in [Issues](https://github.com/occat666/occat-live-caption-download/issues), including the candidate version, system, model and reproduction steps. Remove private paths, account details, recordings and real conversations before submitting evidence.
