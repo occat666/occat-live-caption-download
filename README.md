@@ -42,7 +42,7 @@
 
 ## 自定义主题示例
 
-![自定义主题、玻璃材质与导航预览](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/custom-theme-example.png?v=2562eb7803b4b4bf)
+![自定义主题、玻璃材质与导航预览](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/custom-theme-example-2562eb7803b4b4bf.png)
 
 这是用户提供的自定义主题截图预览。在“页面外观”选择“自定义”后，可以自行设置背景图片；原始壁纸不随安装包分发。
 
