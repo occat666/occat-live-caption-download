@@ -42,7 +42,7 @@ Installation is per user and preserves existing preferences. Both versions store
 
 ## Custom theme example
 
-![RC29 custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/custom-theme-example.png)
+![Custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.0-rc.29/custom-theme-example.png?v=2562eb7803b4b4bf)
 
 This user-provided screenshot previews a custom theme. Select Custom in Page appearance to choose your own background image; the original wallpaper is not distributed with the installer.
 
