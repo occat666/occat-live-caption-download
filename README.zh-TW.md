@@ -16,28 +16,27 @@
 - 五個 Feather 向量圖示入口、浮動名稱提示和單一滑動遊標；支援 Tab 鍵盤導覽、Ctrl+1～5 切頁及關閉頁面動效。
 - 暫停、預覽、隱藏字幕、視窗穿透、待機、系統匣入口和正式版本更新檢查；設定頁支援滑鼠滾輪和觸控板滾動。
 
-這次改動與修正的具體內容放在 [0.1.2 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)。
+這次改動與修正的具體內容放在 [0.1.3 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.3)。
 
-## 0.1.2 更新
+## 0.1.3 更新
 
-- **預設模型改為 Whisper large-v3-turbo**：新使用者首次使用時下載約 1.6 GB，完成檔案驗證後載入；支援斷點續傳和下載來源切換。完整快取後可離線辨識。
-- 另外 8 個辨識模型按需下載或從本地匯入。安裝套件不再預設內建 Base；升級保留已有模型選擇與快取。
-- 開啟「同時顯示原文」時，字幕自動設為兩行，避免譯文蓋掉原文。
-- 右上角紋理改為圓點，由大到小漸變淡出。
-- 統一標題、狀態、內容卡片與底欄的左右邊緣，修正捲動及視窗縮放時的邊線高度與間距。
+- 修正 CUDA 載入卡住後，切換 CPU 或其他模型仍一直等待重新載入的問題。辨識計算改為獨立程序，重新載入可結束舊程序。
+- 分別顯示載入、預熱與耗時。自動模式下 GPU 初始化逾時或當機後，保留所選模型並嘗試 CPU；CPU 失敗會顯示錯誤，等待手動重新載入。
+- 預設仍為 large-v3-turbo，首次下載約 1.6 GB，其他模型按需下載；保留原有模型與設定。
+- 辨識電腦播放的聲音時，請選系統預設輸出或實際耳機／喇叭對應的系統聲音；麥克風用於周圍的人聲。
 
 ## 下載與安裝
 
-**[開啟 0.1.2 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)**。這是 **prerelease 預發行版本**；[上一版 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) 保留，方便回復舊版，其他舊版也保留在 Releases。
+**[開啟 0.1.3 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.3)**。這是 **prerelease 預發行版本**；[上一版 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) 保留，方便回復舊版，其他舊版也保留在 Releases。
 
 安裝版和免安裝版**選一個即可**，不用下載整個倉庫或所有 ZIP：
 
 | 檔案 | 選擇方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/SHA256SUMS.txt) | 可選，用於核對同版公開附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.2-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
+| [OCCAT-Live-Caption-0.1.3-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/OCCAT-Live-Caption-0.1.3-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.3-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/OCCAT-Live-Caption-0.1.3-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/SHA256SUMS.txt) | 可選，用於核對同版公開附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.3-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
 
 1. 使用 **Windows 10/11 x64**，並具備 Microsoft Visual C++ x64 執行階段程式庫 **14.44.35211 或更新版**。安裝器發現執行階段程式庫缺失或過舊時，會在確認後從微軟官方下載、驗證數位簽章並開啟安裝介面。請按提示確認微軟授權及管理員授權，完成後自動繼續字幕安裝；需要連線至網路，不會自動重新啟動。微軟提示必須重新啟動時，請儲存工作、自行重新啟動，再執行字幕安裝器。免安裝版同樣需要先具備執行階段程式庫。
 2. 安裝版按兩下 EXE，選擇簡體中文、繁體中文、英文、日文或韓文並依精靈完成安裝；免安裝版請完整解壓縮後啟動，不要單獨取出 EXE。安裝套件沒有商業程式碼簽章，請核對下載來源與 SHA-256。
@@ -45,7 +44,7 @@
 4. 需要翻譯時，在「辨識與翻譯」下載或匯入相容的 **M2M100** 模型，再開啟「即時翻譯」；只看原文時保持關閉。
 5. 在「字幕外觀」調整字幕樣式，在「視窗與待機」調整位置、穿透和待機方式。底部語言選單支援简体中文、繁體中文、English、日本語、한국어，辨識語言單獨設定。中文字幕字形在「字幕外觀 → 文字」設定，不隨介面語言切換。
 
-本版的軟體版本號為 **0.1.2**，發行標籤為 **`v0.1.2`**，仍按預發行版本提供。**測試版不透過 GitHub latest 正式版本介面推送，請從 Releases 手動下載。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
+本版的軟體版本號為 **0.1.3**，發行標籤為 **`v0.1.3`**，仍按預發行版本提供。**測試版不透過 GitHub latest 正式版本介面推送，請從 Releases 手動下載。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
 
 按使用者安裝，已有設定優先。安裝版和免安裝版均把設定、下載模型和字幕記錄儲存到 `%LOCALAPPDATA%/OCCATLiveCaption`，解除安裝保留使用者資料；免安裝版不會把設定放在解壓縮目錄裡。
 
@@ -53,15 +52,15 @@
 
 ## 自訂主題範例
 
-![自訂主題、玻璃材質與導覽預覽](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/custom-theme-example-2562eb7803b4b4bf.png)
+![自訂主題、玻璃材質與導覽預覽](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/custom-theme-example-2562eb7803b4b4bf.png)
 
 這是使用者提供的自訂主題截圖預覽。在「頁面外觀」選擇「自訂」後，可以自行設定背景圖片；原始桌布不隨安裝套件分發。
 
 ## 驗證範圍與使用說明
 
-本次模型、字幕和外觀改動通過 **178 項相關迴歸測試**；邊緣對齊等介面改動另通過 **46 項相關檢查**，兩組結果分別記錄，不合併計數。沿用先前版本已完成的 **117 組 Feather 官方 SVG 獨立繪製對照**，以及五語言、字幕簡繁獨立設定和四種字型 30 個原生字重的相關檢查。離線介面檢查使用隔離資料目錄，不啟動模型下載；不把「缺少模型時介面可用」視為首次模型下載或離線模型推論已通過。
+保留先前的介面、字型、語言與圖示檢查結果；本版重點驗證辨識程序的啟動、取消、逾時、CPU 備援、佇列世代與辨識語言同步。
 
-本版 **0.1.2 凍結程式及五種語言安裝流程**已在開發電腦完成隔離安裝、禁止連線的介面啟動與解除安裝檢查。主程式軟體版本為 0.1.2，Windows 檔案版本為 0.1.2.0，首次預設選擇 large-v3-turbo，安裝套件未內建 Base，檢查期間未發生連線嘗試。這些檢查沒有下載新模型權重，也沒有執行實際模型推論。
+本版 **0.1.3 凍結程式及五種語言安裝流程**在開發電腦通過隔離安裝、禁止連線的介面啟動與解除安裝檢查，並新增實際子程序通訊、模擬卡住逾時與結束清理檢查。使用既有完整 Turbo 快取及英文測試音訊，也完成凍結程式的 CPU 辨識測試；未擷取實際播放音訊，也未重新下載完整權重。Windows 檔案版本為 0.1.3.0，預設 Turbo，安裝套件未內建 Base。
 
 **尚未在缺少執行階段程式庫的乾淨 Windows 環境實測，仍屬於預發行版本。** 我沒有把這些檢查當作所有 GPU、多螢幕、音訊裝置和系統組合的保證。
 

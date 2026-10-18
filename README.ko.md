@@ -16,28 +16,27 @@
 - 다섯 개의 Feather 벡터 탐색 아이콘, 이름 툴팁, 하나의 움직이는 선택 표시를 제공합니다. Tab 키 탐색, Ctrl+1～5 페이지 전환, 화면 애니메이션 끄기를 지원합니다.
 - 일시 정지, 미리 보기, 자막 숨기기, 마우스 클릭 통과, 대기 모드, 트레이 메뉴, 정식 버전 업데이트 확인 기능이 있습니다. 설정 페이지는 마우스 휠과 터치패드 스크롤을 지원합니다.
 
-이번 변경 및 수정 사항은 [0.1.2 릴리스 노트](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)에서 확인할 수 있습니다.
+이번 변경 및 수정 사항은 [0.1.3 릴리스 노트](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.3)에서 확인할 수 있습니다.
 
-## 0.1.2 변경 사항
+## 0.1.3 변경 사항
 
-- **새 사용자의 기본 모델을 Whisper large-v3-turbo로 변경했습니다.** 처음 사용할 때 약 1.6 GB를 다운로드하고 파일을 검증한 후 불러옵니다. 이어받기와 다운로드 경로 전환을 지원하며, 캐시가 완성되면 오프라인으로 인식할 수 있습니다.
-- 나머지 8개 인식 모델은 필요할 때 다운로드하거나 로컬에서 가져옵니다. Base는 기본 설치 패키지에 포함하지 않습니다. 업데이트해도 저장된 모델 선택과 캐시는 유지합니다.
-- “원문 함께 표시”를 켜면 자막을 자동으로 두 줄로 바꿔 원문이 번역문에 덮이지 않도록 합니다.
-- 오른쪽 위 무늬는 점점 작아지고 옅어지는 원형 점으로 변경했습니다.
-- 제목, 상태 표시, 내용 카드와 하단 바의 좌우 가장자리를 맞추고, 스크롤 및 창 크기 변경 시 테두리 높이와 간격을 통일했습니다.
+- CUDA 로딩이 멈춘 뒤 CPU나 다른 모델로 바꿔도 다시 불러오기가 끝나지 않는 문제를 수정했습니다. 인식 연산을 독립 프로세스로 옮겨 이전 프로세스를 종료할 수 있습니다.
+- 로딩, 예열, 경과 시간을 표시합니다. 자동 모드에서 GPU 초기화가 시간 초과되거나 비정상 종료되면 같은 모델로 CPU를 재시도합니다. CPU 시작 실패 시 오류를 표시하고 수동 재시도를 기다립니다.
+- 기본 모델은 여전히 large-v3-turbo이며 첫 사용 시 약 1.6 GB를 다운로드합니다. 다른 모델은 필요할 때 추가하며 기존 모델과 설정은 유지됩니다.
+- 컴퓨터 재생 음성을 자막으로 보려면 기본 시스템 출력이나 실제 헤드폰·스피커의 시스템 오디오를 선택하세요. 마이크는 주변 사람의 음성을 인식합니다.
 
 ## 다운로드 및 설치
 
-**[0.1.2 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
+**[0.1.3 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.3)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
 
 설치형과 무설치형 중 **하나만 선택하면 됩니다**. 저장소 전체나 모든 ZIP 파일을 다운로드할 필요는 없습니다.
 
 | 파일 | 용도 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
-| [OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/SHA256SUMS.txt) | 선택 사항. 같은 버전의 공개 첨부 파일을 검증할 때 사용 |
-| `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.2-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
+| [OCCAT-Live-Caption-0.1.3-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/OCCAT-Live-Caption-0.1.3-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
+| [OCCAT-Live-Caption-0.1.3-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/OCCAT-Live-Caption-0.1.3-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/SHA256SUMS.txt) | 선택 사항. 같은 버전의 공개 첨부 파일을 검증할 때 사용 |
+| `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.3-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
 
 1. **Windows 10/11 x64**와 **14.44.35211 이상**의 Microsoft Visual C++ x64 런타임이 필요합니다. 런타임이 없거나 너무 오래된 경우, 설치 프로그램은 사용자 확인을 받은 뒤 Microsoft 공식 경로에서 다운로드하고 서명을 검증한 다음 런타임 설치 화면을 엽니다. 안내에 따라 Microsoft 라이선스와 관리자 권한 요청을 확인하면, 런타임 설치 후 자막 프로그램 설치가 자동으로 계속됩니다. 인터넷 연결이 필요하며 Windows를 자동으로 다시 시작하지 않습니다. Microsoft 설치 프로그램에서 다시 시작을 요구하면 작업을 저장하고 직접 다시 시작한 후 자막 설치 프로그램을 다시 실행하세요. 무설치형도 이 런타임을 먼저 갖추어야 합니다.
 2. 설치형은 EXE를 두 번 클릭한 뒤 중국어 간체, 중국어 번체, 영어, 일본어, 한국어 중 하나를 선택하고 안내에 따라 설치하세요. 무설치형은 압축을 완전히 푼 후 실행해야 하며, EXE 파일만 따로 꺼내 실행하면 안 됩니다. 설치 프로그램에는 상용 코드 서명이 없으므로 다운로드 출처와 SHA-256을 확인하세요.
@@ -45,7 +44,7 @@
 4. 번역이 필요하면 “识别与翻译”(인식 및 번역)에서 호환되는 **M2M100** 모델을 다운로드하거나 가져온 다음 “实时翻译”(실시간 번역)를 켜세요. 원문만 보려면 꺼 둡니다.
 5. “字幕外观”(자막 모양)에서 자막 스타일을, “窗口与待机”(창 및 대기)에서 위치, 마우스 클릭 통과, 대기 방식을 조절하세요. 하단 언어 메뉴는 简体中文, 繁體中文, English, 日本語, 한국어를 지원하며, 인식 언어는 별도로 설정합니다. 중국어 자막의 간체·번체는 “字幕外观 → 文字”(자막 모양 → 텍스트)에서 설정하며, 화면 언어를 바꾸어도 함께 바뀌지 않습니다.
 
-이번 소프트웨어 버전은 **0.1.2**, 릴리스 태그는 **`v0.1.2`**이며, 여전히 사전 공개 버전으로 제공합니다. **테스트 버전은 GitHub의 latest 정식 릴리스 API를 통한 업데이트 대상으로 제공되지 않습니다. Releases에서 직접 다운로드하세요.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
+이번 소프트웨어 버전은 **0.1.3**, 릴리스 태그는 **`v0.1.3`**이며, 여전히 사전 공개 버전으로 제공합니다. **테스트 버전은 GitHub의 latest 정식 릴리스 API를 통한 업데이트 대상으로 제공되지 않습니다. Releases에서 직접 다운로드하세요.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
 
 사용자별로 설치하며 기존 설정을 우선 유지합니다. 설치형과 무설치형 모두 설정, 다운로드한 모델, 자막 기록을 `%LOCALAPPDATA%/OCCATLiveCaption`에 저장하며, 제거 후에도 사용자 데이터는 남습니다. 무설치형도 압축을 푼 폴더에 설정을 저장하지 않습니다.
 
@@ -53,15 +52,15 @@
 
 ## 사용자 지정 테마 예시
 
-![사용자 지정 테마, 유리 효과와 탐색 메뉴 미리 보기](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/custom-theme-example-2562eb7803b4b4bf.png)
+![사용자 지정 테마, 유리 효과와 탐색 메뉴 미리 보기](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/custom-theme-example-2562eb7803b4b4bf.png)
 
 사용자가 제공한 사용자 지정 테마의 스크린샷입니다. “页面外观”(화면 모양)에서 “自定义”(사용자 지정)를 선택하면 원하는 배경 이미지를 설정할 수 있습니다. 원본 배경화면은 설치 패키지에 포함하지 않습니다.
 
 ## 검증 범위 및 사용 안내
 
-이번 모델, 자막 및 모양 변경은 **관련 회귀 테스트 178개**를 통과했습니다. 가장자리 정렬 등의 화면 변경은 별도로 **관련 검사 46개**를 통과했으며, 두 결과를 합산하지 않고 각각 기록합니다. 이전 버전에서 확인한 **Feather 공식 SVG와의 독립적인 렌더링 비교 117건**, 다섯 언어, 화면 언어와 자막 문자 체계의 개별 설정, 네 글꼴의 원래 굵기 파일 30개 관련 검사도 유지합니다. 오프라인 화면 검사는 격리된 데이터를 사용하며 모델을 다운로드하지 않습니다. 모델이 없을 때 화면이 동작한다는 결과를 첫 다운로드나 오프라인 모델 추론이 검증되었다는 뜻으로 사용하지 않습니다.
+이전 화면, 글꼴, 언어 및 아이콘 검사 결과는 유지됩니다. 이번 버전은 인식 프로세스 시작, 취소, 시간 초과, CPU 재시도, 결과 세대 관리 및 인식 언어 동기화를 중점적으로 검사합니다.
 
-**0.1.2 동결 실행 파일과 다섯 언어의 설치 과정**은 개발용 컴퓨터의 격리 환경에서 설치, 네트워크를 차단한 화면 실행, 제거 검사를 통과했습니다. 프로그램 버전은 0.1.2, Windows 파일 버전은 0.1.2.0이며, 첫 실행의 모델 선택은 large-v3-turbo입니다. Base는 포함하지 않았고 검사 중 네트워크 연결 시도가 없었습니다. 이 검사는 새 모델 가중치 다운로드나 실제 모델 추론을 수행하지 않았습니다.
+**0.1.3 동결 실행 파일과 다섯 언어의 설치 과정**은 개발 컴퓨터에서 격리 설치, 네트워크를 차단한 화면 실행, 제거 검사를 통과했습니다. 실제 자식 프로세스 통신, 멈춤 모의, 시간 초과 및 종료 정리를 추가 검사했습니다. 기존의 완전한 Turbo 캐시와 영어 테스트 음성으로 동결 프로그램의 CPU 인식도 확인했습니다. 실제 재생 음성 수집이나 전체 모델 신규 다운로드는 검사하지 않았습니다. Windows 파일 버전은 0.1.3.0이며 기본 모델은 Turbo, Base는 포함하지 않습니다.
 
 **런타임이 없는 깨끗한 Windows 환경에서는 아직 실제로 테스트하지 않았으며, 여전히 사전 공개 버전입니다.** 이러한 확인을 모든 GPU, 다중 모니터, 오디오 장치, 시스템 조합에 대한 보장으로 여기지는 않습니다.
 
