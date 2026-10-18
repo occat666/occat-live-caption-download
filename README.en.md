@@ -16,44 +16,56 @@ I'm **OCCAT**, and this is my local live caption tool for Windows. It turns audi
 - Five Feather vector icon entries with floating names and one moving indicator, Tab navigation, Ctrl+1–5 page shortcuts and optional interface motion.
 - Pause, preview, hide, click-through, standby, tray access, stable-release update checks, mouse-wheel scrolling and direct touchpad input.
 
-Changes and fixes belong in the [0.1.1 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1).
+Changes and fixes belong in the [0.1.2 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2).
+
+## What's new in 0.1.2
+
+- **Whisper large-v3-turbo is the default for new users.** First use downloads about 1.6 GB and verifies its files before loading. Transfers support resume and source fallback; a complete cached model can run offline.
+- Download the other 8 recognition models on demand or import a compatible local model. Base is no longer bundled by default. Upgrades preserve saved model choices and caches.
+- Enabling “Show original text” automatically selects two caption lines so the translation does not replace the original.
+- The upper-right texture now uses circular dots that gradually become smaller and fade out.
+- Header, status, content cards and footer share aligned side edges, with consistent border heights and spacing when scrolling or resizing.
 
 ## Download and install
 
-**[Open the 0.1.1 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1)**. This is a **prerelease**. [The previous RC29](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.29) remains available for rollback; other earlier releases are also retained.
+**[Open the 0.1.2 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)**. This is a **prerelease**. [The previous 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) remains available for rollback; other earlier releases are also retained.
 
 Choose **either the installer or the portable archive**. You do not need the entire repository or every ZIP:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.1-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/OCCAT-Live-Caption-0.1.1-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.1-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/OCCAT-Live-Caption-0.1.1-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/SHA256SUMS.txt) | Optional integrity checks for this release's public assets |
+| [OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/SHA256SUMS.txt) | Optional integrity checks for this release's public assets |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
 1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
 2. Run the installer and choose Simplified Chinese, Traditional Chinese, English, Japanese or Korean, or fully extract the portable ZIP before starting it. Do not copy out the EXE alone. The installer has no commercial code-signing certificate; verify the download source and SHA-256.
-3. Select the actual system output device or microphone, wait for the bundled **Whisper base** model, and start captions. Initial recognition requires no model download.
+3. Select the actual system output device or microphone. New users default to **Whisper large-v3-turbo**: first use needs internet access to download about **1.6 GB** and verify its files. Downloads support resume and source fallback. Complete cached models are loaded locally and can run offline. Download the other 8 recognition models on demand or import compatible local files; upgrades preserve saved model choices.
 4. For translation, download or import a compatible **M2M100** model from Recognition and translation, then enable real-time translation. Leave it off for original captions only.
 5. Adjust caption styling in Caption appearance and positioning, click-through and standby options in Window and standby. The footer language menu supports 简体中文, 繁體中文, English, 日本語 and 한국어; recognition language is a separate setting. Choose Chinese caption script under Caption appearance → Text; changing interface language does not change it.
 
-The software version is **0.1.1**, with release tag **`v0.1.1`**. It remains a prerelease. **Previews are not delivered through GitHub's stable latest-release endpoint. Download them manually from Releases.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
+The software version is **0.1.2**, with release tag **`v0.1.2`**. It remains a prerelease. **Previews are not delivered through GitHub's stable latest-release endpoint. Download them manually from Releases.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
 
 Installation is per user and preserves existing preferences. Both versions store settings, downloaded models and caption records under `%LOCALAPPDATA%/OCCATLiveCaption`; uninstall retains that data. The portable version does not store preferences alongside the extracted EXE.
 
+**Upgrading from an older version:** Saved model choices and other settings are preserved. If Base is still selected, open Speech + translation → Recognition engine → Recognition model, choose `large-v3-turbo`, then click Apply and reload model to download and use Turbo. New users default to Turbo.
+
 ## Custom theme example
 
-![Custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/custom-theme-example-2562eb7803b4b4bf.png)
+![Custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/custom-theme-example-2562eb7803b4b4bf.png)
 
 This user-provided screenshot previews a custom theme. Select Custom in Page appearance to choose your own background image; the original wallpaper is not distributed with the installer.
 
 ## Validation and use
 
-This feature set passed **274 related regression tests** and **117 independent render comparisons against official Feather SVGs**. All five languages passed isolated installation, offline startup and uninstall checks on the development computer. Checks also covered separate interface/script preferences, Chinese source captions and translations, preservation of other-language originals, and loading the four interface font families' 30 original weight files.
+The model, caption and appearance changes passed **178 related regression tests**. The edge-alignment and related interface changes separately passed **46 checks**; the two groups are reported separately rather than added together. Prior-release checks include **117 independent official Feather SVG render comparisons**, five-language support, separate interface/script settings and the four interface font families' 30 original weight files. Offline interface checks use isolated data without starting model downloads; a usable interface with a missing model is not treated as validation of the first download or offline model inference.
+
+The **0.1.2 frozen application and all five installer-language flows** passed isolated installation, network-blocked interface startup and uninstall checks on the development computer. The application reports software version 0.1.2 and Windows file version 0.1.2.0; first-run selection is large-v3-turbo, Base is not bundled, and the checks made no network attempts. These checks did not download new model weights or run actual model inference.
 
 **It has not been tested on a clean Windows system without the runtime and remains a prerelease.** I do not treat these checks as certification for every GPU, monitor, audio device or Windows configuration.
 
-Recognition and translation run locally. Additional model downloads and update checks use the network. **Caption text is saved locally by default**; disable logging in Advanced settings if preferred. Disabling it does not remove previous records. Personal backgrounds and user-imported models or fonts are not bundled with official downloads.
+Recognition and translation run locally. First-use recognition model downloads, on-demand translation model downloads and update checks use the network. Complete cached models can run locally offline. **Caption text is saved locally by default**; disable logging in Advanced settings if preferred. Disabling it does not remove previous records. Personal backgrounds and user-imported models or fonts are not bundled with official downloads.
 
 Captions and translations can be wrong; verify important content yourself. This is a reading aid, not a substitute for professional accessibility services or formal records. Process content you are entitled to use and obtain permission before capturing other people's speech.
 
@@ -61,7 +73,7 @@ Captions and translations can be wrong; verify important content yourself. This 
 
 My own code and these download-repository documents use [MIT](LICENSE), copyright **OCCAT**. **The application development source repository remains Private. This public repository provides downloads and distribution materials; it does not claim that all application source has been published.**
 
-The complete package is not MIT-only. Navigation and window controls use [official Feather v4.29.0 icons](https://github.com/feathericons/feather/tree/v4.29.0); the [original MIT license](https://github.com/feathericons/feather/blob/v4.29.0/LICENSE) is included in the installer and same-version notice archive. Fonts, Whisper base, Qt, FFmpeg/PyAV, Sherpa ASR and vendor components retain their respective licenses and terms. Original font licenses are included in the same-version notice archive.
+The complete package is not MIT-only. Navigation and window controls use [official Feather v4.29.0 icons](https://github.com/feathericons/feather/tree/v4.29.0); the [original MIT license](https://github.com/feathericons/feather/blob/v4.29.0/LICENSE) is included in the installer and same-version notice archive. Fonts, on-demand Whisper models, Qt, FFmpeg/PyAV, Sherpa ASR and vendor components retain their respective licenses and terms. Original font licenses are included in the same-version notice archive.
 
 Same-version releases provide third-party corresponding sources, build resources, original copyright notices and checksums. See [third-party notices](THIRD_PARTY_NOTICE_PUBLIC.md) and the [library modification/replacement guide](LIBRARY_REPLACEMENT.en.md). Applicable rights to modify, replace and debug LGPL libraries remain intact. Public assets exclude the application's own Source.zip, build reports and user data.
 

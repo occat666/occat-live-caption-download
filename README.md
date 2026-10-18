@@ -16,44 +16,56 @@
 - 五个 Feather 矢量图标入口、悬浮名称提示和单一滑动游标；支持 Tab 键盘导航、Ctrl+1～5 切页及关闭页面动效。
 - 暂停、预览、隐藏字幕、窗口穿透、待机、托盘入口和正式版本更新检查；设置页支持鼠标滚轮和触控板滚动。
 
-这次改动与修正的具体内容放在 [0.1.1 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1)。
+这次改动与修正的具体内容放在 [0.1.2 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)。
+
+## 0.1.2 更新
+
+- **默认模型改为 Whisper large-v3-turbo**：新用户首次使用时下载约 1.6 GB，完成文件校验后加载；支持断点续传和下载源回退。完整缓存后可离线识别。
+- 另外 8 个识别模型按需下载或本地导入。安装包不再默认附带 Base；升级保留已有模型选择和缓存。
+- 开启“同时显示原文”时，字幕自动设为两行，避免译文挤掉原文。
+- 右上角纹理改为圆点，由大到小渐变淡出。
+- 统一标题、状态、内容卡片与底栏的左右边缘，修正滚动和窗口缩放时的边线高度与间距。
 
 ## 下载与安装
 
-**[打开 0.1.1 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1)**。这是 **prerelease 预发布版本**；[上一版 RC29](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.0-rc.29) 保留供回退，其他旧版也保留在 Releases。
+**[打开 0.1.2 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.2)**。这是 **prerelease 预发布版本**；[上一版 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) 保留供回退，其他旧版也保留在 Releases。
 
 安装版和免安装版**选一个即可**，不用下载整个仓库或所有 ZIP：
 
 | 文件 | 选择方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.1-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/OCCAT-Live-Caption-0.1.1-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.1-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/OCCAT-Live-Caption-0.1.1-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/SHA256SUMS.txt) | 可选，用于核对同版公开附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.1-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
+| [OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/OCCAT-Live-Caption-0.1.2-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/SHA256SUMS.txt) | 可选，用于核对同版公开附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.2-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
 
 1. 使用 **Windows 10/11 x64**，并具备 Microsoft Visual C++ x64 运行库 **14.44.35211 或更新版**。安装器发现运行库缺失或过旧时，会在确认后从微软官方下载、校验签名并打开安装界面。请按提示确认微软许可及管理员授权，完成后自动继续字幕安装；需要联网，不会自动重启。微软提示必须重启时，请保存工作、自行重启，再运行字幕安装器。免安装版同样需要先具备运行库。
 2. 安装版双击 EXE，选择简体中文、繁體中文、英文、日文或韩文并按向导完成；免安装版请完整解压后启动，不要单独取出 EXE。安装包没有商业代码签名，请核对下载来源与 SHA-256。
-3. 启动“猫猫本地实时字幕”，选择实际播放声音的系统设备或麦克风，等待内置 **Whisper base** 就绪后点击“开始字幕”。首次识别无需另行下载模型。
+3. 启动“猫猫本地实时字幕”，选择实际播放声音的系统设备或麦克风。新用户默认使用 **Whisper large-v3-turbo**，首次使用需联网下载约 **1.6 GB** 并完成校验；下载支持续传和下载源回退，完整缓存后优先本地加载，可断网使用。其他 8 个识别模型按需下载，也可导入兼容本地模型；升级不覆盖已有模型选择。
 4. 需要翻译时，在“识别与翻译”下载或导入兼容的 **M2M100** 模型，再开启“实时翻译”；只看原文时保持关闭。
 5. 在“字幕外观”调整字幕样式，在“窗口与待机”调整位置、穿透和待机方式。底部语言菜单支持简体中文、繁體中文、English、日本語、한국어，识别语言单独设置。中文字幕字形在“字幕外观 → 文字”设置，不随界面语言切换。
 
-本版的软件版本号为 **0.1.1**，发布标签为 **`v0.1.1`**，仍按预发布版本提供。**测试版不通过 GitHub latest 正式版本接口推送，请从 Releases 手动下载。** 旧分语言安装包用户可手动升级到上面的统一安装包；繁體中文、日文、韩文安装向导保留已审阅的英文组件条款原文。
+本版的软件版本号为 **0.1.2**，发布标签为 **`v0.1.2`**，仍按预发布版本提供。**测试版不通过 GitHub latest 正式版本接口推送，请从 Releases 手动下载。** 旧分语言安装包用户可手动升级到上面的统一安装包；繁體中文、日文、韩文安装向导保留已审阅的英文组件条款原文。
 
 按用户安装，已有设置优先。安装版和免安装版均把设置、下载模型和字幕记录保存到 `%LOCALAPPDATA%/OCCATLiveCaption`，卸载保留用户数据；免安装版不会把设置放在解压目录里。
 
+**从旧版升级：** 已有模型选择与其他设置会保留。如果升级后仍显示 Base，请到“识别与翻译 → 识别引擎 → 识别模型”选择 `large-v3-turbo`，再点击“应用并重载模型”，即可下载并使用 Turbo；新用户默认选择 Turbo。
+
 ## 自定义主题示例
 
-![自定义主题、玻璃材质与导航预览](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.1/custom-theme-example-2562eb7803b4b4bf.png)
+![自定义主题、玻璃材质与导航预览](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.2/custom-theme-example-2562eb7803b4b4bf.png)
 
 这是用户提供的自定义主题截图预览。在“页面外观”选择“自定义”后，可以自行设置背景图片；原始壁纸不随安装包分发。
 
 ## 验证范围与使用说明
 
-本轮功能代码已通过 **274 项相关回归测试**，Feather 图标完成 **117 组与官方 SVG 的独立渲染对照**。五种语言均已在开发电脑上完成隔离安装、离线启动与卸载检查；界面语言与字幕简繁设置分别保存，中文原文、译文及其他语言原文的切换均经过检查。四种界面字体的 30 个原生字重文件保留加载校验。
+本次模型、字幕和外观改动通过 **178 项相关回归测试**；边缘对齐等界面改动另通过 **46 项相关检查**，两组结果分别记录，不合并计数。沿用此前版本已完成的 **117 组 Feather 官方 SVG 独立渲染对照**，以及五语言、字幕简繁独立设置和四种字体 30 个原生字重的相关检查。离线界面检查使用隔离数据目录，不启动模型下载；不把“缺少模型时界面可用”记为首次模型下载或离线模型推理已通过。
+
+本版 **0.1.2 冻结程序及五种语言安装流程**已在开发电脑完成隔离安装、禁止联网的界面启动与卸载检查。主程序软件版本为 0.1.2，Windows 文件版本为 0.1.2.0，首次默认选择 large-v3-turbo，安装包未附带 Base，检查期间未发生联网尝试。这些检查没有下载新模型权重，也没有执行真实模型推理。
 
 **尚未在缺少运行库的干净 Windows 环境实测，仍属于预发布版本。** 我没有把这些检查当作所有 GPU、多屏、音频设备和系统组合的保证。
 
-识别和翻译在本机执行；额外模型下载和更新检查会联网。**默认保存本地字幕文本**，可在高级设置关闭，关闭不会删除旧记录。个人背景图片、自行导入的模型和字体不随官方安装包发布。
+识别和翻译在本机执行；首次识别模型下载、按需翻译模型下载和更新检查会联网，模型完整缓存后可在本地使用。**默认保存本地字幕文本**，可在高级设置关闭，关闭不会删除旧记录。个人背景图片、自行导入的模型和字体不随官方安装包发布。
 
 字幕和翻译可能有误，重要内容请人工核对；这是辅助阅读工具，不替代专业无障碍服务或正式记录。请只处理有权使用的内容，采集他人发言前取得必要授权。
 
@@ -61,7 +73,7 @@
 
 本下载仓库文档及我自己的代码采用 [MIT](LICENSE)，署名 **OCCAT**。**应用开发源码仓库保持 Private；这个公共仓库提供软件下载与分发材料，不表示全部应用源码已经公开。**
 
-安装包并非整套 MIT。导航与窗口控件使用 [Feather v4.29.0 官方图标](https://github.com/feathericons/feather/tree/v4.29.0)，其 [MIT 原始许可](https://github.com/feathericons/feather/blob/v4.29.0/LICENSE) 随安装包和同版通知归档提供。四种界面字体、Whisper base、Qt、FFmpeg/PyAV、Sherpa ASR、Intel/NVIDIA 等保留各自适用的许可和组件条款；字体的原始许可也随本版通知归档提供。
+安装包并非整套 MIT。导航与窗口控件使用 [Feather v4.29.0 官方图标](https://github.com/feathericons/feather/tree/v4.29.0)，其 [MIT 原始许可](https://github.com/feathericons/feather/blob/v4.29.0/LICENSE) 随安装包和同版通知归档提供。四种界面字体、Whisper 模型（按需下载）、Qt、FFmpeg/PyAV、Sherpa ASR、Intel/NVIDIA 等保留各自适用的许可和组件条款；字体的原始许可也随本版通知归档提供。
 
 同版 Release 附第三方对应源码、构建材料、原始版权通知和校验清单。入口见[第三方许可说明](THIRD_PARTY_NOTICE_PUBLIC.md)与[共享库修改/替换指引](LIBRARY_REPLACEMENT.zh-CN.md)；适用的 LGPL 修改、替换及必要调试权利保持不变。公开附件不包含自有应用 Source.zip、构建报告或用户数据。
 
