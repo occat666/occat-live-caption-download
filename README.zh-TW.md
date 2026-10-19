@@ -2,6 +2,10 @@
 
 [简体中文](README.md) · **繁體中文** · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · 作者 **OCCAT**
 
+<p align="center">
+  <img src="assets/project-cover-6a518bb8328c.jpg" alt="貓貓本地即時字幕專案封面" width="640">
+</p>
+
 我是 **OCCAT**，這是我做的 Windows 本地即時字幕工具。你可以把電腦正在播放的聲音，或者麥克風裡的說話聲，顯示成浮動字幕；需要的時候，也可以把英文、日文、韓文翻譯成中文。看影片、聽課、玩遊戲、看直播，或者開個人會議時，都可以用它輔助閱讀。
 
 ## 可以怎麼用

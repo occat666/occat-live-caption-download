@@ -2,6 +2,10 @@
 
 **简体中文** · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · 作者 **OCCAT**
 
+<p align="center">
+  <img src="assets/project-cover-6a518bb8328c.jpg" alt="猫猫本地实时字幕项目封面" width="640">
+</p>
+
 我是 **OCCAT**，这是我做的 Windows 本地实时字幕工具。你可以把电脑正在播放的声音，或者麦克风里的说话声，显示成悬浮字幕；需要的时候，也可以把英文、日文、韩文翻译成中文。看视频、听课、玩游戏、看直播，或者开个人会议时，都可以用它辅助阅读。
 
 ## 可以怎么用
