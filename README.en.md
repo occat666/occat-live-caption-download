@@ -20,26 +20,25 @@ I'm **OCCAT**, and this is my local live caption tool for Windows. It turns audi
 - Five Feather vector icon entries with floating names and one moving indicator, Tab navigation, Ctrl+1–5 page shortcuts and optional interface motion.
 - Pause, preview, hide, click-through, standby, tray access, stable-release update checks, mouse-wheel scrolling and direct touchpad input.
 
-Changes and fixes belong in the [0.1.3 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.3).
+Changes and fixes belong in the [0.1.4 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.4).
 
-## What's new in 0.1.3
+## What's new in 0.1.4
 
-- Fixed model reload waiting forever after a stuck CUDA load. Native recognition now runs in a separate process that can be stopped before switching models.
-- Loading, warmup and elapsed time are shown separately. Auto mode retries the same model on CPU after GPU startup times out or crashes. A failed CPU startup shows an error and waits for manual reload.
-- large-v3-turbo remains the default, with about 1.6 GB downloaded on first use. Other models are optional; saved settings and models are preserved.
-- To caption computer playback, select the default system output or the actual headphones/speakers marked as system audio. Microphone input is for nearby speech.
+- Dark, day and system-following modes hide the entire accent settings card. Only custom mode shows color selection and reset.
+- Saved custom colors are preserved when switching modes. Leaving custom mode closes its picker and rejects late color selections.
+- Keeps the 0.1.3 isolated ASR process, startup timeout and automatic CPU fallback fixes.
 
 ## Download and install
 
-**[Open the 0.1.3 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.3)**. This is a **prerelease**. [The previous 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) remains available for rollback; other earlier releases are also retained.
+**[Open the 0.1.4 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.4)**. This is a **prerelease**. [The previous 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) remains available for rollback; other earlier releases are also retained.
 
 Choose **either the installer or the portable archive**. You do not need the entire repository or every ZIP:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.3-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/OCCAT-Live-Caption-0.1.3-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.3-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/OCCAT-Live-Caption-0.1.3-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/SHA256SUMS.txt) | Optional integrity checks for this release's public assets |
+| [OCCAT-Live-Caption-0.1.4-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.4/OCCAT-Live-Caption-0.1.4-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.4-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.4/OCCAT-Live-Caption-0.1.4-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.4/SHA256SUMS.txt) | Optional integrity checks for this release's public assets |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
 1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
@@ -48,7 +47,7 @@ Choose **either the installer or the portable archive**. You do not need the ent
 4. For translation, download or import a compatible **M2M100** model from Recognition and translation, then enable real-time translation. Leave it off for original captions only.
 5. Adjust caption styling in Caption appearance and positioning, click-through and standby options in Window and standby. The footer language menu supports 简体中文, 繁體中文, English, 日本語 and 한국어; recognition language is a separate setting. Choose Chinese caption script under Caption appearance → Text; changing interface language does not change it.
 
-The software version is **0.1.3**, with release tag **`v0.1.3`**. It remains a prerelease. **Previews are not delivered through GitHub's stable latest-release endpoint. Download them manually from Releases.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
+The software version is **0.1.4**, with release tag **`v0.1.4`**. It remains a prerelease. **Previews are not delivered through GitHub's stable latest-release endpoint. Download them manually from Releases.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
 
 Installation is per user and preserves existing preferences. Both versions store settings, downloaded models and caption records under `%LOCALAPPDATA%/OCCATLiveCaption`; uninstall retains that data. The portable version does not store preferences alongside the extracted EXE.
 
@@ -56,7 +55,7 @@ Installation is per user and preserves existing preferences. Both versions store
 
 ## Custom theme example
 
-![Custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.3/custom-theme-example-2562eb7803b4b4bf.png)
+![Custom theme, shared glass material and navigation](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.4/custom-theme-example-2562eb7803b4b4bf.png)
 
 This user-provided screenshot previews a custom theme. Select Custom in Page appearance to choose your own background image; the original wallpaper is not distributed with the installer.
 
@@ -64,7 +63,7 @@ This user-provided screenshot previews a custom theme. Select Custom in Page app
 
 Earlier interface, font, language and icon checks are retained. This version focuses on ASR process startup, cancellation, timeouts, CPU fallback, result generations and recognition-language synchronization.
 
-The **0.1.3 frozen application and all five installer-language flows** passed isolated installation, network-blocked interface startup and uninstall checks on the development PC. Added checks cover real child-process IPC, simulated native hangs, timeouts and cleanup. The frozen CPU recognition path also passed an English audio fixture using the existing complete Turbo cache. These checks did not capture live playback or freshly download full weights. Windows file version is 0.1.3.0; Turbo remains the default and Base is not bundled.
+The **0.1.4 frozen application and all five installer-language flows** passed isolated installation, offline interface startup and uninstall checks on the development PC. Frozen UI checks verify accent-card visibility across modes. This version retains the 0.1.3 ASR process isolation and actual Turbo CPU test results; this round did not repeat real speech inference or download full model weights. Windows file version is 0.1.4.0.
 
 **It has not been tested on a clean Windows system without the runtime and remains a prerelease.** I do not treat these checks as certification for every GPU, monitor, audio device or Windows configuration.
 
