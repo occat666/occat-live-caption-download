@@ -18,28 +18,29 @@
 - 介面提供 HarmonyOS Sans、MiSans、思源黑體、思源宋體，按各自原生字重選擇；也支援本地 TTF、OTF、TTC 字型匯入。
 - 黑夜、白天、跟隨系統和自訂主題；自訂背景與玻璃透明度、模糊、壓暗設定同步。預設導覽圖示跟隨文字色，按下或選取使用主題色。
 - 五個 Feather 向量圖示入口、浮動名稱提示和單一滑動遊標；支援 Tab 鍵盤導覽、Ctrl+1～5 切頁及關閉頁面動效。
-- 暫停、預覽、隱藏字幕、視窗穿透、待機、系統匣入口和正式版本更新檢查；設定頁支援滑鼠滾輪和觸控板滾動。
+- 暫停、預覽、隱藏字幕、視窗穿透、待機、系統匣入口和軟體內公開版本更新檢查（含預覽版）；設定頁支援滑鼠滾輪和觸控板滾動。
 
-這次改動與修正的具體內容放在 [0.1.5 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.5)。
+這次改動與修正的具體內容放在 [0.1.6 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.6)。
 
-## 0.1.5 更新
+## 0.1.6 更新
 
-- 首次下載、載入與預熱辨識模型時，懸浮字幕同步顯示目前階段；模型尚未就緒時不再提前顯示「等待音訊輸入」。
-- 模型載入失敗時顯示對應錯誤；模型就緒後自動連接所選音訊，連接完成後才進入等待音訊狀態，無需為繼續初始化而重新開啟軟體。
-- 完整模型快取繼續優先在本機載入，無需重複下載；首次下載完成提示改為自動繼續載入。保留僅自訂模式顯示主題色設定的行為。
+- 軟體內檢查最新公開版本，包含預覽版，不再只依賴 GitHub 的 latest 正式版介面。下載安裝程式並確認後，已安裝版在目前安裝目錄覆蓋升級，保留既有設定、模型與語言選擇。
+- 免安裝版先說明更新方式，再開啟一般安裝精靈；不會在背景覆蓋原免安裝目錄。**0.1.5 及更早版本需先從本頁手動安裝一次 0.1.6，之後才能使用新版的軟體內更新。**
+- 目前句子的翻譯完成後才開始計算自動隱藏時間；即時中間辨識結果的翻譯經過節流，並優先處理目前句子，減少字幕過早隱藏與舊譯文蓋過新句的情況。暫停、切換、清空與舊任務的狀態互相隔離。
+- GitHub API 達到流量限制或連線失敗時，改用專案官方公開更新清單繼續檢查；安裝程式仍依精確檔案大小及 SHA-256 驗證。
 
 ## 下載與安裝
 
-**[開啟 0.1.5 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.5)**。這是 **prerelease 預發行版本**；[上一版 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) 保留，方便回復舊版，其他舊版也保留在 Releases。
+**[開啟 0.1.6 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.6)**。這是 **prerelease 預發行版本**；[上一版 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) 保留，方便回復舊版，其他舊版也保留在 Releases。
 
 安裝版和免安裝版**選一個即可**，不用下載整個倉庫或所有 ZIP：
 
 | 檔案 | 選擇方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.5-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.5/OCCAT-Live-Caption-0.1.5-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.5-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.5/OCCAT-Live-Caption-0.1.5-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.5/SHA256SUMS.txt) | 可選，用於核對同版公開附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.5-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
+| [OCCAT-Live-Caption-0.1.6-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.6/OCCAT-Live-Caption-0.1.6-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.6-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.6/OCCAT-Live-Caption-0.1.6-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.6/SHA256SUMS.txt) | 可選，用於核對同版公開附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.6-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
 
 1. 使用 **Windows 10/11 x64**，並具備 Microsoft Visual C++ x64 執行階段程式庫 **14.44.35211 或更新版**。安裝器發現執行階段程式庫缺失或過舊時，會在確認後從微軟官方下載、驗證數位簽章並開啟安裝介面。請按提示確認微軟授權及管理員授權，完成後自動繼續字幕安裝；需要連線至網路，不會自動重新啟動。微軟提示必須重新啟動時，請儲存工作、自行重新啟動，再執行字幕安裝器。免安裝版同樣需要先具備執行階段程式庫。
 2. 安裝版按兩下 EXE，選擇簡體中文、繁體中文、英文、日文或韓文並依精靈完成安裝；免安裝版請完整解壓縮後啟動，不要單獨取出 EXE。安裝套件沒有商業程式碼簽章，請核對下載來源與 SHA-256。
@@ -47,7 +48,7 @@
 4. 需要翻譯時，在「辨識與翻譯」下載或匯入相容的 **M2M100** 模型，再開啟「即時翻譯」；只看原文時保持關閉。
 5. 在「字幕外觀」調整字幕樣式，在「視窗與待機」調整位置、穿透和待機方式。底部語言選單支援简体中文、繁體中文、English、日本語、한국어，辨識語言單獨設定。中文字幕字形在「字幕外觀 → 文字」設定，不隨介面語言切換。
 
-本版的軟體版本號為 **0.1.5**，發行標籤為 **`v0.1.5`**，仍按預發行版本提供。**測試版不透過 GitHub latest 正式版本介面推送，請從 Releases 手動下載。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
+本版的軟體版本號為 **0.1.6**，發行標籤為 **`v0.1.6`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
 
 按使用者安裝，已有設定優先。安裝版和免安裝版均把設定、下載模型和字幕記錄儲存到 `%LOCALAPPDATA%/OCCATLiveCaption`，解除安裝保留使用者資料；免安裝版不會把設定放在解壓縮目錄裡。
 
@@ -55,15 +56,15 @@
 
 ## 自訂主題範例
 
-![自訂主題、玻璃材質與導覽預覽](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.5/custom-theme-example-2562eb7803b4b4bf.png)
+![自訂主題、玻璃材質與導覽預覽](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.6/custom-theme-example-2562eb7803b4b4bf.png)
 
 這是使用者提供的自訂主題截圖預覽。在「頁面外觀」選擇「自訂」後，可以自行設定背景圖片；原始桌布不隨安裝套件分發。
 
 ## 驗證範圍與使用說明
 
-本輪重點驗證首次啟動提示、載入失敗提示、就緒後自動連接音訊，以及暫停、重新載入與舊事件隔離。
+本輪重點驗證預覽版更新偵測、已安裝版原目錄升級與免安裝版提示、目前句子的即時譯文及隱藏時機，以及暫停、切換與舊任務隔離。
 
-本版已通過 **155 項相關單元檢查**、凍結程式的啟動狀態檢查，以及五種語言的隔離安裝、離線介面啟動與解除安裝檢查。原始碼與凍結程式均使用本機完整快取的 **Turbo 模型，在 CPU 上完成實際語音測試資料辨識**，並確認辨識子程序退出；這不是重新連線下載模型的測試。本輪未重新下載完整權重、未擷取真人現場音訊，也未在回報者的硬體或缺少執行階段程式庫的乾淨 Windows 上驗證，不能作為所有裝置與網路組合的認證。Windows 檔案版本 **0.1.5.0** 已由建置報告中的凍結程式檢查結果核對。
+本版已通過 **252 項相關單元檢查**、原始碼與凍結程式的實際公開更新來源偵測（GitHub API 達到流量限制時透過官方公開清單回退）、凍結程式更新與即時譯文檢查，以及五種語言的隔離安裝、離線介面啟動與解除安裝檢查。原始碼與凍結程式均使用本機完整快取的 **M2M100 模型，在 CPU 上完成實際翻譯測試資料**；另以人為延遲譯文交付的測試驗證翻譯完成後才隱藏，這個控制延遲不是模型實測推理時間。自訂目錄的隔離 0.1.5 → 0.1.6 覆蓋升級保留了設定檔、語言選擇與模型佔位檔案，並完成解除安裝；佔位檔案檢查不等於重新驗證所有實際模型。本輪未重新完整下載模型、未擷取現場音訊，也未在回報者硬體或缺少執行階段程式庫的乾淨 Windows 上驗證，不能作為所有裝置或網路組合的認證。Windows 檔案版本 **0.1.6.0** 已由凍結程式核對。
 
 **尚未在缺少執行階段程式庫的乾淨 Windows 環境實測，仍屬於預發行版本。** 我沒有把這些檢查當作所有 GPU、多螢幕、音訊裝置和系統組合的保證。
 
