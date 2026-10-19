@@ -3,7 +3,7 @@
 [简体中文](README.md) · [繁體中文](README.zh-TW.md) · **English** · [日本語](README.ja.md) · [한국어](README.ko.md) · By **OCCAT**
 
 <p align="center">
-  <img src="assets/project-cover-6a518bb8328c.jpg" alt="Maomao Local Live Captions project cover" width="640">
+  <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="Maomao Local Live Captions project cover" width="640">
 </p>
 
 I'm **OCCAT**, and this is my local live caption tool for Windows. It turns audio playing on your computer, or speech from your microphone, into floating captions. You can also translate English, Japanese or Korean into Chinese when you need it. You can use it while watching videos, taking courses, playing games, watching streams or joining personal meetings.

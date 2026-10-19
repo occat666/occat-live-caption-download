@@ -3,7 +3,7 @@
 [简体中文](README.md) · [繁體中文](README.zh-TW.md) · [English](README.en.md) · [日本語](README.ja.md) · **한국어** · 작성자 **OCCAT**
 
 <p align="center">
-  <img src="assets/project-cover-6a518bb8328c.jpg" alt="고양이 로컬 실시간 자막 프로젝트 표지" width="640">
+  <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="고양이 로컬 실시간 자막 프로젝트 표지" width="640">
 </p>
 
 안녕하세요, **OCCAT**입니다. 제가 만든 Windows용 로컬 실시간 자막 도구를 소개합니다. 컴퓨터에서 재생되는 소리나 마이크로 입력한 음성을 화면 위에 떠 있는 자막으로 표시합니다. 필요할 때는 영어, 일본어, 한국어를 중국어로 번역할 수도 있습니다. 동영상 시청, 강의 수강, 게임, 라이브 방송 시청, 개인적으로 참여하는 회의 등에서 내용을 읽고 이해하는 데 활용할 수 있습니다.
