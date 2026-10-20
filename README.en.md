@@ -20,13 +20,13 @@ I'm **OCCAT**, and this is my local live caption tool for Windows, with a native
 - Five Feather vector icon entries with floating names and one moving indicator, Tab navigation, Ctrl+1–5 page shortcuts and optional interface motion.
 - Pause, preview, hide, click-through, standby, tray access, in-app public-release update checks including previews, mouse-wheel scrolling and direct touchpad input.
 
-Changes and fixes belong in the [0.1.7 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7).
+Changes and fixes belong in the [0.1.8 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8).
 
-## What's new in 0.1.7
+## What's new in 0.1.8
 
-- Five Chinese/Japanese/Korean caption glyph choices, with bundled Japanese and Korean regional Source Han fonts. Switching refreshes captions from the retained source text, including reversible Chinese script changes. Recognition language, interface language and translation target stay independent.
-- Windows keeps the existing installed-directory upgrade behavior and retains settings and models. Portable copies follow the existing update instructions.
-- **Native macOS 14+ preview downloads are available separately for Apple silicon and Intel; speech recognition runs on CPU.**
+- Verified the existing Windows installed updater: a current copy reports that it is up to date; an older copy downloads and verifies the installer, saves settings, and upgrades in its actual installation directory while retaining settings and models.
+- Clarified update behavior for each runtime. Source runs still direct users to an installer; Mac updates still require downloading a new DMG and replacing the app.
+- Windows downloads move to 0.1.8; Mac downloads remain at 0.1.7. CJK caption glyphs, live translation and first-use large-v3-turbo downloads are retained.
 
 ## What's new in 0.1.6 (previous release)
 
@@ -37,15 +37,15 @@ Changes and fixes belong in the [0.1.7 release notes](https://github.com/occat66
 
 ## Download and install
 
-**[Open the 0.1.7 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7)**. This is a **prerelease**. [The previous 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) remains available for rollback; other earlier releases are also retained.
+**[Open the 0.1.8 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)**. This is a **prerelease**. [The previous 0.1.7](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7) remains available for rollback; other earlier releases are also retained.
 
 Choose **either the installer or the portable archive**. You do not need the entire repository or every ZIP:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | Optional checksums for the existing Windows release assets |
+| [OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS.txt) | Optional checksums for the existing Windows release assets |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
 1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
@@ -54,13 +54,15 @@ Choose **either the installer or the portable archive**. You do not need the ent
 4. For translation, download or import a compatible **M2M100** model from Recognition and translation, then enable real-time translation. Leave it off for original captions only.
 5. Adjust caption styling in Caption appearance and positioning, click-through and standby options in Window and standby. The footer language menu supports 简体中文, 繁體中文, English, 日本語 and 한국어; recognition language is a separate setting. Choose Chinese/Japanese/Korean caption glyphs under Caption appearance → Text; changing interface language does not change them.
 
-The software version is **0.1.7**, with release tag **`v0.1.7`**. It remains a prerelease. **This version supports public preview updates in the app. Version 0.1.5 and earlier still query only the old latest endpoint and need one manual installation of 0.1.6 or later; later checks and updates can then run in the app.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
+The software version is **0.1.8**, with release tag **`v0.1.8`**. It remains a prerelease. **This version supports public preview updates in the app. Version 0.1.5 and earlier still query only the old latest endpoint and need one manual installation of 0.1.6 or later; later checks and updates can then run in the app.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
 
 Installation is per user and preserves existing preferences. Both versions store settings, downloaded models and caption records under `%LOCALAPPDATA%/OCCATLiveCaption`; uninstall retains that data. The portable version does not store preferences alongside the extracted EXE.
 
 **Upgrading from an older version:** Saved model choices and other settings are preserved. If Base is still selected, open Speech + translation → Recognition engine → Recognition model, choose `large-v3-turbo`, then click Apply and reload model to download and use Turbo. New users default to Turbo.
 
 ## macOS preview downloads
+
+**Current Mac downloads remain at 0.1.7.** GitHub account payment/spending-limit restrictions prevented both 0.1.8 architecture jobs from starting, so no 0.1.8 DMG exists yet. A later Mac release requires the restriction to be resolved and validation to pass. The native-CI results below apply to the published 0.1.7 packages.
 
 **Requires macOS 14 or newer.** Choose one DMG for your processor:
 
@@ -87,7 +89,7 @@ This user-provided screenshot previews a custom theme. Select Custom in Page app
 
 ## Validation and use
 
-The Windows version 0.1.7 passed **414 relevant unit checks**, source and frozen-app offline interface/runtime checks, and isolated installation, offline startup and uninstallation in all five languages. The frozen app verified native Japanese/Korean regional glyphs and preservation of original text; its Windows file version is **0.1.7.0**. A complete locally cached M2M100 model also performed a real CPU int8 translation fixture in the frozen app. A separate synthetic delivery delay checks that hiding waits for translation; it is not inference latency. This round did not redownload complete models or capture live audio, and does not cover every hardware/network combination or clean Windows. 
+Windows 0.1.8 passed 62 updater unit checks, 2 update-job/interface integration checks, frozen-app offline checks, isolated install/start/uninstall in all five installer languages, and a real 0.1.7 → 0.1.8 upgrade in a custom directory containing spaces. Settings and model verification fixtures remained unchanged; file version is **0.1.8.0**, and regional CJK glyphs, source-text preservation and translation lifecycle checks passed. The lifecycle check uses synthetic translation delivery, not a new native M2M100 inference run. The 414 checks and native M2M100 fixture from 0.1.7 are historical evidence, not new 0.1.8 results. These checks do not constitute clean-Windows, live-audio or all-hardware acceptance.
 
 **It has not been tested on a clean Windows system without the runtime and remains a prerelease.** I do not treat these checks as certification for every GPU, monitor, audio device or Windows configuration.
 

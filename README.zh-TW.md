@@ -20,13 +20,13 @@
 - 五個 Feather 向量圖示入口、浮動名稱提示和單一滑動遊標；支援 Tab 鍵盤導覽、Ctrl+1～5 切頁及關閉頁面動效。
 - 暫停、預覽、隱藏字幕、視窗穿透、待機、系統匣入口和軟體內公開版本更新檢查（含預覽版）；設定頁支援滑鼠滾輪和觸控板滾動。
 
-這次改動與修正的具體內容放在 [0.1.7 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7)。
+這次改動與修正的具體內容放在 [0.1.8 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)。
 
-## 0.1.7 更新
+## 0.1.8 更新
 
-- 增加五種中日韓字幕字形選擇；內建日語、韓語地區思源字型，切換後從保留的來源文字更新，簡繁切換也保留原始文字。此選項不改變辨識語言、介面語言或翻譯目標。
-- Windows 沿用已安裝版原目錄覆蓋升級，保留既有設定和模型；免安裝版仍依原有更新說明操作。
-- **新增 macOS 14+ 原生預覽套件，分別提供 Apple 晶片與 Intel 下載；語音辨識使用 CPU。**
+- 驗證 Windows 安裝版更新流程：已是最新版時顯示提示；有新版時下載並驗證安裝包，儲存設定後覆蓋原安裝目錄，保留設定與模型。
+- 更新機制沿用既有實作，本版補齊不同執行方式的說明與版本一致性驗證；原始碼執行仍提示下載安裝版，Mac 仍以新 DMG 手動替換。
+- Windows 下載更新為 0.1.8；Mac 暫保留 0.1.7。保留中日韓字幕字形、即時翻譯及首次下載 large-v3-turbo。
 
 ## 0.1.6 更新（歷史）
 
@@ -37,16 +37,16 @@
 
 ## 下載與安裝
 
-**[開啟 0.1.7 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7)**。這是 **prerelease 預發行版本**；[上一版 0.1.1](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.1) 保留，方便回復舊版，其他舊版也保留在 Releases。
+**[開啟 0.1.8 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)**。這是 **prerelease 預發行版本**；[上一版 0.1.7](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7) 保留，方便回復舊版，其他舊版也保留在 Releases。
 
 安裝版和免安裝版**選一個即可**，不用下載整個倉庫或所有 ZIP：
 
 | 檔案 | 選擇方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 可選，僅用於核對原有 Windows 公開附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.7-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
+| [OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS.txt) | 可選，僅用於核對原有 Windows 公開附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.8-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
 
 1. 使用 **Windows 10/11 x64**，並具備 Microsoft Visual C++ x64 執行階段程式庫 **14.44.35211 或更新版**。安裝器發現執行階段程式庫缺失或過舊時，會在確認後從微軟官方下載、驗證數位簽章並開啟安裝介面。請按提示確認微軟授權及管理員授權，完成後自動繼續字幕安裝；需要連線至網路，不會自動重新啟動。微軟提示必須重新啟動時，請儲存工作、自行重新啟動，再執行字幕安裝器。免安裝版同樣需要先具備執行階段程式庫。
 2. 安裝版按兩下 EXE，選擇簡體中文、繁體中文、英文、日文或韓文並依精靈完成安裝；免安裝版請完整解壓縮後啟動，不要單獨取出 EXE。安裝套件沒有商業程式碼簽章，請核對下載來源與 SHA-256。
@@ -54,13 +54,15 @@
 4. 需要翻譯時，在「辨識與翻譯」下載或匯入相容的 **M2M100** 模型，再開啟「即時翻譯」；只看原文時保持關閉。
 5. 在「字幕外觀」調整字幕樣式，在「視窗與待機」調整位置、穿透和待機方式。底部語言選單支援简体中文、繁體中文、English、日本語、한국어，辨識語言單獨設定。中日韓字幕字形在「字幕外觀 → 文字」設定，不隨介面語言切換。
 
-本版的軟體版本號為 **0.1.7**，發行標籤為 **`v0.1.7`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6 或更新版；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
+本版的軟體版本號為 **0.1.8**，發行標籤為 **`v0.1.8`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6 或更新版；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
 
 按使用者安裝，已有設定優先。安裝版和免安裝版均把設定、下載模型和字幕記錄儲存到 `%LOCALAPPDATA%/OCCATLiveCaption`，解除安裝保留使用者資料；免安裝版不會把設定放在解壓縮目錄裡。
 
 **從舊版升級：** 已有模型選擇與其他設定會保留。如果升級後仍顯示 Base，請到「辨識與翻譯 → 辨識引擎 → 辨識模型」選擇 `large-v3-turbo`，再點擊重新載入按鈕（介面顯示「應用並過載模型」），即可下載並使用 Turbo；新使用者預設選擇 Turbo。
 
 ## macOS 預覽版下載
+
+**Mac 目前下載仍為 0.1.7。** 0.1.8 的 Apple 晶片與 Intel 建置因 GitHub 帳戶付款／額度限制而未啟動，目前沒有可下載的 0.1.8 DMG；限制解除並完成驗證後再補發。下方原生 CI 驗證描述均對應已發行的 0.1.7。
 
 **需要 macOS 14 或更新版本。** 依處理器選擇一個 DMG：
 
@@ -87,7 +89,7 @@ Mac 預覽套件內建思源黑體、思源宋體及日語／韓語地區思源�
 
 ## 驗證範圍與使用說明
 
-Windows 版 0.1.7 已通過 **414 項相關單元檢查**、原始碼與凍結程式的離線介面/執行階段程式庫檢查，以及五種語言的隔離安裝、離線啟動與解除安裝。凍結程式核對了日語、韓語地區字型的原生字形與原始文字保留，Windows 檔案版本為 **0.1.7.0**。另以完整本機快取的 M2M100 模型，在凍結程式中完成實際 CPU int8 翻譯測試資料；譯文交付的人為延遲另行驗證完成後才隱藏，並非模型推理時間。本輪未完整重新下載模型、未擷取現場音訊；這些檢查不涵蓋所有硬體、網路或乾淨 Windows。
+Windows 0.1.8 已通過 62 項更新單元檢查、2 項更新工作與介面聯通檢查、凍結程式離線檢查、五種安裝語言的隔離安裝／啟動／解除安裝，以及實際 0.1.7 → 0.1.8 含空格自訂目錄覆蓋升級。升級後設定與模型校驗樣本保持不變；檔案版本為 **0.1.8.0**，中日韓地區字形、原始文字保留與翻譯生命週期檢查通過。翻譯生命週期使用合成譯文交付，並非本輪實際 M2M100 推理；0.1.7 的 414 項檢查與原生 M2M100 測試為歷史證據，不計作本版新執行。這些檢查不等同於乾淨 Windows、現場音訊或所有硬體實測。
 
 **尚未在缺少執行階段程式庫的乾淨 Windows 環境實測，仍屬於預發行版本。** 我沒有把這些檢查當作所有 GPU、多螢幕、音訊裝置和系統組合的保證。
 
