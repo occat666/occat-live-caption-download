@@ -6,7 +6,7 @@
   <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="고양이 로컬 실시간 자막 프로젝트 표지" width="640">
 </p>
 
-안녕하세요, **OCCAT**입니다. 제가 만든 Windows용 로컬 실시간 자막 도구를 소개합니다. 컴퓨터에서 재생되는 소리나 마이크로 입력한 음성을 화면 위에 떠 있는 자막으로 표시합니다. 필요할 때는 영어, 일본어, 한국어를 중국어로 번역할 수도 있습니다. 동영상 시청, 강의 수강, 게임, 라이브 방송 시청, 개인적으로 참여하는 회의 등에서 내용을 읽고 이해하는 데 활용할 수 있습니다.
+안녕하세요, **OCCAT**입니다. 제가 만든 Windows용 로컬 실시간 자막 도구와 macOS 네이티브 미리 보기 버전을 소개합니다. 컴퓨터에서 재생되는 소리나 마이크로 입력한 음성을 화면 위에 떠 있는 자막으로 표시합니다. 필요할 때는 영어, 일본어, 한국어를 중국어로 번역할 수도 있습니다. 동영상 시청, 강의 수강, 게임, 라이브 방송 시청, 개인적으로 참여하는 회의 등에서 내용을 읽고 이해하는 데 활용할 수 있습니다.
 
 ## 주요 기능
 
@@ -26,7 +26,7 @@
 
 - 중국어·일본어·한국어 자막 글리프를 다섯 가지 중에서 선택하며 일본·한국 지역별 Source Han 글꼴을 내장했습니다. 전환할 때 보관된 원문으로 표시를 갱신하므로 중국어 간체·번체를 바꾸어도 원문을 유지합니다. 인식 언어, 화면 언어, 번역 대상은 바뀌지 않습니다.
 - Windows 설치형은 기존 설치 폴더에 덮어쓰는 업데이트 방식을 유지하며 설정과 모델을 보존합니다. 무설치형은 기존 업데이트 안내를 따릅니다.
-- **macOS 대응은 검증 중입니다. 현재 다운로드할 수 있는 Mac 패키지는 없습니다.**
+- **macOS 14 이상용 네이티브 미리 보기 패키지를 추가했습니다. Apple Silicon과 Intel 다운로드를 각각 제공하며 음성 인식은 CPU에서 실행합니다.**
 
 ## 0.1.6 변경 사항 (이전 릴리스)
 
@@ -45,7 +45,7 @@
 | --- | --- |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 선택 사항. 같은 버전의 공개 첨부 파일을 검증할 때 사용 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 기존 Windows 공개 첨부 파일용 체크섬(선택 사항) |
 | `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.7-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
 
 1. **Windows 10/11 x64**와 **14.44.35211 이상**의 Microsoft Visual C++ x64 런타임이 필요합니다. 런타임이 없거나 너무 오래된 경우, 설치 프로그램은 사용자 확인을 받은 뒤 Microsoft 공식 경로에서 다운로드하고 서명을 검증한 다음 런타임 설치 화면을 엽니다. 안내에 따라 Microsoft 라이선스와 관리자 권한 요청을 확인하면, 런타임 설치 후 자막 프로그램 설치가 자동으로 계속됩니다. 인터넷 연결이 필요하며 Windows를 자동으로 다시 시작하지 않습니다. Microsoft 설치 프로그램에서 다시 시작을 요구하면 작업을 저장하고 직접 다시 시작한 후 자막 설치 프로그램을 다시 실행하세요. 무설치형도 이 런타임을 먼저 갖추어야 합니다.
@@ -60,9 +60,24 @@
 
 **이전 버전에서 업데이트하는 경우:** 저장된 모델 선택과 다른 설정을 유지합니다. 업데이트 후에도 Base가 선택되어 있으면 인식 및 번역 → 인식 엔진 → 인식 모델에서 `large-v3-turbo`를 선택한 다음 ‘적용 후 모델 다시 로드’를 눌러 Turbo를 다운로드하고 사용하세요. 새 사용자의 기본 모델은 Turbo입니다.
 
-## macOS 대응 상태
+## macOS 미리 보기 다운로드
 
-**검증 중이며 현재 다운로드할 수 있는 Mac 패키지는 없습니다.** 네이티브 빌드는 워크플로 실행 승인과 후속 검증을 기다리고 있습니다. Windows 설치 파일이나 소스 다운로드는 Mac 패키지가 아닙니다. 준비된 오디오 대응은 CoreAudio 입력을 사용하며, 시스템 오디오는 사용자가 설치하고 설정한 BlackHole 가상 입력에서 읽도록 계획했습니다. CPU 추론, 실제 권한 요청과 장치 녹음은 Mac에서 확인해야 합니다. [macOS 오디오 설정 초안 (중국어)](docs/macos-audio.md)을 참고하세요.
+**macOS 14 이상이 필요합니다.** 프로세서에 맞는 DMG 하나를 선택하세요.
+
+| Mac 종류 | 다운로드 |
+| --- | --- |
+| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+
+DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
+
+Mac 버전은 **CPU 추론**을 사용합니다. 새 사용자는 여전히 처음 사용할 때 기본 모델인 **large-v3-turbo(약 1.6 GB)**를 다운로드합니다. 모델을 포함하거나 Base로 자동 변경하지 않으며 다른 모델은 필요할 때 다운로드합니다. 대형 모델의 CPU 처리 속도는 하드웨어에 따라 달라 실시간 성능을 보장하지 않습니다.
+
+오디오는 CoreAudio 입력을 사용하며 캡처를 시작할 때 마이크 권한이 필요합니다. 재생 중인 시스템 소리를 받으려면 사용자가 직접 **BlackHole 등의 가상 입력을 설치하고 설정**해야 합니다. 앱은 오디오 드라이버를 포함하거나 설치하지 않습니다. [macOS 오디오 설정(중국어)](docs/macos-audio.md)을 참고하세요.
+
+두 아키텍처의 네이티브 CI에서 동결 앱의 Cocoa 화면, 자막과 글꼴, 하위 프로세스 정리, HTTPS 인증서 검증을 확인했습니다. 실제 CPU 인식은 실행 중 `say`로 임시 생성한 음성과 `tiny.en`으로 검사했으며 Turbo의 성능이나 정확도를 측정한 것은 아닙니다. **실제 Mac의 마이크 권한과 녹음, BlackHole 시스템 오디오, 장시간 실행, Spaces와 전체 화면 앱 사이의 자막 최상위 표시 검증은 끝나지 않았습니다.** 구성 요소의 고지와 공유 라이브러리 교체 안내는 앱 안에 있으며 대응하는 제삼자 소스는 같은 Release의 첨부 자료를 확인하세요.
+
+Mac 미리 보기에는 Source Han Sans, Source Han Serif 및 일본어·한국어 지역별 Source Han Sans 글꼴이 포함됩니다. 다른 글꼴은 로컬에서 가져올 수 있습니다.
 
 ## 사용자 지정 테마 예시
 
@@ -72,7 +87,7 @@
 
 ## 검증 범위 및 사용 안내
 
-0.1.7은 **관련 단위 검사 414개**, 소스 앱과 동결 앱의 오프라인 화면·런타임 검사, 다섯 언어의 격리 설치·오프라인 실행·제거 검사를 통과했습니다. 동결 앱에서 일본·한국 지역별 기본 글리프와 원문 보존을 확인했으며 Windows 파일 버전은 **0.1.7.0**입니다. 완전한 로컬 캐시 M2M100 모델로 동결 앱에서 실제 CPU int8 번역 테스트도 수행했습니다. 별도의 인위적인 번역 전달 지연은 번역 완료 후 숨김을 확인하며 추론 시간이 아닙니다. 전체 모델 재다운로드나 현장 음성 수집은 하지 않았으며 모든 하드웨어·네트워크 또는 깨끗한 Windows를 검증한 것은 아닙니다. macOS 네이티브 빌드와 실제 Mac 검증은 끝나지 않았고 Mac 패키지는 없습니다.
+Windows용 0.1.7은 **관련 단위 검사 414개**, 소스 앱과 동결 앱의 오프라인 화면·런타임 검사, 다섯 언어의 격리 설치·오프라인 실행·제거 검사를 통과했습니다. 동결 앱에서 일본·한국 지역별 기본 글리프와 원문 보존을 확인했으며 Windows 파일 버전은 **0.1.7.0**입니다. 완전한 로컬 캐시 M2M100 모델로 동결 앱에서 실제 CPU int8 번역 테스트도 수행했습니다. 별도의 인위적인 번역 전달 지연은 번역 완료 후 숨김을 확인하며 추론 시간이 아닙니다. 전체 모델 재다운로드나 현장 음성 수집은 하지 않았으며 모든 하드웨어·네트워크 또는 깨끗한 Windows를 검증한 것은 아닙니다. 
 
 **런타임이 없는 깨끗한 Windows 환경에서는 아직 실제로 테스트하지 않았으며, 여전히 사전 공개 버전입니다.** 이러한 확인을 모든 GPU, 다중 모니터, 오디오 장치, 시스템 조합에 대한 보장으로 여기지는 않습니다.
 

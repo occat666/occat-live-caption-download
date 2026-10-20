@@ -6,7 +6,7 @@
   <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="猫猫本地实时字幕项目封面" width="640">
 </p>
 
-我是 **OCCAT**，这是我做的 Windows 本地实时字幕工具。你可以把电脑正在播放的声音，或者麦克风里的说话声，显示成悬浮字幕；需要的时候，也可以把英文、日文、韩文翻译成中文。看视频、听课、玩游戏、看直播，或者开个人会议时，都可以用它辅助阅读。
+我是 **OCCAT**，这是我做的本地实时字幕工具，提供 Windows 版和 macOS 原生预览版。你可以把电脑正在播放的声音，或者麦克风里的说话声，显示成悬浮字幕；需要的时候，也可以把英文、日文、韩文翻译成中文。看视频、听课、玩游戏、看直播，或者开个人会议时，都可以用它辅助阅读。
 
 ## 可以怎么用
 
@@ -26,7 +26,7 @@
 
 - 增加五种中日韩字幕字形选择；内置日语、韩语地区思源字体，切换后从保留的源文本刷新，简繁切换也保留原始文字。该选项不改变识别语言、界面语言或翻译目标。
 - Windows 沿用安装版原目录覆盖升级，保留已有设置和模型；便携版仍按原有更新说明操作。
-- **macOS 适配验证中，目前没有 Mac 安装包可下载。**
+- **新增 macOS 14+ 原生预览包，分别提供 Apple 芯片和 Intel 下载；运行识别使用 CPU。**
 
 ## 0.1.6 更新（历史）
 
@@ -45,7 +45,7 @@
 | --- | --- |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 可选，用于核对同版公开附件 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 可选，仅用于核对原有 Windows 公开附件 |
 | `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.7-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
 
 1. 使用 **Windows 10/11 x64**，并具备 Microsoft Visual C++ x64 运行库 **14.44.35211 或更新版**。安装器发现运行库缺失或过旧时，会在确认后从微软官方下载、校验签名并打开安装界面。请按提示确认微软许可及管理员授权，完成后自动继续字幕安装；需要联网，不会自动重启。微软提示必须重启时，请保存工作、自行重启，再运行字幕安装器。免安装版同样需要先具备运行库。
@@ -60,9 +60,24 @@
 
 **从旧版升级：** 已有模型选择与其他设置会保留。如果升级后仍显示 Base，请到“识别与翻译 → 识别引擎 → 识别模型”选择 `large-v3-turbo`，再点击“应用并重载模型”，即可下载并使用 Turbo；新用户默认选择 Turbo。
 
-## macOS 适配状态
+## macOS 预览版下载
 
-**适配验证中，当前没有 Mac 安装包可下载。** 原生构建仍待工作流运行授权及后续验证；本页不把 Windows 安装包或源码下载标作 Mac 版。已准备的音频适配采用 CoreAudio 输入，系统声音拟通过用户自行安装并配置的 BlackHole 虚拟输入读取；CPU 推理、真实授权与设备采集仍需在 Mac 上验收。流程草稿见 [macOS 声音来源设置](docs/macos-audio.md)。
+**需要 macOS 14 或更新版本。** 按处理器选择一个 DMG：
+
+| Mac 类型 | 下载 |
+| --- | --- |
+| Apple 芯片（M1 及更新机型） | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+
+打开 DMG，将应用拖到“应用程序”。此预览包采用 **ad-hoc 签名，未经 Apple 公证**；首次尝试打开后，macOS 可能要求在“系统设置 → 隐私与安全性”对该应用选择“仍要打开”。请使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt) 核对 Mac 附件。后续更新在 Mac 版中打开 Releases 下载页，下载新 DMG 并替换应用；设置、模型和字幕记录保存在 `~/Library/Application Support/OCCATLiveCaption`。
+
+Mac 版使用 **CPU 推理**，新用户仍默认首次下载 **large-v3-turbo（约 1.6 GB）**，不内置模型，也不会自动改选 Base；其他模型按需下载。大模型在 CPU 上的速度取决于硬件，预览包不保证实时性能。
+
+声音来源使用 CoreAudio 输入，开始采集时需允许麦克风权限。播放中的系统声音需要自行安装并配置 **BlackHole 等虚拟输入**，软件不捆绑或安装音频驱动。步骤见 [macOS 声音来源设置](docs/macos-audio.md)。
+
+两种架构在原生 CI 中检查了冻结应用的 Cocoa 界面、字幕与字体、进程回收和 HTTPS 证书验证；另以运行时临时生成的 `say` 语音和 `tiny.en` 完成真实 CPU 识别。该夹具不代表 Turbo 的性能或准确率。**实体 Mac 的麦克风授权与采集、BlackHole 系统声音、长期运行，以及多桌面 Spaces／全屏置顶仍未完成验收。** 组件许可和共享库替换说明在应用包内，对应第三方源码附件见同版 Release。
+
+Mac 预览包内置思源黑体、思源宋体及日语／韩语地区思源字体，其他字体可从本地导入。
 
 ## 自定义主题示例
 
@@ -72,7 +87,7 @@
 
 ## 验证范围与使用说明
 
-0.1.7 已通过 **414 项相关单元检查**、源码与冻结程序的离线界面/运行库检查，以及五种语言的隔离安装、离线启动和卸载。冻结程序核对了日语、韩语地区字体的原生字形及源文本保留，Windows 文件版本为 **0.1.7.0**。另用完整本地缓存的 M2M100 模型，在冻结程序中完成真实 CPU int8 翻译夹具；译文交付的人为延迟另行验证完成后才隐藏，不是模型推理耗时。本轮未完整重下模型、未采集现场音频；这些检查不覆盖全部硬件、网络或干净 Windows。macOS 原生构建及真机验证尚未完成，目前没有 Mac 安装包。
+Windows 版 0.1.7 已通过 **414 项相关单元检查**、源码与冻结程序的离线界面/运行库检查，以及五种语言的隔离安装、离线启动和卸载。冻结程序核对了日语、韩语地区字体的原生字形及源文本保留，Windows 文件版本为 **0.1.7.0**。另用完整本地缓存的 M2M100 模型，在冻结程序中完成真实 CPU int8 翻译夹具；译文交付的人为延迟另行验证完成后才隐藏，不是模型推理耗时。本轮未完整重下模型、未采集现场音频；这些检查不覆盖全部硬件、网络或干净 Windows。
 
 **尚未在缺少运行库的干净 Windows 环境实测，仍属于预发布版本。** 我没有把这些检查当作所有 GPU、多屏、音频设备和系统组合的保证。
 

@@ -6,7 +6,7 @@
   <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="貓貓本地即時字幕專案封面" width="640">
 </p>
 
-我是 **OCCAT**，這是我做的 Windows 本地即時字幕工具。你可以把電腦正在播放的聲音，或者麥克風裡的說話聲，顯示成浮動字幕；需要的時候，也可以把英文、日文、韓文翻譯成中文。看影片、聽課、玩遊戲、看直播，或者開個人會議時，都可以用它輔助閱讀。
+我是 **OCCAT**，這是我做的本機即時字幕工具，提供 Windows 版與 macOS 原生預覽版。你可以把電腦正在播放的聲音，或者麥克風裡的說話聲，顯示成浮動字幕；需要的時候，也可以把英文、日文、韓文翻譯成中文。看影片、聽課、玩遊戲、看直播，或者開個人會議時，都可以用它輔助閱讀。
 
 ## 可以怎麼用
 
@@ -26,7 +26,7 @@
 
 - 增加五種中日韓字幕字形選擇；內建日語、韓語地區思源字型，切換後從保留的來源文字更新，簡繁切換也保留原始文字。此選項不改變辨識語言、介面語言或翻譯目標。
 - Windows 沿用已安裝版原目錄覆蓋升級，保留既有設定和模型；免安裝版仍依原有更新說明操作。
-- **macOS 適配驗證中，目前沒有 Mac 安裝套件可下載。**
+- **新增 macOS 14+ 原生預覽套件，分別提供 Apple 晶片與 Intel 下載；語音辨識使用 CPU。**
 
 ## 0.1.6 更新（歷史）
 
@@ -45,7 +45,7 @@
 | --- | --- |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 可選，用於核對同版公開附件 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | 可選，僅用於核對原有 Windows 公開附件 |
 | `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.7-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
 
 1. 使用 **Windows 10/11 x64**，並具備 Microsoft Visual C++ x64 執行階段程式庫 **14.44.35211 或更新版**。安裝器發現執行階段程式庫缺失或過舊時，會在確認後從微軟官方下載、驗證數位簽章並開啟安裝介面。請按提示確認微軟授權及管理員授權，完成後自動繼續字幕安裝；需要連線至網路，不會自動重新啟動。微軟提示必須重新啟動時，請儲存工作、自行重新啟動，再執行字幕安裝器。免安裝版同樣需要先具備執行階段程式庫。
@@ -60,9 +60,24 @@
 
 **從舊版升級：** 已有模型選擇與其他設定會保留。如果升級後仍顯示 Base，請到「辨識與翻譯 → 辨識引擎 → 辨識模型」選擇 `large-v3-turbo`，再點擊重新載入按鈕（介面顯示「應用並過載模型」），即可下載並使用 Turbo；新使用者預設選擇 Turbo。
 
-## macOS 適配狀態
+## macOS 預覽版下載
 
-**適配驗證中，目前沒有 Mac 安裝套件可下載。** 原生建置仍待工作流程執行授權及後續驗證；本頁不將 Windows 安裝套件或原始碼下載標示為 Mac 版。已準備的音訊適配採用 CoreAudio 輸入，系統聲音預計透過使用者自行安裝並設定的 BlackHole 虛擬輸入讀取；CPU 推論、實際授權與裝置擷取仍需在 Mac 上驗收。流程草稿見 [macOS 聲音來源設定（簡體中文）](docs/macos-audio.md)。
+**需要 macOS 14 或更新版本。** 依處理器選擇一個 DMG：
+
+| Mac 類型 | 下載 |
+| --- | --- |
+| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+
+開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
+
+Mac 版使用 **CPU 推論**，新使用者仍預設在首次使用時下載 **large-v3-turbo（約 1.6 GB）**，不內建模型，也不會自動改選 Base；其他模型按需下載。大型模型的 CPU 速度取決於硬體，預覽套件不保證即時效能。
+
+音訊來源採用 CoreAudio 輸入，開始擷取時需要允許麥克風權限。播放中的系統聲音需要自行安裝並設定 **BlackHole 等虛擬輸入**，軟體不隨附或安裝音訊驅動程式。步驟見 [macOS 聲音來源設定（簡體中文）](docs/macos-audio.md)。
+
+兩種架構已在原生 CI 中檢查凍結應用程式的 Cocoa 介面、字幕與字型、程序回收及 HTTPS 憑證驗證；另以執行時暫時產生的 `say` 語音與 `tiny.en` 完成真實 CPU 辨識。此測試資料不代表 Turbo 的效能或準確率。**實體 Mac 的麥克風授權與擷取、BlackHole 系統聲音、長時間執行，以及多桌面 Spaces／全螢幕置頂仍未完成驗收。** 元件授權與共享程式庫替換說明位於應用程式套件內，對應第三方原始碼附件見同版 Release。
+
+Mac 預覽套件內建思源黑體、思源宋體及日語／韓語地區思源字型，其他字型可從本機匯入。
 
 ## 自訂主題範例
 
@@ -72,7 +87,7 @@
 
 ## 驗證範圍與使用說明
 
-0.1.7 已通過 **414 項相關單元檢查**、原始碼與凍結程式的離線介面/執行階段程式庫檢查，以及五種語言的隔離安裝、離線啟動與解除安裝。凍結程式核對了日語、韓語地區字型的原生字形與原始文字保留，Windows 檔案版本為 **0.1.7.0**。另以完整本機快取的 M2M100 模型，在凍結程式中完成實際 CPU int8 翻譯測試資料；譯文交付的人為延遲另行驗證完成後才隱藏，並非模型推理時間。本輪未完整重新下載模型、未擷取現場音訊；這些檢查不涵蓋所有硬體、網路或乾淨 Windows。macOS 原生建置與真機驗證尚未完成，目前沒有 Mac 安裝套件。
+Windows 版 0.1.7 已通過 **414 項相關單元檢查**、原始碼與凍結程式的離線介面/執行階段程式庫檢查，以及五種語言的隔離安裝、離線啟動與解除安裝。凍結程式核對了日語、韓語地區字型的原生字形與原始文字保留，Windows 檔案版本為 **0.1.7.0**。另以完整本機快取的 M2M100 模型，在凍結程式中完成實際 CPU int8 翻譯測試資料；譯文交付的人為延遲另行驗證完成後才隱藏，並非模型推理時間。本輪未完整重新下載模型、未擷取現場音訊；這些檢查不涵蓋所有硬體、網路或乾淨 Windows。
 
 **尚未在缺少執行階段程式庫的乾淨 Windows 環境實測，仍屬於預發行版本。** 我沒有把這些檢查當作所有 GPU、多螢幕、音訊裝置和系統組合的保證。
 

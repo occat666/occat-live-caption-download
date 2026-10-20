@@ -6,7 +6,7 @@
   <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="Maomao Local Live Captions project cover" width="640">
 </p>
 
-I'm **OCCAT**, and this is my local live caption tool for Windows. It turns audio playing on your computer, or speech from your microphone, into floating captions. You can also translate English, Japanese or Korean into Chinese when you need it. You can use it while watching videos, taking courses, playing games, watching streams or joining personal meetings.
+I'm **OCCAT**, and this is my local live caption tool for Windows, with a native macOS preview. It turns audio playing on your computer, or speech from your microphone, into floating captions. You can also translate English, Japanese or Korean into Chinese when you need it. You can use it while watching videos, taking courses, playing games, watching streams or joining personal meetings.
 
 ## What you can do
 
@@ -26,7 +26,7 @@ Changes and fixes belong in the [0.1.7 release notes](https://github.com/occat66
 
 - Five Chinese/Japanese/Korean caption glyph choices, with bundled Japanese and Korean regional Source Han fonts. Switching refreshes captions from the retained source text, including reversible Chinese script changes. Recognition language, interface language and translation target stay independent.
 - Windows keeps the existing installed-directory upgrade behavior and retains settings and models. Portable copies follow the existing update instructions.
-- **macOS adaptation is being validated. No Mac package is available to download yet.**
+- **Native macOS 14+ preview downloads are available separately for Apple silicon and Intel; speech recognition runs on CPU.**
 
 ## What's new in 0.1.6 (previous release)
 
@@ -45,7 +45,7 @@ Choose **either the installer or the portable archive**. You do not need the ent
 | --- | --- |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
 | [OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCAT-Live-Caption-0.1.7-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | Optional integrity checks for this release's public assets |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS.txt) | Optional checksums for the existing Windows release assets |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
 1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
@@ -60,9 +60,24 @@ Installation is per user and preserves existing preferences. Both versions store
 
 **Upgrading from an older version:** Saved model choices and other settings are preserved. If Base is still selected, open Speech + translation → Recognition engine → Recognition model, choose `large-v3-turbo`, then click Apply and reload model to download and use Turbo. New users default to Turbo.
 
-## macOS adaptation status
+## macOS preview downloads
 
-**Validation is in progress. No Mac package is available to download yet.** Native builds still await workflow authorization and subsequent validation. Windows installers and source downloads are not Mac packages. The prepared audio adaptation uses CoreAudio inputs, with system audio planned through a BlackHole virtual input installed and configured by the user. CPU inference, actual permission prompts and device capture still need Mac acceptance checks. See the [macOS audio setup draft (Chinese)](docs/macos-audio.md).
+**Requires macOS 14 or newer.** Choose one DMG for your processor:
+
+| Mac processor | Download |
+| --- | --- |
+| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+
+Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
+
+The Mac preview uses **CPU inference**. New users still download **large-v3-turbo (about 1.6 GB)** on first use; no model is bundled and the app does not automatically switch to Base. Other models remain optional downloads. CPU speed for large models depends on hardware; real-time performance is not guaranteed.
+
+Audio comes from CoreAudio inputs and microphone permission is required when capture starts. Capturing playback audio requires **BlackHole or another virtual input installed and configured by you**; the app includes and installs no audio driver. See [macOS audio setup (Chinese)](docs/macos-audio.md).
+
+Native CI checked both architectures' frozen Cocoa interface, captions/fonts, process cleanup and HTTPS certificate verification. A real CPU recognition check used `tiny.en` and a temporary utterance generated by `say`; it does not measure Turbo performance or accuracy. **Physical-Mac microphone permission/capture, BlackHole playback capture, long sessions, and overlay behavior across Spaces/full-screen apps have not completed acceptance testing.** Component notices and shared-library replacement instructions are inside the app; corresponding third-party sources are attached to the same Release.
+
+The Mac preview bundles Source Han Sans, Source Han Serif, and the Japanese/Korean regional Source Han Sans fonts; additional fonts can be imported locally.
 
 ## Custom theme example
 
@@ -72,7 +87,7 @@ This user-provided screenshot previews a custom theme. Select Custom in Page app
 
 ## Validation and use
 
-Version 0.1.7 passed **414 relevant unit checks**, source and frozen-app offline interface/runtime checks, and isolated installation, offline startup and uninstallation in all five languages. The frozen app verified native Japanese/Korean regional glyphs and preservation of original text; its Windows file version is **0.1.7.0**. A complete locally cached M2M100 model also performed a real CPU int8 translation fixture in the frozen app. A separate synthetic delivery delay checks that hiding waits for translation; it is not inference latency. This round did not redownload complete models or capture live audio, and does not cover every hardware/network combination or clean Windows. Native macOS builds and physical-Mac acceptance remain unfinished; no Mac package is available.
+The Windows version 0.1.7 passed **414 relevant unit checks**, source and frozen-app offline interface/runtime checks, and isolated installation, offline startup and uninstallation in all five languages. The frozen app verified native Japanese/Korean regional glyphs and preservation of original text; its Windows file version is **0.1.7.0**. A complete locally cached M2M100 model also performed a real CPU int8 translation fixture in the frozen app. A separate synthetic delivery delay checks that hiding waits for translation; it is not inference latency. This round did not redownload complete models or capture live audio, and does not cover every hardware/network combination or clean Windows. 
 
 **It has not been tested on a clean Windows system without the runtime and remains a prerelease.** I do not treat these checks as certification for every GPU, monitor, audio device or Windows configuration.
 
