@@ -1,0 +1,32 @@
+name: macOS runner availability check
+
+on:
+  workflow_dispatch:
+
+# Availability check only: no checkout, credentials, private source, cache,
+# artifacts, release uploads, or access to repository contents.
+permissions: {}
+
+jobs:
+  check:
+    name: macOS / ${{ matrix.arch }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            runner: macos-15
+          - arch: x86_64
+            runner: macos-15-intel
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 5
+    steps:
+      - name: Verify native environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          sw_vers
+          uname -m
+          test "$(uname -m)" = '${{ matrix.arch }}'
+          python3 --version
+          xcodebuild -version
