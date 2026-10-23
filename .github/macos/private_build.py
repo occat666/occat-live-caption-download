@@ -36,7 +36,8 @@ def checkout():
         raise RuntimeError('Missing read-only source deploy key')
     with tempfile.TemporaryDirectory(prefix='occat-read-key-') as temp:
         identity = Path(temp) / 'identity'
-        identity.write_text(key, encoding='utf-8'); identity.chmod(0o600)
+        identity.write_text(key.replace('\r\n','\n').strip() + '\n', encoding='utf-8')
+        identity.chmod(0o600)
         del key
         environment = dict(os.environ)
         environment['GIT_SSH_COMMAND'] = (
