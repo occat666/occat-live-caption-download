@@ -11,11 +11,12 @@ import tarfile
 import tempfile
 
 ROOT = Path.cwd()
-SOURCE = ROOT / 'private-source'
 CONTROL = ROOT / '.github/macos'
 ARCH = os.environ['OCCAT_ARCH']
 COMMIT = os.environ['OCCAT_SOURCE_COMMIT']
 assert ARCH in ('arm64', 'x86_64') and re.fullmatch('[0-9a-f]{40}', COMMIT)
+# GPG's Unix-domain socket must fit macOS's short sockaddr_un path limit.
+SOURCE = Path('/tmp') / ('occat-source-' + ARCH)
 LOCAL = Path(os.environ['RUNNER_TEMP']) / ('occat-private-' + ARCH)
 LOCAL.mkdir(exist_ok=True)
 
