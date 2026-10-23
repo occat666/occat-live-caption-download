@@ -26,7 +26,7 @@
 
 - 驗證 Windows 安裝版更新流程：已是最新版時顯示提示；有新版時下載並驗證安裝包，儲存設定後覆蓋原安裝目錄，保留設定與模型。
 - 更新機制沿用既有實作，本版補齊不同執行方式的說明與版本一致性驗證；原始碼執行仍提示下載安裝版，Mac 仍以新 DMG 手動替換。
-- Windows 下載更新為 0.1.8；Mac 暫保留 0.1.7。保留中日韓字幕字形、即時翻譯及首次下載 large-v3-turbo。
+- Windows 與 Mac 下載均為 0.1.8，保留中日韓字幕字形、即時翻譯及首次下載 large-v3-turbo。
 
 ## 0.1.6 更新（歷史）
 
@@ -62,16 +62,16 @@
 
 ## macOS 預覽版下載
 
-**Mac 目前下載仍為 0.1.7。** 0.1.8 的 Apple 晶片與 Intel 建置因 GitHub 帳戶付款／額度限制而未啟動，目前沒有可下載的 0.1.8 DMG；限制解除並完成驗證後再補發。下方原生 CI 驗證描述均對應已發行的 0.1.7。
+**Mac 0.1.8 已提供 Apple 晶片與 Intel 原生預覽套件。** 兩種架構均完成雲端 macOS 建置、凍結介面與 CPU 辨識測試，並在本機獨立核驗。實體 Mac 的麥克風與系統收音仍需使用者實測。
 
 **需要 macOS 14 或更新版本。** 依處理器選擇一個 DMG：
 
 | Mac 類型 | 下載 |
 | --- | --- |
-| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.8-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.8-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-x86_64.dmg) |
 
-開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
+開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
 
 Mac 版使用 **CPU 推論**，新使用者仍預設在首次使用時下載 **large-v3-turbo（約 1.6 GB）**，不內建模型，也不會自動改選 Base；其他模型按需下載。大型模型的 CPU 速度取決於硬體，預覽套件不保證即時效能。
 

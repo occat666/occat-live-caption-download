@@ -26,7 +26,7 @@
 
 - Windows インストール版の既存更新処理を検証しました。最新版ではその旨を表示し、新版があればダウンロードと検証を行い、設定を保存して元のインストール先を更新します。設定とモデルは保持されます。
 - ソース実行ではインストール版のダウンロードを案内し、Mac は新しい DMG でアプリを手動置換します。
-- Windows ダウンロードは 0.1.8 に更新し、Mac は 0.1.7 を維持します。中日韓の字幕字形、リアルタイム翻訳、初回の large-v3-turbo ダウンロードは継続します。
+- Windows と Mac のダウンロードは共に 0.1.8 です。中日韓の字幕字形、リアルタイム翻訳、初回の large-v3-turbo ダウンロードは継続します。
 
 ## 0.1.6 の変更点（過去のリリース）
 
@@ -62,16 +62,16 @@
 
 ## macOS プレビュー版のダウンロード
 
-**現在の Mac ダウンロードは 0.1.7 です。** GitHub アカウントの支払い／利用上限により、0.1.8 の Apple シリコン・Intel 両方のビルドは開始されず、0.1.8 DMG はまだありません。制限の解消と検証の完了後に追加公開します。以下のネイティブ CI 検証結果は、公開済みの 0.1.7 に対応します。
+**Apple シリコンと Intel 向けの Mac 0.1.8 ネイティブプレビューを公開しました。** 両アーキテクチャでクラウド macOS ビルド、凍結 GUI、CPU 音声認識を検証し、成果物をローカルで独立確認しました。実機のマイクとシステム音声収録は引き続き確認が必要です。
 
 **macOS 14 以降が必要です。** プロセッサーに合った DMG を 1 つ選んでください。
 
 | Mac の種類 | ダウンロード |
 | --- | --- |
-| Apple シリコン（M1 以降） | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+| Apple シリコン（M1 以降） | [OCCATLiveCaption-0.1.8-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.8-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-x86_64.dmg) |
 
-DMG を開き、アプリを「アプリケーション」へドラッグします。このプレビューは **ad-hoc 署名で、Apple の公証は受けていません**。初回の起動を試した後、「システム設定 → プライバシーとセキュリティ」で、このアプリに対して「このまま開く」が必要な場合があります。同じ Release の [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt) で Mac 添付ファイルを確認してください。Mac 版の更新操作は Releases のダウンロードページを開きます。新しい DMG をダウンロードしてアプリを置き換えます。設定、モデル、字幕記録の保存先は `~/Library/Application Support/OCCATLiveCaption` です。
+DMG を開き、アプリを「アプリケーション」へドラッグします。このプレビューは **ad-hoc 署名で、Apple の公証は受けていません**。初回の起動を試した後、「システム設定 → プライバシーとセキュリティ」で、このアプリに対して「このまま開く」が必要な場合があります。同じ Release の [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS-macOS.txt) で Mac 添付ファイルを確認してください。Mac 版の更新操作は Releases のダウンロードページを開きます。新しい DMG をダウンロードしてアプリを置き換えます。設定、モデル、字幕記録の保存先は `~/Library/Application Support/OCCATLiveCaption` です。
 
 Mac 版は **CPU 推論**を使用します。新規利用時の既定モデルは引き続き **large-v3-turbo（約 1.6 GB）**で、初回にダウンロードします。モデルの同梱や Base への自動変更はなく、他のモデルは必要に応じてダウンロードします。大きなモデルの処理速度はハードウェアに依存し、リアルタイム性能は保証しません。
 

@@ -26,7 +26,7 @@ Changes and fixes belong in the [0.1.8 release notes](https://github.com/occat66
 
 - Verified the existing Windows installed updater: a current copy reports that it is up to date; an older copy downloads and verifies the installer, saves settings, and upgrades in its actual installation directory while retaining settings and models.
 - Clarified update behavior for each runtime. Source runs still direct users to an installer; Mac updates still require downloading a new DMG and replacing the app.
-- Windows downloads move to 0.1.8; Mac downloads remain at 0.1.7. CJK caption glyphs, live translation and first-use large-v3-turbo downloads are retained.
+- Windows and Mac downloads are both 0.1.8, retaining regional CJK caption glyphs, live translation and first-use large-v3-turbo downloads.
 
 ## What's new in 0.1.6 (previous release)
 
@@ -62,16 +62,16 @@ Installation is per user and preserves existing preferences. Both versions store
 
 ## macOS preview downloads
 
-**Current Mac downloads remain at 0.1.7.** GitHub account payment/spending-limit restrictions prevented both 0.1.8 architecture jobs from starting, so no 0.1.8 DMG exists yet. A later Mac release requires the restriction to be resolved and validation to pass. The native-CI results below apply to the published 0.1.7 packages.
+**Mac 0.1.8 native previews are available for Apple Silicon and Intel.** Both architectures passed cloud macOS builds, frozen GUI and CPU recognition tests, followed by independent local artifact verification. Physical microphone and playback capture still require user testing on a Mac.
 
 **Requires macOS 14 or newer.** Choose one DMG for your processor:
 
 | Mac processor | Download |
 | --- | --- |
-| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.7-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.7-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/OCCATLiveCaption-0.1.7-macOS-x86_64.dmg) |
+| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.8-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.8-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-x86_64.dmg) |
 
-Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
+Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
 
 The Mac preview uses **CPU inference**. New users still download **large-v3-turbo (about 1.6 GB)** on first use; no model is bundled and the app does not automatically switch to Base. Other models remain optional downloads. CPU speed for large models depends on hardware; real-time performance is not guaranteed.
 

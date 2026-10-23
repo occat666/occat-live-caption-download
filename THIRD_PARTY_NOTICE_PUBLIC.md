@@ -26,7 +26,7 @@ Windows 0.1.8 provides HarmonyOS Sans, MiSans, Source Han Sans and Source Han Se
 
 ## macOS preview components
 
-These Mac materials apply to the published **0.1.7** previews. The 0.1.8 Mac jobs did not start because of GitHub account payment/spending-limit restrictions; no Mac 0.1.8 artifact or replacement source archive is published here. The existing 0.1.7 links below remain the matching materials.
+These Mac materials apply to the published **0.1.8** native previews. Both Apple Silicon and Intel artifacts were built and tested on native cloud macOS runners and independently reviewed; the links below are the matching corresponding sources. The application source repository remains private.
 
 The native macOS previews use Qt/PySide6/Shiboken6 6.9.3, including the QtDBus framework required by QtGui. Their original Qt notices come from the matching verified 6.9.3 source archives; the Windows Qt 6.11.2 materials remain separate. The bundled PyAV 18.1.0 uses rebuilt LGPL FFmpeg 8.1.3 shared libraries, and sherpa-onnx is the ASR-only 1.13.8+asr.1 build.
 
@@ -34,6 +34,6 @@ Original installed-wheel licenses, pinned Adobe SC/Serif/JP/KR font licenses, an
 
 Matching same-version Mac corresponding-source assets:
 
-- [CorrespondingSources-Qt-6.9.3-macOS.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/CorrespondingSources-Qt-6.9.3-macOS.zip)
-- [CorrespondingSources-macOS-arm64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/CorrespondingSources-macOS-arm64.zip)
-- [CorrespondingSources-macOS-x86_64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.7/CorrespondingSources-macOS-x86_64.zip)
+- [CorrespondingSources-Qt-6.9.3-macOS.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/CorrespondingSources-Qt-6.9.3-macOS.zip)
+- [CorrespondingSources-macOS-arm64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/CorrespondingSources-macOS-arm64.zip)
+- [CorrespondingSources-macOS-x86_64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/CorrespondingSources-macOS-x86_64.zip)
