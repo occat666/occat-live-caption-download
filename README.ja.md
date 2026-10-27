@@ -20,13 +20,13 @@
 - 5 つの Feather ベクターアイコン、ホバー時の名前表示、1 つのスライド式インジケーターを備えています。Tab キーでの移動、Ctrl+1～5 でのページ切り替え、画面アニメーションの無効化にも対応しています。
 - 字幕の一時停止・プレビュー・非表示、ウィンドウのクリック透過、待機、トレイからの操作、プレビュー版を含む公開版のアプリ内更新確認に対応。設定ページはマウスホイールとタッチパッドでスクロールできます。
 
-今回の変更・修正内容は [0.1.8 リリースノート](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)に掲載しています。
+今回の変更・修正内容は [0.1.9 リリースノート](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9)に掲載しています。
 
-## 0.1.8 の更新
+## 0.1.9 の更新
 
-- Windows インストール版の既存更新処理を検証しました。最新版ではその旨を表示し、新版があればダウンロードと検証を行い、設定を保存して元のインストール先を更新します。設定とモデルは保持されます。
-- ソース実行ではインストール版のダウンロードを案内し、Mac は新しい DMG でアプリを手動置換します。
-- Windows と Mac のダウンロードは共に 0.1.8 です。中日韓の字幕字形、リアルタイム翻訳、初回の large-v3-turbo ダウンロードは継続します。
+- 認識原文と翻訳字幕のフォント、サイズ、太さ、色、不透明度、縁取り、影を個別に調整できます。
+- 「字幕の外観」で原文と翻訳を別々に設定できます。翻訳がオフでも翻訳スタイルをプレビューできます。位置、背景、行間、最大行数は共通です。
+- 既存の設定は翻訳スタイルの初期値として一度コピーされ、その後は個別に保存されます。5言語の画面、リアルタイム翻訳、中日韓の字形、初回の large-v3-turbo ダウンロードも利用できます。
 
 ## 0.1.6 の変更点（過去のリリース）
 
@@ -37,24 +37,24 @@
 
 ## ダウンロードとインストール
 
-**[0.1.8 公開テスト版を開く](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)**。これは **prerelease（プレリリース版）**です。[前の 0.1.7](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7) は以前の版に戻すために残しており、その他の旧版も Releases から入手できます。
+**[0.1.9 公開テスト版を開く](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9)**。これは **prerelease（プレリリース版）**です。[前の 0.1.8](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8) は以前の版に戻すために残しており、その他の旧版も Releases から入手できます。
 
 インストーラー版とポータブル版は、**どちらか一方を選んでください**。リポジトリ全体やすべての ZIP をダウンロードする必要はありません。
 
 | ファイル | 選び方 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe) | インストーラー版。简体中文 / 繁體中文 / English / 日本語 / 한국어 に共通のインストーラーです |
-| [OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip) | ポータブル版。すべて展開してから `OCCATLiveCaption.exe` を実行してください |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS.txt) | 従来の Windows 公開添付ファイル用チェックサム（任意） |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.8-Third-Party-Notices.zip` | サードパーティーの対応ソースコードとライセンス資料です。通常の利用では個別にダウンロードする必要はありません |
+| [OCCAT-Live-Caption-0.1.9-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCAT-Live-Caption-0.1.9-windows-x64-setup.exe) | インストーラー版。简体中文 / 繁體中文 / English / 日本語 / 한국어 に共通のインストーラーです |
+| [OCCAT-Live-Caption-0.1.9-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCAT-Live-Caption-0.1.9-windows-x64-portable.zip) | ポータブル版。すべて展開してから `OCCATLiveCaption.exe` を実行してください |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/SHA256SUMS.txt) | 本バージョンの Windows 添付ファイル用チェックサム（任意） |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.9-Third-Party-Notices.zip` | サードパーティーの対応ソースコードとライセンス資料です。通常の利用では個別にダウンロードする必要はありません |
 
 1. **Windows 10/11 x64** と Microsoft Visual C++ x64 ランタイム **14.44.35211 以降**が必要です。ランタイムが未導入または古い場合、インストーラーは確認後に Microsoft の公式サイトからダウンロードし、署名を検証してランタイムのインストール画面を開きます。Microsoft のライセンスと管理者権限の確認に従ってください。完了後、字幕アプリのインストールが自動的に続行されます。このダウンロードにはインターネット接続が必要です。Windows が自動的に再起動されることはありません。Microsoft から再起動が必要と案内された場合は、作業を保存して自分で再起動し、字幕アプリのインストーラーを再実行してください。ポータブル版でもランタイムの事前導入が必要です。
 2. インストーラー版は EXE をダブルクリックし、簡体字中国語・繁体字中国語・英語・日本語・韓国語を選んでウィザードに従ってください。ポータブル版はすべて展開してから起動し、EXE だけを取り出さないでください。インストーラーには商用のコード署名証明書を使用していません。ダウンロード元と SHA-256 を確認してください。
 3. 「猫猫本地实时字幕」を起動し、実際に音声を再生している出力デバイス、またはマイクを選びます。新規ユーザーの既定は **Whisper large-v3-turbo** です。初回はネット接続が必要で、約 **1.6 GB** をダウンロードしてファイルを検証します。途中からの再開とダウンロード先の切り替えに対応し、完全なキャッシュがあればローカルから優先的に読み込み、オフラインでも使えます。ほかの 8 つの認識モデルは必要に応じてダウンロードするか、互換性のあるローカルモデルをインポートしてください。更新は保存済みのモデル選択を上書きしません。
 4. 翻訳が必要な場合は、「识别与翻译」（認識と翻訳）で互換性のある **M2M100** モデルをダウンロードまたはインポートし、「实时翻译」（リアルタイム翻訳）をオンにしてください。原文だけを表示する場合はオフのままで使えます。
-5. 「字幕外观」（字幕の外観）で字幕スタイルを、「窗口与待机」（ウィンドウと待機）で位置・クリック透過・待機方法を調整できます。画面下部の言語メニューは简体中文、繁體中文、English、日本語、한국어 に対応し、認識言語は別に設定します。中日韓の字幕字形は「字幕外观 → 文字」（字幕の外観 → テキスト）で設定でき、画面の言語を切り替えても変わりません。
+5. 「字幕外观」（字幕の外観）で字幕スタイルを、「窗口与待机」（ウィンドウと待機）で位置・クリック透過・待機方法を調整できます。画面下部の言語メニューは简体中文、繁體中文、English、日本語、한국어 に対応し、認識言語は別に設定します。中日韓の字幕字形は「字幕外观 → 识别原文 · 文字」（字幕の外観 → 認識原文 · 文字）で設定でき、画面の言語を切り替えても変わりません。
 
-ソフトウェアのバージョンは **0.1.8**、リリースタグは **`v0.1.8`** で、引き続きプレリリース版として提供しています。**本バージョンはアプリ内で公開プレビュー版の更新に対応します。0.1.5 以前の版は従来の latest API だけを参照するため、一度 0.1.6 以降を手動でインストールしてください。その後はアプリ内で確認と更新を行えます。** 以前の言語別インストーラーを使っている方も、上記の共通インストーラーで手動更新できます。繁体字中国語・日本語・韓国語のインストールウィザードでは、確認済みの英語のコンポーネント規約を原文のまま掲載しています。
+ソフトウェアのバージョンは **0.1.9**、リリースタグは **`v0.1.9`** で、引き続きプレリリース版として提供しています。**本バージョンはアプリ内で公開プレビュー版の更新に対応します。0.1.5 以前の版は従来の latest API だけを参照するため、一度 0.1.6 以降を手動でインストールしてください。その後はアプリ内で確認と更新を行えます。** 以前の言語別インストーラーを使っている方も、上記の共通インストーラーで手動更新できます。繁体字中国語・日本語・韓国語のインストールウィザードでは、確認済みの英語のコンポーネント規約を原文のまま掲載しています。
 
 ユーザー単位でインストールされ、既存の設定が優先されます。インストーラー版・ポータブル版ともに、設定・ダウンロードしたモデル・字幕記録を `%LOCALAPPDATA%/OCCATLiveCaption` に保存します。アンインストールしてもユーザーデータは残ります。ポータブル版も、展開先のフォルダーに設定を保存する方式ではありません。
 
@@ -62,16 +62,16 @@
 
 ## macOS プレビュー版のダウンロード
 
-**Apple シリコンと Intel 向けの Mac 0.1.8 ネイティブプレビューを公開しました。** 両アーキテクチャでクラウド macOS ビルド、凍結 GUI、CPU 音声認識を検証し、成果物をローカルで独立確認しました。実機のマイクとシステム音声収録は引き続き確認が必要です。
+**Apple シリコンと Intel 向けの Mac 0.1.9 ネイティブプレビューを公開しました。** 両アーキテクチャでクラウド macOS ビルド、凍結 GUI、CPU 音声認識を検証し、成果物をローカルで独立確認しました。実機のマイクとシステム音声収録は引き続き確認が必要です。
 
 **macOS 14 以降が必要です。** プロセッサーに合った DMG を 1 つ選んでください。
 
 | Mac の種類 | ダウンロード |
 | --- | --- |
-| Apple シリコン（M1 以降） | [OCCATLiveCaption-0.1.8-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.8-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-x86_64.dmg) |
+| Apple シリコン（M1 以降） | [OCCATLiveCaption-0.1.9-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCATLiveCaption-0.1.9-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.9-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCATLiveCaption-0.1.9-macOS-x86_64.dmg) |
 
-DMG を開き、アプリを「アプリケーション」へドラッグします。このプレビューは **ad-hoc 署名で、Apple の公証は受けていません**。初回の起動を試した後、「システム設定 → プライバシーとセキュリティ」で、このアプリに対して「このまま開く」が必要な場合があります。同じ Release の [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS-macOS.txt) で Mac 添付ファイルを確認してください。Mac 版の更新操作は Releases のダウンロードページを開きます。新しい DMG をダウンロードしてアプリを置き換えます。設定、モデル、字幕記録の保存先は `~/Library/Application Support/OCCATLiveCaption` です。
+DMG を開き、アプリを「アプリケーション」へドラッグします。このプレビューは **ad-hoc 署名で、Apple の公証は受けていません**。初回の起動を試した後、「システム設定 → プライバシーとセキュリティ」で、このアプリに対して「このまま開く」が必要な場合があります。同じ Release の [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/SHA256SUMS-macOS.txt) で Mac 添付ファイルを確認してください。Mac 版の更新操作は Releases のダウンロードページを開きます。新しい DMG をダウンロードしてアプリを置き換えます。設定、モデル、字幕記録の保存先は `~/Library/Application Support/OCCATLiveCaption` です。
 
 Mac 版は **CPU 推論**を使用します。新規利用時の既定モデルは引き続き **large-v3-turbo（約 1.6 GB）**で、初回にダウンロードします。モデルの同梱や Base への自動変更はなく、他のモデルは必要に応じてダウンロードします。大きなモデルの処理速度はハードウェアに依存し、リアルタイム性能は保証しません。
 
@@ -89,7 +89,7 @@ Mac プレビューには源ノ角ゴシック、源ノ明朝、および日本�
 
 ## 検証範囲と利用について
 
-Windows 0.1.8 は、更新の単体チェック 62 件、更新処理・画面の連携チェック 2 件、凍結アプリのオフライン検証、5 言語の分離インストール・起動・アンインストール、空白を含むカスタムディレクトリでの実際の 0.1.7 → 0.1.8 上書き更新に合格しました。設定・モデルの検証用データは変わらず、ファイルバージョンは **0.1.8.0** です。中日韓の地域字形、原文保持、翻訳ライフサイクルも確認しました。ライフサイクル検証は合成訳文の配信を使い、今回の実 M2M100 推論ではありません。0.1.7 の 414 件と実 M2M100 テストは過去の結果で、新規結果には数えません。クリーン Windows、現場音声、全機器の受入検証ではありません。
+Windows 0.1.9 は、原文と翻訳の個別スタイル、設定移行、画面言語、字幕描画の回帰チェック、凍結アプリ検証、5言語の分離インストール・起動・アンインストール、空白を含むカスタムディレクトリでの実際の 0.1.8 → 0.1.9 上書き更新に合格しました。設定とモデルの検証用データは保持され、ファイルバージョンは **0.1.9.0** です。翻訳ライフサイクル検証は合成訳文を使い、新たな実 M2M100 推論ではありません。クリーン Windows、現場音声、全機器の受入検証を意味しません。
 
 **ランタイムが入っていないクリーンな Windows 環境での実機検証はまだ行っておらず、引き続きプレリリース版です。** これらの確認によって、あらゆる GPU、複数ディスプレイ、音声デバイス、システムの組み合わせでの動作を保証するとは考えていません。
 

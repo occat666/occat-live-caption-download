@@ -20,13 +20,13 @@
 - 다섯 개의 Feather 벡터 탐색 아이콘, 이름 툴팁, 하나의 움직이는 선택 표시를 제공합니다. Tab 키 탐색, Ctrl+1～5 페이지 전환, 화면 애니메이션 끄기를 지원합니다.
 - 일시 정지, 미리 보기, 자막 숨기기, 마우스 클릭 통과, 대기 모드, 트레이 메뉴, 미리 보기 버전을 포함한 앱 내 공개 버전 업데이트 확인 기능이 있습니다. 설정 페이지는 마우스 휠과 터치패드 스크롤을 지원합니다.
 
-이번 변경 및 수정 사항은 [0.1.8 릴리스 노트](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)에서 확인할 수 있습니다.
+이번 변경 및 수정 사항은 [0.1.9 릴리스 노트](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9)에서 확인할 수 있습니다.
 
-## 0.1.8 업데이트
+## 0.1.9 업데이트
 
-- 기존 Windows 설치판 업데이트 흐름을 검증했습니다. 최신 버전이면 안내를 표시하고, 새 버전이 있으면 설치 파일을 다운로드·검증한 뒤 설정을 저장하고 원래 설치 경로에 업데이트합니다. 설정과 모델은 유지됩니다.
-- 소스 실행은 설치판 다운로드를 안내하며, Mac은 새 DMG를 다운로드해 앱을 직접 교체합니다.
-- Windows와 Mac 다운로드 모두 0.1.8입니다. 중일한 자막 글리프, 실시간 번역 및 첫 사용 시 large-v3-turbo 다운로드를 유지합니다.
+- 인식 원문과 번역 자막의 글꼴, 크기, 굵기, 색상, 불투명도, 외곽선과 그림자를 각각 조정할 수 있습니다.
+- 자막 모양에서 원문과 번역을 따로 설정하세요. 번역을 꺼도 번역 스타일을 미리 볼 수 있습니다. 위치, 배경, 줄 간격과 최대 줄 수는 공통입니다.
+- 기존 설정은 번역 스타일의 초기값으로 한 번 복사되며, 이후에는 따로 저장됩니다. 5개 인터페이스 언어, 실시간 번역, 중일한 글리프와 첫 사용 시 large-v3-turbo 다운로드도 유지됩니다.
 
 ## 0.1.6 변경 사항 (이전 릴리스)
 
@@ -37,24 +37,24 @@
 
 ## 다운로드 및 설치
 
-**[0.1.8 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.7](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.7)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
+**[0.1.9 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.8](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
 
 설치형과 무설치형 중 **하나만 선택하면 됩니다**. 저장소 전체나 모든 ZIP 파일을 다운로드할 필요는 없습니다.
 
 | 파일 | 용도 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
-| [OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCAT-Live-Caption-0.1.8-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS.txt) | 기존 Windows 공개 첨부 파일용 체크섬(선택 사항) |
-| `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.8-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
+| [OCCAT-Live-Caption-0.1.9-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCAT-Live-Caption-0.1.9-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
+| [OCCAT-Live-Caption-0.1.9-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCAT-Live-Caption-0.1.9-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/SHA256SUMS.txt) | 이번 버전의 Windows 첨부 파일용 체크섬(선택 사항) |
+| `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.9-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
 
 1. **Windows 10/11 x64**와 **14.44.35211 이상**의 Microsoft Visual C++ x64 런타임이 필요합니다. 런타임이 없거나 너무 오래된 경우, 설치 프로그램은 사용자 확인을 받은 뒤 Microsoft 공식 경로에서 다운로드하고 서명을 검증한 다음 런타임 설치 화면을 엽니다. 안내에 따라 Microsoft 라이선스와 관리자 권한 요청을 확인하면, 런타임 설치 후 자막 프로그램 설치가 자동으로 계속됩니다. 인터넷 연결이 필요하며 Windows를 자동으로 다시 시작하지 않습니다. Microsoft 설치 프로그램에서 다시 시작을 요구하면 작업을 저장하고 직접 다시 시작한 후 자막 설치 프로그램을 다시 실행하세요. 무설치형도 이 런타임을 먼저 갖추어야 합니다.
 2. 설치형은 EXE를 두 번 클릭한 뒤 중국어 간체, 중국어 번체, 영어, 일본어, 한국어 중 하나를 선택하고 안내에 따라 설치하세요. 무설치형은 압축을 완전히 푼 후 실행해야 하며, EXE 파일만 따로 꺼내 실행하면 안 됩니다. 설치 프로그램에는 상용 코드 서명이 없으므로 다운로드 출처와 SHA-256을 확인하세요.
 3. “猫猫本地实时字幕”를 실행하고 실제 소리를 재생하는 시스템 장치나 마이크를 선택하세요. 새 사용자의 기본 모델은 **Whisper large-v3-turbo**이며, 처음 사용할 때 인터넷에 연결하여 약 **1.6 GB**를 다운로드하고 파일을 검증해야 합니다. 이어받기와 다운로드 경로 전환을 지원합니다. 완성된 캐시는 로컬에서 우선 불러오며 오프라인으로 사용할 수 있습니다. 나머지 8개 인식 모델은 필요할 때 다운로드하거나 호환되는 로컬 모델을 가져오세요. 업데이트는 저장된 모델 선택을 덮어쓰지 않습니다.
 4. 번역이 필요하면 “识别与翻译”(인식 및 번역)에서 호환되는 **M2M100** 모델을 다운로드하거나 가져온 다음 “实时翻译”(실시간 번역)를 켜세요. 원문만 보려면 꺼 둡니다.
-5. “字幕外观”(자막 모양)에서 자막 스타일을, “窗口与待机”(창 및 대기)에서 위치, 마우스 클릭 통과, 대기 방식을 조절하세요. 하단 언어 메뉴는 简体中文, 繁體中文, English, 日本語, 한국어를 지원하며, 인식 언어는 별도로 설정합니다. 중국어·일본어·한국어 자막 글리프는 “字幕外观 → 文字”(자막 모양 → 텍스트)에서 설정하며 화면 언어를 바꾸어도 함께 바뀌지 않습니다.
+5. “字幕外观”(자막 모양)에서 자막 스타일을, “窗口与待机”(창 및 대기)에서 위치, 마우스 클릭 통과, 대기 방식을 조절하세요. 하단 언어 메뉴는 简体中文, 繁體中文, English, 日本語, 한국어를 지원하며, 인식 언어는 별도로 설정합니다. 중국어·일본어·한국어 자막 글리프는 “字幕外观 → 识别原文 · 文字”(자막 모양 → 인식 원문 · 텍스트)에서 설정하며 화면 언어를 바꾸어도 함께 바뀌지 않습니다.
 
-이번 소프트웨어 버전은 **0.1.8**, 릴리스 태그는 **`v0.1.8`**이며, 여전히 사전 공개 버전으로 제공합니다. **이번 버전은 앱에서 공개 미리 보기 업데이트를 지원합니다. 0.1.5 이하 버전은 기존 latest API만 조회하므로 0.1.6 이상을 한 번 수동으로 설치해야 합니다. 이후에는 앱에서 확인하고 업데이트할 수 있습니다.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
+이번 소프트웨어 버전은 **0.1.9**, 릴리스 태그는 **`v0.1.9`**이며, 여전히 사전 공개 버전으로 제공합니다. **이번 버전은 앱에서 공개 미리 보기 업데이트를 지원합니다. 0.1.5 이하 버전은 기존 latest API만 조회하므로 0.1.6 이상을 한 번 수동으로 설치해야 합니다. 이후에는 앱에서 확인하고 업데이트할 수 있습니다.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
 
 사용자별로 설치하며 기존 설정을 우선 유지합니다. 설치형과 무설치형 모두 설정, 다운로드한 모델, 자막 기록을 `%LOCALAPPDATA%/OCCATLiveCaption`에 저장하며, 제거 후에도 사용자 데이터는 남습니다. 무설치형도 압축을 푼 폴더에 설정을 저장하지 않습니다.
 
@@ -62,16 +62,16 @@
 
 ## macOS 미리 보기 다운로드
 
-**Apple Silicon과 Intel용 Mac 0.1.8 네이티브 미리 보기를 제공합니다.** 두 아키텍처 모두 클라우드 macOS 빌드, 동결 GUI 및 CPU 음성 인식 검사를 통과했으며 결과물을 로컬에서 독립 검증했습니다. 실제 Mac의 마이크와 시스템 오디오 캡처는 추가 확인이 필요합니다.
+**Apple Silicon과 Intel용 Mac 0.1.9 네이티브 미리 보기를 제공합니다.** 두 아키텍처 모두 클라우드 macOS 빌드, 동결 GUI 및 CPU 음성 인식 검사를 통과했으며 결과물을 로컬에서 독립 검증했습니다. 실제 Mac의 마이크와 시스템 오디오 캡처는 추가 확인이 필요합니다.
 
 **macOS 14 이상이 필요합니다.** 프로세서에 맞는 DMG 하나를 선택하세요.
 
 | Mac 종류 | 다운로드 |
 | --- | --- |
-| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.8-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.8-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/OCCATLiveCaption-0.1.8-macOS-x86_64.dmg) |
+| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.9-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCATLiveCaption-0.1.9-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.9-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCATLiveCaption-0.1.9-macOS-x86_64.dmg) |
 
-DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.8/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
+DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
 
 Mac 버전은 **CPU 추론**을 사용합니다. 새 사용자는 여전히 처음 사용할 때 기본 모델인 **large-v3-turbo(약 1.6 GB)**를 다운로드합니다. 모델을 포함하거나 Base로 자동 변경하지 않으며 다른 모델은 필요할 때 다운로드합니다. 대형 모델의 CPU 처리 속도는 하드웨어에 따라 달라 실시간 성능을 보장하지 않습니다.
 
@@ -89,7 +89,7 @@ Mac 미리 보기에는 Source Han Sans, Source Han Serif 및 일본어·한국�
 
 ## 검증 범위 및 사용 안내
 
-Windows 0.1.8은 업데이트 단위 검사 62개, 업데이트 작업·UI 연동 검사 2개, 동결 앱 오프라인 검사, 5개 언어별 격리 설치·시작·제거, 공백을 포함한 사용자 지정 경로에서 실제 0.1.7 → 0.1.8 덮어쓰기를 통과했습니다. 설정·모델 검증 데이터는 유지되었으며 파일 버전은 **0.1.8.0**입니다. 중일한 지역 글리프, 원문 보존 및 번역 수명 주기도 확인했습니다. 수명 주기 검사는 합성 번역 전달을 사용하며 이번 실제 M2M100 추론이 아닙니다. 0.1.7의 414개 검사와 실제 M2M100 테스트는 과거 기록이며 새 결과에 포함하지 않습니다. 깨끗한 Windows, 현장 오디오 또는 모든 하드웨어 인수 검증을 의미하지 않습니다.
+Windows 0.1.9은 원문과 번역의 개별 스타일, 설정 이전, 인터페이스 언어와 자막 렌더링 회귀 검사, 동결 앱 검사, 5개 언어별 격리 설치·시작·제거, 공백을 포함한 사용자 지정 경로의 실제 0.1.8 → 0.1.9 덮어쓰기를 통과했습니다. 설정과 모델 검증 데이터가 보존되었으며 파일 버전은 **0.1.9.0**입니다. 번역 수명 주기 검사는 합성 번역을 사용하며 새로운 실제 M2M100 추론이 아닙니다. 깨끗한 Windows, 현장 오디오 또는 모든 하드웨어의 인수 검증을 의미하지 않습니다.
 
 **런타임이 없는 깨끗한 Windows 환경에서는 아직 실제로 테스트하지 않았으며, 여전히 사전 공개 버전입니다.** 이러한 확인을 모든 GPU, 다중 모니터, 오디오 장치, 시스템 조합에 대한 보장으로 여기지는 않습니다.
 
