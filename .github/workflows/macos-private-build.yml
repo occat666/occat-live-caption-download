@@ -70,6 +70,8 @@ jobs:
           done
       - name: Rebuild LGPL PyAV and ASR-only sherpa
         if: inputs.stage == 'build'
+        env:
+          OCCAT_NATIVE_CACHE_TOKEN: ${{ github.token }}
         run: python .github/macos/private_build.py native
       - name: Build and smoke test application and DMG
         if: inputs.stage == 'build'

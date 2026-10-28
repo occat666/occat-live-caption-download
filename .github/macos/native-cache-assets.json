@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "repository": "occat666/occat-live-caption-download",
+  "architectures": {
+    "arm64": {
+      "asset_id": 684109419,
+      "file": "OCCAT-Reviewed-Native-40500985056-arm64.zip",
+      "bytes": 70147754,
+      "sha256": "bc70c15e2b94acfa69e4bb0ee149c7441098e8283554dfe9c9a5f785487ca8d6",
+      "source_run_id": 40500985056,
+      "source_commit": "920359fa9ed2d6908703cf4ea9435f74a9ab1186"
+    },
+    "x86_64": {
+      "asset_id": 684110914,
+      "file": "OCCAT-Reviewed-Native-40500985056-x86_64.zip",
+      "bytes": 73832967,
+      "sha256": "2eb591f18fee912b03513da0863c2f418e80ec5471e680a59cb9f64732670b9d",
+      "source_run_id": 40500985056,
+      "source_commit": "920359fa9ed2d6908703cf4ea9435f74a9ab1186"
+    }
+  }
+}

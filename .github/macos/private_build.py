@@ -72,6 +72,22 @@ def builder(stage):
     run([sys.executable,'tools/build_macos_release.py','--stage',stage,'--arch',ARCH,'--jobs','3'],
         'builder-' + stage)
 
+def native():
+    # Only the current public repository's short-lived job token is supplied.
+    token = os.environ.pop('OCCAT_NATIVE_CACHE_TOKEN', '')
+    if not token:
+        raise RuntimeError('Missing repository native-cache asset token')
+    environment = dict(os.environ, OCCAT_NATIVE_CACHE_TOKEN=token)
+    del token
+    try:
+        run([sys.executable, CONTROL / 'restore_native_cache.py', SOURCE, ARCH,
+             CONTROL / 'native-cache-assets.json'], 'restore-and-reverify-native-cache',
+            cwd=ROOT, env=environment, timeout=600)
+    finally:
+        environment.clear()
+    # Retain the existing stage and mandatory fresh application checks.
+    builder('native')
+
 def inference():
     executable = SOURCE / '_dev/macos' / ARCH / 'dist/OCCATLiveCaption.app/Contents/MacOS/OCCATLiveCaption'
     report = SOURCE / '_deliver/macos' / ARCH / 'reports/frozen-model-smoke.json'
@@ -115,7 +131,7 @@ def package():
 def main():
     step = sys.argv[1]
     choices = {'checkout':checkout,'tests':tests,'probe':lambda:builder('probe'),
-        'native':lambda:builder('native'),'bundle':lambda:builder('bundle'),
+        'native':native,'bundle':lambda:builder('bundle'),
         'inference':inference,'package':package}
     try:
         choices[step]()
