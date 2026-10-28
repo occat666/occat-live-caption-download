@@ -8,6 +8,12 @@
 
 I'm **OCCAT**, and this is my local live caption tool for Windows, with a native macOS preview. It turns audio playing on your computer, or speech from your microphone, into floating captions. You can also translate English, Japanese or Korean into Chinese when you need it. You can use it while watching videos, taking courses, playing games, watching streams or joining personal meetings.
 
+## What's new in 0.1.12
+
+- Reduce waiting in live caption processing and presentation while retaining readable chunks, independent original/translation tracks and complete received-text logs.
+- Performance still depends on the model and hardware; zero latency, word-level timing alignment and recovery of audio skipped by backpressure are not promised.
+
+
 ## What you can do
 
 - System-audio and microphone input, with model-dependent Chinese, English, Japanese, Korean and automatic recognition, displayed as floating captions.
@@ -20,7 +26,7 @@ I'm **OCCAT**, and this is my local live caption tool for Windows, with a native
 - Five Feather vector icon entries with floating names and one moving indicator, Tab navigation, Ctrl+1–5 page shortcuts and optional interface motion.
 - Pause, preview, hide, click-through, standby, tray access, in-app public-release update checks including previews, mouse-wheel scrolling and direct touchpad input.
 
-Changes and fixes belong in the [0.1.11 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.11).
+Changes and fixes belong in the [0.1.12 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.12).
 
 ## What's new in 0.1.11
 
@@ -55,15 +61,15 @@ Changes and fixes belong in the [0.1.11 release notes](https://github.com/occat6
 
 ## Download and install
 
-**[Open the 0.1.11 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.11)**. This is a **prerelease**. [The previous 0.1.10](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.10) remains available for rollback; other earlier releases are also retained.
+**[Open the 0.1.12 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.12)**. This is a **prerelease**. [The previous 0.1.11](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.11) remains available for rollback; other earlier releases are also retained.
 
 Choose **either the installer or the portable archive**. You do not need the entire repository or every ZIP:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.11-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCAT-Live-Caption-0.1.11-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.11-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCAT-Live-Caption-0.1.11-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/SHA256SUMS.txt) | Optional checksums for this version’s Windows assets |
+| [OCCAT-Live-Caption-0.1.12-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/OCCAT-Live-Caption-0.1.12-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.12-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/OCCAT-Live-Caption-0.1.12-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/SHA256SUMS.txt) | Optional checksums for this version’s Windows assets |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
 1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
@@ -72,7 +78,7 @@ Choose **either the installer or the portable archive**. You do not need the ent
 4. For translation, download or import a compatible **M2M100** model from Recognition and translation, then enable real-time translation. Leave it off for original captions only.
 5. Adjust caption styling in Caption appearance and positioning, click-through and standby options in Window and standby. The footer language menu supports 简体中文, 繁體中文, English, 日本語 and 한국어; recognition language is a separate setting. Choose Chinese/Japanese/Korean caption glyphs under Caption appearance → Recognized original · Text; changing interface language does not change them.
 
-The software version is **0.1.11**, with release tag **`v0.1.11`**. It remains a prerelease. **This version supports public preview updates in the app. Version 0.1.5 and earlier still query only the old latest endpoint and need one manual installation of 0.1.6 or later; later checks and updates can then run in the app.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
+The software version is **0.1.12**, with release tag **`v0.1.12`**. It remains a prerelease. **This version supports public preview updates in the app. Version 0.1.5 and earlier still query only the old latest endpoint and need one manual installation of 0.1.6 or later; later checks and updates can then run in the app.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
 
 Installation is per user and preserves existing preferences. Both versions store settings, downloaded models and caption records under `%LOCALAPPDATA%/OCCATLiveCaption`; uninstall retains that data. The portable version does not store preferences alongside the extracted EXE.
 
@@ -80,16 +86,16 @@ Installation is per user and preserves existing preferences. Both versions store
 
 ## macOS preview downloads
 
-**Mac 0.1.11 native previews are available for Apple Silicon and Intel.** Both architectures passed cloud macOS builds, frozen GUI and CPU recognition tests, followed by independent local artifact verification. Physical microphone and playback capture still require user testing on a Mac.
+**Mac 0.1.12 native previews are available for Apple Silicon and Intel.** Both architectures passed cloud macOS builds, frozen GUI and CPU recognition tests, followed by independent local artifact verification. Physical microphone and playback capture still require user testing on a Mac.
 
 **Requires macOS 14 or newer.** Choose one DMG for your processor:
 
 | Mac processor | Download |
 | --- | --- |
-| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.11-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCATLiveCaption-0.1.11-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.11-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCATLiveCaption-0.1.11-macOS-x86_64.dmg) |
+| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.12-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/OCCATLiveCaption-0.1.12-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.12-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/OCCATLiveCaption-0.1.12-macOS-x86_64.dmg) |
 
-Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
+Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
 
 The Mac preview uses **CPU inference**. New users still download **large-v3-turbo (about 1.6 GB)** on first use; no model is bundled and the app does not automatically switch to Base. Other models remain optional downloads. CPU speed for large models depends on hardware; real-time performance is not guaranteed.
 
@@ -107,7 +113,7 @@ This user-provided screenshot previews a custom theme. Select Custom in Page app
 
 ## Validation and use
 
-Windows 0.1.11 passed independent original/translation style, configuration migration, interface language and caption rendering regression checks, frozen-app checks, isolated install/start/uninstall in all five installer languages, and a real 0.1.10 → 0.1.11 upgrade in a custom directory containing spaces. Settings and model verification fixtures were preserved; file version is **0.1.11.0**. Translation lifecycle checks use synthetic delivery, not new native M2M100 inference. These checks do not constitute clean-Windows, live-audio or all-hardware acceptance.
+Windows 0.1.12 passed independent original/translation style, configuration migration, interface language and caption rendering regression checks, frozen-app checks, isolated install/start/uninstall in all five installer languages, and a real 0.1.11 → 0.1.12 upgrade in a custom directory containing spaces. Settings and model verification fixtures were preserved; file version is **0.1.12.0**. Translation lifecycle checks use synthetic delivery, not new native M2M100 inference. These checks do not constitute clean-Windows, live-audio or all-hardware acceptance.
 
 **It has not been tested on a clean Windows system without the runtime and remains a prerelease.** I do not treat these checks as certification for every GPU, monitor, audio device or Windows configuration.
 

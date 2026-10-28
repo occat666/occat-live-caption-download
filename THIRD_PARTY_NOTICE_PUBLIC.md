@@ -34,6 +34,6 @@ Original installed-wheel licenses, pinned Adobe SC/Serif/JP/KR font licenses, an
 
 Matching same-version Mac corresponding-source assets:
 
-- [CorrespondingSources-Qt-6.9.3-macOS.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/CorrespondingSources-Qt-6.9.3-macOS.zip)
-- [CorrespondingSources-macOS-arm64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/CorrespondingSources-macOS-arm64.zip)
-- [CorrespondingSources-macOS-x86_64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/CorrespondingSources-macOS-x86_64.zip)
+- [CorrespondingSources-Qt-6.9.3-macOS.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/CorrespondingSources-Qt-6.9.3-macOS.zip)
+- [CorrespondingSources-macOS-arm64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/CorrespondingSources-macOS-arm64.zip)
+- [CorrespondingSources-macOS-x86_64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.12/CorrespondingSources-macOS-x86_64.zip)
