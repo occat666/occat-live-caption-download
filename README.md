@@ -20,9 +20,16 @@
 - 五个 Feather 矢量图标入口、悬浮名称提示和单一滑动游标；支持 Tab 键盘导航、Ctrl+1～5 切页及关闭页面动效。
 - 暂停、预览、隐藏字幕、窗口穿透、待机、托盘入口和软件内公开版本更新检查（含预览版）；设置页支持鼠标滚轮和触控板滚动。
 
-这次改动与修正的具体内容放在 [0.1.10 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.10)。
+这次改动与修正的具体内容放在 [0.1.11 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.11)。
 
-## 0.1.10 更新
+## 0.1.11 更新
+
+- 长句按标点和可读长度拆成较短的信息，按阅读时间逐段显示。
+- 识别原文与译文分别推进，保留各自样式；这是两条文字轨道，不保证逐词或逐句时间对齐。
+- 新识别段到来后替换旧段，清空、暂停、预览和会话切换会清理旧轮播，避免旧句累积排队。隐藏字幕仍继续识别，恢复时显示当前进度。
+- 本地字幕记录仍保留收到的完整识别及翻译文本，屏幕短句不会改写识别结果。
+
+## 0.1.10 更新（历史）
 
 - 修复反相立体声混音后抵消、以及多声道仅中央声道人声被过度衰减的问题；降低持续低电平人声的触发门槛，并保留短脉冲与底噪保护。
 - 声音来源列表分别处理输入与输出枚举失败；旧设备失效后按名称和来源类型恢复，遇到歧义时提示重新选择，避免误录同名麦克风。
@@ -48,16 +55,16 @@
 
 ## 下载与安装
 
-**[打开 0.1.10 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.10)**。这是 **prerelease 预发布版本**；[上一版 0.1.9](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9) 保留供回退，其他旧版也保留在 Releases。
+**[打开 0.1.11 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.11)**。这是 **prerelease 预发布版本**；[上一版 0.1.10](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.10) 保留供回退，其他旧版也保留在 Releases。
 
 安装版和免安装版**选一个即可**，不用下载整个仓库或所有 ZIP：
 
 | 文件 | 选择方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.10-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCAT-Live-Caption-0.1.10-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.10-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCAT-Live-Caption-0.1.10-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/SHA256SUMS.txt) | 可选，用于核对本版 Windows 附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.10-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
+| [OCCAT-Live-Caption-0.1.11-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCAT-Live-Caption-0.1.11-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.11-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCAT-Live-Caption-0.1.11-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/SHA256SUMS.txt) | 可选，用于核对本版 Windows 附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.11-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
 
 1. 使用 **Windows 10/11 x64**，并具备 Microsoft Visual C++ x64 运行库 **14.44.35211 或更新版**。安装器发现运行库缺失或过旧时，会在确认后从微软官方下载、校验签名并打开安装界面。请按提示确认微软许可及管理员授权，完成后自动继续字幕安装；需要联网，不会自动重启。微软提示必须重启时，请保存工作、自行重启，再运行字幕安装器。免安装版同样需要先具备运行库。
 2. 安装版双击 EXE，选择简体中文、繁體中文、英文、日文或韩文并按向导完成；免安装版请完整解压后启动，不要单独取出 EXE。安装包没有商业代码签名，请核对下载来源与 SHA-256。
@@ -65,7 +72,7 @@
 4. 需要翻译时，在“识别与翻译”下载或导入兼容的 **M2M100** 模型，再开启“实时翻译”；只看原文时保持关闭。
 5. 在“字幕外观”调整字幕样式，在“窗口与待机”调整位置、穿透和待机方式。底部语言菜单支持简体中文、繁體中文、English、日本語、한국어，识别语言单独设置。中日韩字幕字形在“字幕外观 → 识别原文 · 文字”设置，不随界面语言切换。
 
-本版的软件版本号为 **0.1.10**，发布标签为 **`v0.1.10`**，仍按预发布版本提供。**本版的软件内更新支持公开预览版。0.1.5 及更早版本仍只查询旧的 latest 接口，需先手动安装一次 0.1.6 或更新版；之后可在软件内检查并更新。** 旧分语言安装包用户可手动升级到上面的统一安装包；繁體中文、日文、韩文安装向导保留已审阅的英文组件条款原文。
+本版的软件版本号为 **0.1.11**，发布标签为 **`v0.1.11`**，仍按预发布版本提供。**本版的软件内更新支持公开预览版。0.1.5 及更早版本仍只查询旧的 latest 接口，需先手动安装一次 0.1.6 或更新版；之后可在软件内检查并更新。** 旧分语言安装包用户可手动升级到上面的统一安装包；繁體中文、日文、韩文安装向导保留已审阅的英文组件条款原文。
 
 按用户安装，已有设置优先。安装版和免安装版均把设置、下载模型和字幕记录保存到 `%LOCALAPPDATA%/OCCATLiveCaption`，卸载保留用户数据；免安装版不会把设置放在解压目录里。
 
@@ -73,16 +80,16 @@
 
 ## macOS 预览版下载
 
-**Mac 0.1.10 已提供 Apple 芯片与 Intel 原生预览包。** 两种架构均完成云端 macOS 构建、冻结界面与 CPU 识别测试，并在本机独立核验。实体 Mac 的麦克风与系统收音仍需用户实测。
+**Mac 0.1.11 已提供 Apple 芯片与 Intel 原生预览包。** 两种架构均完成云端 macOS 构建、冻结界面与 CPU 识别测试，并在本机独立核验。实体 Mac 的麦克风与系统收音仍需用户实测。
 
 **需要 macOS 14 或更新版本。** 按处理器选择一个 DMG：
 
 | Mac 类型 | 下载 |
 | --- | --- |
-| Apple 芯片（M1 及更新机型） | [OCCATLiveCaption-0.1.10-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCATLiveCaption-0.1.10-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.10-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCATLiveCaption-0.1.10-macOS-x86_64.dmg) |
+| Apple 芯片（M1 及更新机型） | [OCCATLiveCaption-0.1.11-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCATLiveCaption-0.1.11-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.11-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/OCCATLiveCaption-0.1.11-macOS-x86_64.dmg) |
 
-打开 DMG，将应用拖到“应用程序”。此预览包采用 **ad-hoc 签名，未经 Apple 公证**；首次尝试打开后，macOS 可能要求在“系统设置 → 隐私与安全性”对该应用选择“仍要打开”。请使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/SHA256SUMS-macOS.txt) 核对 Mac 附件。后续更新在 Mac 版中打开 Releases 下载页，下载新 DMG 并替换应用；设置、模型和字幕记录保存在 `~/Library/Application Support/OCCATLiveCaption`。
+打开 DMG，将应用拖到“应用程序”。此预览包采用 **ad-hoc 签名，未经 Apple 公证**；首次尝试打开后，macOS 可能要求在“系统设置 → 隐私与安全性”对该应用选择“仍要打开”。请使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.11/SHA256SUMS-macOS.txt) 核对 Mac 附件。后续更新在 Mac 版中打开 Releases 下载页，下载新 DMG 并替换应用；设置、模型和字幕记录保存在 `~/Library/Application Support/OCCATLiveCaption`。
 
 Mac 版使用 **CPU 推理**，新用户仍默认首次下载 **large-v3-turbo（约 1.6 GB）**，不内置模型，也不会自动改选 Base；其他模型按需下载。大模型在 CPU 上的速度取决于硬件，预览包不保证实时性能。
 
@@ -100,7 +107,7 @@ Mac 预览包内置思源黑体、思源宋体及日语／韩语地区思源字�
 
 ## 验证范围与使用说明
 
-Windows 0.1.10 已通过原文与译文独立样式、配置迁移、界面语言及字幕渲染回归检查，冻结程序检查、五种安装语言的隔离安装／启动／卸载，以及真实 0.1.9 → 0.1.10 含空格自定义目录覆盖升级。升级保留配置与模型校验样本，文件版本为 **0.1.10.0**。翻译生命周期检查使用合成译文交付，并非本轮真实 M2M100 推理。以上不等同于干净 Windows、现场音频或全部硬件实测。
+Windows 0.1.11 已通过原文与译文独立样式、配置迁移、界面语言及字幕渲染回归检查，冻结程序检查、五种安装语言的隔离安装／启动／卸载，以及真实 0.1.10 → 0.1.11 含空格自定义目录覆盖升级。升级保留配置与模型校验样本，文件版本为 **0.1.11.0**。翻译生命周期检查使用合成译文交付，并非本轮真实 M2M100 推理。以上不等同于干净 Windows、现场音频或全部硬件实测。
 
 **尚未在缺少运行库的干净 Windows 环境实测，仍属于预发布版本。** 我没有把这些检查当作所有 GPU、多屏、音频设备和系统组合的保证。
 
