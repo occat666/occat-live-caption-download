@@ -20,13 +20,24 @@
 - 五個 Feather 向量圖示入口、浮動名稱提示和單一滑動遊標；支援 Tab 鍵盤導覽、Ctrl+1～5 切頁及關閉頁面動效。
 - 暫停、預覽、隱藏字幕、視窗穿透、待機、系統匣入口和軟體內公開版本更新檢查（含預覽版）；設定頁支援滑鼠滾輪和觸控板滾動。
 
-這次改動與修正的具體內容放在 [0.1.9 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9)。
+這次改動與修正的具體內容放在 [0.1.10 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.10)。
 
-## 0.1.9 更新
+## 0.1.10 更新
+
+- 修正反相立體聲混音後抵銷，以及多聲道只有中央聲道人聲時被過度衰減的問題；降低持續低電平人聲的觸發門檻，同時保留短脈衝與底噪保護。
+- 聲音來源清單分別處理輸入與輸出列舉失敗；舊裝置失效後依名稱與來源類型恢復，遇到歧義時提示重新選擇，避免誤錄同名麥克風。
+- 忙碌時只保留最新待處理終句和臨時句，被取代的舊音訊會略過，以優先跟上目前播放；需要完整記錄時，請選用能跟上即時速度的模型。控制台區分裝置未傳回資料、收到聲音與正在辨識。
+- 結合辨識信心分數與無語音機率，過濾低可信度的重複、套話結果，減少靜音或背景聲下的幻覺字幕，並保留有充分辨識證據的正常話語。
+- 原文與譯文獨立樣式、中日韓字形、五種介面語言與首次下載 large-v3-turbo 繼續保留。速度與準確率仍取決於模型、內容和硬體，不保證零延遲或零幻覺。
+
+- 移除通用中英文辨識提示語，修正純音被模型複述成提示語字幕的已重現問題；實際模型樣本已驗證修正結果。
+
+## 0.1.9 更新（歷史）
 
 - 辨識原文與翻譯字幕的格式獨立設定：字型、字級、字重、顏色、不透明度、描邊和陰影均可分別調整。
 - 開啟「字幕外觀」，分別調整「辨識原文」和「翻譯字幕」；翻譯關閉時也能預覽譯文樣式。位置、背景、行距和最多行數共用。
 - 舊設定會自動複製為譯文的初始樣式，此後兩組設定獨立儲存。支援五種介面語言，保留即時翻譯、中日韓字形和首次下載 large-v3-turbo。
+
 
 ## 0.1.6 更新（歷史）
 
@@ -37,16 +48,16 @@
 
 ## 下載與安裝
 
-**[開啟 0.1.9 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9)**。這是 **prerelease 預發行版本**；[上一版 0.1.8](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.8) 保留，方便回復舊版，其他舊版也保留在 Releases。
+**[開啟 0.1.10 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.10)**。這是 **prerelease 預發行版本**；[上一版 0.1.9](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.9) 保留，方便回復舊版，其他舊版也保留在 Releases。
 
 安裝版和免安裝版**選一個即可**，不用下載整個倉庫或所有 ZIP：
 
 | 檔案 | 選擇方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.9-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCAT-Live-Caption-0.1.9-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.9-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCAT-Live-Caption-0.1.9-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/SHA256SUMS.txt) | 可選，用於核對本版 Windows 附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.9-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
+| [OCCAT-Live-Caption-0.1.10-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCAT-Live-Caption-0.1.10-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.10-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCAT-Live-Caption-0.1.10-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/SHA256SUMS.txt) | 可選，用於核對本版 Windows 附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.10-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
 
 1. 使用 **Windows 10/11 x64**，並具備 Microsoft Visual C++ x64 執行階段程式庫 **14.44.35211 或更新版**。安裝器發現執行階段程式庫缺失或過舊時，會在確認後從微軟官方下載、驗證數位簽章並開啟安裝介面。請按提示確認微軟授權及管理員授權，完成後自動繼續字幕安裝；需要連線至網路，不會自動重新啟動。微軟提示必須重新啟動時，請儲存工作、自行重新啟動，再執行字幕安裝器。免安裝版同樣需要先具備執行階段程式庫。
 2. 安裝版按兩下 EXE，選擇簡體中文、繁體中文、英文、日文或韓文並依精靈完成安裝；免安裝版請完整解壓縮後啟動，不要單獨取出 EXE。安裝套件沒有商業程式碼簽章，請核對下載來源與 SHA-256。
@@ -54,7 +65,7 @@
 4. 需要翻譯時，在「辨識與翻譯」下載或匯入相容的 **M2M100** 模型，再開啟「即時翻譯」；只看原文時保持關閉。
 5. 在「字幕外觀」調整字幕樣式，在「視窗與待機」調整位置、穿透和待機方式。底部語言選單支援简体中文、繁體中文、English、日本語、한국어，辨識語言單獨設定。中日韓字幕字形在「字幕外觀 → 辨識原文 · 文字」設定，不隨介面語言切換。
 
-本版的軟體版本號為 **0.1.9**，發行標籤為 **`v0.1.9`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6 或更新版；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
+本版的軟體版本號為 **0.1.10**，發行標籤為 **`v0.1.10`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6 或更新版；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
 
 按使用者安裝，已有設定優先。安裝版和免安裝版均把設定、下載模型和字幕記錄儲存到 `%LOCALAPPDATA%/OCCATLiveCaption`，解除安裝保留使用者資料；免安裝版不會把設定放在解壓縮目錄裡。
 
@@ -62,16 +73,16 @@
 
 ## macOS 預覽版下載
 
-**Mac 0.1.9 已提供 Apple 晶片與 Intel 原生預覽套件。** 兩種架構均完成雲端 macOS 建置、凍結介面與 CPU 辨識測試，並在本機獨立核驗。實體 Mac 的麥克風與系統收音仍需使用者實測。
+**Mac 0.1.10 已提供 Apple 晶片與 Intel 原生預覽套件。** 兩種架構均完成雲端 macOS 建置、凍結介面與 CPU 辨識測試，並在本機獨立核驗。實體 Mac 的麥克風與系統收音仍需使用者實測。
 
 **需要 macOS 14 或更新版本。** 依處理器選擇一個 DMG：
 
 | Mac 類型 | 下載 |
 | --- | --- |
-| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.9-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCATLiveCaption-0.1.9-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.9-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/OCCATLiveCaption-0.1.9-macOS-x86_64.dmg) |
+| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.10-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCATLiveCaption-0.1.10-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.10-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/OCCATLiveCaption-0.1.10-macOS-x86_64.dmg) |
 
-開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.9/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
+開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.10/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
 
 Mac 版使用 **CPU 推論**，新使用者仍預設在首次使用時下載 **large-v3-turbo（約 1.6 GB）**，不內建模型，也不會自動改選 Base；其他模型按需下載。大型模型的 CPU 速度取決於硬體，預覽套件不保證即時效能。
 
@@ -89,7 +100,7 @@ Mac 預覽套件內建思源黑體、思源宋體及日語／韓語地區思源�
 
 ## 驗證範圍與使用說明
 
-Windows 0.1.9 已通過原文與譯文獨立樣式、設定移轉、介面語言及字幕繪製回歸檢查，凍結程式檢查、五種安裝語言的隔離安裝／啟動／解除安裝，以及實際 0.1.8 → 0.1.9 含空格自訂目錄覆蓋升級。升級保留設定與模型校驗樣本，檔案版本為 **0.1.9.0**。翻譯生命週期檢查使用合成譯文交付，並非本輪實際 M2M100 推理。以上不等同於乾淨 Windows、現場音訊或全部硬體實測。
+Windows 0.1.10 已通過原文與譯文獨立樣式、設定移轉、介面語言及字幕繪製回歸檢查，凍結程式檢查、五種安裝語言的隔離安裝／啟動／解除安裝，以及實際 0.1.9 → 0.1.10 含空格自訂目錄覆蓋升級。升級保留設定與模型校驗樣本，檔案版本為 **0.1.10.0**。翻譯生命週期檢查使用合成譯文交付，並非本輪實際 M2M100 推理。以上不等同於乾淨 Windows、現場音訊或全部硬體實測。
 
 **尚未在缺少執行階段程式庫的乾淨 Windows 環境實測，仍屬於預發行版本。** 我沒有把這些檢查當作所有 GPU、多螢幕、音訊裝置和系統組合的保證。
 
