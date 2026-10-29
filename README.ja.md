@@ -8,6 +8,12 @@
 
 **OCCAT** です。Windows 向けのローカルリアルタイム字幕ツールを作りました。macOS 向けネイティブプレビューも提供しています。パソコンで再生している音声や、マイクで拾った話し声をフローティング字幕として表示できます。必要に応じて、英語・日本語・韓国語を中国語に翻訳することもできます。動画の視聴、講義、ゲーム、ライブ配信、個人での会議などで、内容を読み取る補助としてお使いください。
 
+## 0.1.14 更新
+
+- 字幕の縁取りや影を切り替え・調整したときに、背景のサイズと位置が変わる問題を修正しました。
+- 原文と翻訳の個別スタイル、約2文の文脈と応答の方針を保持します。最終動作と検証範囲はリリースノートを参照してください。
+
+
 ## 0.1.13 更新
 
 - フォントと画面幅に合わせて直近約2文を表示します。原文をすぐに更新し、古い字幕のページ送りをなくしました。
@@ -40,7 +46,7 @@
 - 5 つの Feather ベクターアイコン、ホバー時の名前表示、1 つのスライド式インジケーターを備えています。Tab キーでの移動、Ctrl+1～5 でのページ切り替え、画面アニメーションの無効化にも対応しています。
 - 字幕の一時停止・プレビュー・非表示、ウィンドウのクリック透過、待機、トレイからの操作、プレビュー版を含む公開版のアプリ内更新確認に対応。設定ページはマウスホイールとタッチパッドでスクロールできます。
 
-今回の変更・修正内容は [0.1.13 リリースノート](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.13)に掲載しています。
+今回の変更・修正内容は [0.1.14 リリースノート](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.14)に掲載しています。
 
 ## 0.1.10 の更新
 
@@ -68,16 +74,16 @@
 
 ## ダウンロードとインストール
 
-**[0.1.13 公開テスト版を開く](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.13)**。これは **prerelease（プレリリース版）**です。[前の 0.1.12](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.12) は以前の版に戻すために残しており、その他の旧版も Releases から入手できます。
+**[0.1.14 公開テスト版を開く](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.14)**。これは **prerelease（プレリリース版）**です。[前の 0.1.13](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.13) は以前の版に戻すために残しており、その他の旧版も Releases から入手できます。
 
 インストーラー版とポータブル版は、**どちらか一方を選んでください**。リポジトリ全体やすべての ZIP をダウンロードする必要はありません。
 
 | ファイル | 選び方 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.13-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.13/OCCAT-Live-Caption-0.1.13-windows-x64-setup.exe) | インストーラー版。简体中文 / 繁體中文 / English / 日本語 / 한국어 に共通のインストーラーです |
-| [OCCAT-Live-Caption-0.1.13-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.13/OCCAT-Live-Caption-0.1.13-windows-x64-portable.zip) | ポータブル版。すべて展開してから `OCCATLiveCaption.exe` を実行してください |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.13/SHA256SUMS.txt) | 本バージョンの Windows 添付ファイル用チェックサム（任意） |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.13-Third-Party-Notices.zip` | サードパーティーの対応ソースコードとライセンス資料です。通常の利用では個別にダウンロードする必要はありません |
+| [OCCAT-Live-Caption-0.1.14-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.14/OCCAT-Live-Caption-0.1.14-windows-x64-setup.exe) | インストーラー版。简体中文 / 繁體中文 / English / 日本語 / 한국어 に共通のインストーラーです |
+| [OCCAT-Live-Caption-0.1.14-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.14/OCCAT-Live-Caption-0.1.14-windows-x64-portable.zip) | ポータブル版。すべて展開してから `OCCATLiveCaption.exe` を実行してください |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.14/SHA256SUMS.txt) | 本バージョンの Windows 添付ファイル用チェックサム（任意） |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.14-Third-Party-Notices.zip` | サードパーティーの対応ソースコードとライセンス資料です。通常の利用では個別にダウンロードする必要はありません |
 
 1. **Windows 10/11 x64** と Microsoft Visual C++ x64 ランタイム **14.44.35211 以降**が必要です。ランタイムが未導入または古い場合、インストーラーは確認後に Microsoft の公式サイトからダウンロードし、署名を検証してランタイムのインストール画面を開きます。Microsoft のライセンスと管理者権限の確認に従ってください。完了後、字幕アプリのインストールが自動的に続行されます。このダウンロードにはインターネット接続が必要です。Windows が自動的に再起動されることはありません。Microsoft から再起動が必要と案内された場合は、作業を保存して自分で再起動し、字幕アプリのインストーラーを再実行してください。ポータブル版でもランタイムの事前導入が必要です。
 2. インストーラー版は EXE をダブルクリックし、簡体字中国語・繁体字中国語・英語・日本語・韓国語を選んでウィザードに従ってください。ポータブル版はすべて展開してから起動し、EXE だけを取り出さないでください。インストーラーには商用のコード署名証明書を使用していません。ダウンロード元と SHA-256 を確認してください。
@@ -85,7 +91,7 @@
 4. 翻訳が必要な場合は、「识别与翻译」（認識と翻訳）で互換性のある **M2M100** モデルをダウンロードまたはインポートし、「实时翻译」（リアルタイム翻訳）をオンにしてください。原文だけを表示する場合はオフのままで使えます。
 5. 「字幕外观」（字幕の外観）で字幕スタイルを、「窗口与待机」（ウィンドウと待機）で位置・クリック透過・待機方法を調整できます。画面下部の言語メニューは简体中文、繁體中文、English、日本語、한국어 に対応し、認識言語は別に設定します。中日韓の字幕字形は「字幕外观 → 识别原文 · 文字」（字幕の外観 → 認識原文 · 文字）で設定でき、画面の言語を切り替えても変わりません。
 
-ソフトウェアのバージョンは **0.1.13**、リリースタグは **`v0.1.13`** で、引き続きプレリリース版として提供しています。**本バージョンはアプリ内で公開プレビュー版の更新に対応します。0.1.5 以前の版は従来の latest API だけを参照するため、一度 0.1.6 以降を手動でインストールしてください。その後はアプリ内で確認と更新を行えます。** 以前の言語別インストーラーを使っている方も、上記の共通インストーラーで手動更新できます。繁体字中国語・日本語・韓国語のインストールウィザードでは、確認済みの英語のコンポーネント規約を原文のまま掲載しています。
+ソフトウェアのバージョンは **0.1.14**、リリースタグは **`v0.1.14`** で、引き続きプレリリース版として提供しています。**本バージョンはアプリ内で公開プレビュー版の更新に対応します。0.1.5 以前の版は従来の latest API だけを参照するため、一度 0.1.6 以降を手動でインストールしてください。その後はアプリ内で確認と更新を行えます。** 以前の言語別インストーラーを使っている方も、上記の共通インストーラーで手動更新できます。繁体字中国語・日本語・韓国語のインストールウィザードでは、確認済みの英語のコンポーネント規約を原文のまま掲載しています。
 
 ユーザー単位でインストールされ、既存の設定が優先されます。インストーラー版・ポータブル版ともに、設定・ダウンロードしたモデル・字幕記録を `%LOCALAPPDATA%/OCCATLiveCaption` に保存します。アンインストールしてもユーザーデータは残ります。ポータブル版も、展開先のフォルダーに設定を保存する方式ではありません。
 
@@ -93,22 +99,22 @@
 
 ## macOS プレビュー版のダウンロード
 
-0.1.13候補は今回の新しいソースによる再ビルドと検証が必要です。0.1.12の結果を本版の証明に流用しません。公開前に回帰、Windowsの5言語インストールと0.1.12→0.1.13更新、Mac両アーキテクチャのビルドと独立確認が必要です。実機と音声収録は別途確認が必要です。
+0.1.14は11組・計267項目（背景と文字効果35項目）の回帰、Windowsの5言語インストール・起動・削除と0.1.13→0.1.14更新、Mac両アーキテクチャのビルドと独立確認を通過しました。実機収音、クリーン環境と長時間動作は別途確認が必要です。
 
 **macOS 14 以降が必要です。** プロセッサーに合った DMG を 1 つ選んでください。
 
 | Mac の種類 | ダウンロード |
 | --- | --- |
-| Apple シリコン（M1 以降） | [OCCATLiveCaption-0.1.13-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.13/OCCATLiveCaption-0.1.13-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.13-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.13/OCCATLiveCaption-0.1.13-macOS-x86_64.dmg) |
+| Apple シリコン（M1 以降） | [OCCATLiveCaption-0.1.14-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.14/OCCATLiveCaption-0.1.14-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.14-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.14/OCCATLiveCaption-0.1.14-macOS-x86_64.dmg) |
 
-DMG を開き、アプリを「アプリケーション」へドラッグします。このプレビューは **ad-hoc 署名で、Apple の公証は受けていません**。初回の起動を試した後、「システム設定 → プライバシーとセキュリティ」で、このアプリに対して「このまま開く」が必要な場合があります。同じ Release の [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.13/SHA256SUMS-macOS.txt) で Mac 添付ファイルを確認してください。Mac 版の更新操作は Releases のダウンロードページを開きます。新しい DMG をダウンロードしてアプリを置き換えます。設定、モデル、字幕記録の保存先は `~/Library/Application Support/OCCATLiveCaption` です。
+DMG を開き、アプリを「アプリケーション」へドラッグします。このプレビューは **ad-hoc 署名で、Apple の公証は受けていません**。初回の起動を試した後、「システム設定 → プライバシーとセキュリティ」で、このアプリに対して「このまま開く」が必要な場合があります。同じ Release の [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.14/SHA256SUMS-macOS.txt) で Mac 添付ファイルを確認してください。Mac 版の更新操作は Releases のダウンロードページを開きます。新しい DMG をダウンロードしてアプリを置き換えます。設定、モデル、字幕記録の保存先は `~/Library/Application Support/OCCATLiveCaption` です。
 
 Mac 版は **CPU 推論**を使用します。新規利用時の既定モデルは引き続き **large-v3-turbo（約 1.6 GB）**で、初回にダウンロードします。モデルの同梱や Base への自動変更はなく、他のモデルは必要に応じてダウンロードします。大きなモデルの処理速度はハードウェアに依存し、リアルタイム性能は保証しません。
 
 音声は CoreAudio 入力から取得し、収録開始時にマイクの許可が必要です。再生中のシステム音声には、利用者自身による **BlackHole などの仮想入力のインストールと設定**が必要です。音声ドライバーは同梱・自動インストールしません。[macOS 音声設定（中国語）](docs/macos-audio.md)を参照してください。
 
-0.1.13候補は今回の新しいソースによる再ビルドと検証が必要です。0.1.12の結果を本版の証明に流用しません。公開前に回帰、Windowsの5言語インストールと0.1.12→0.1.13更新、Mac両アーキテクチャのビルドと独立確認が必要です。実機と音声収録は別途確認が必要です。
+0.1.14は11組・計267項目（背景と文字効果35項目）の回帰、Windowsの5言語インストール・起動・削除と0.1.13→0.1.14更新、Mac両アーキテクチャのビルドと独立確認を通過しました。実機収音、クリーン環境と長時間動作は別途確認が必要です。
 
 Mac プレビューには源ノ角ゴシック、源ノ明朝、および日本語・韓国語の地域別フォントを同梱しています。ほかのフォントはローカルから読み込めます。
 
@@ -120,7 +126,7 @@ Mac プレビューには源ノ角ゴシック、源ノ明朝、および日本�
 
 ## 検証範囲と利用について
 
-0.1.13候補は今回の新しいソースによる再ビルドと検証が必要です。0.1.12の結果を本版の証明に流用しません。公開前に回帰、Windowsの5言語インストールと0.1.12→0.1.13更新、Mac両アーキテクチャのビルドと独立確認が必要です。実機と音声収録は別途確認が必要です。
+0.1.14は11組・計267項目（背景と文字効果35項目）の回帰、Windowsの5言語インストール・起動・削除と0.1.13→0.1.14更新、Mac両アーキテクチャのビルドと独立確認を通過しました。実機収音、クリーン環境と長時間動作は別途確認が必要です。
 
 **ランタイムが入っていないクリーンな Windows 環境での実機検証はまだ行っておらず、引き続きプレリリース版です。** これらの確認によって、あらゆる GPU、複数ディスプレイ、音声デバイス、システムの組み合わせでの動作を保証するとは考えていません。
 
