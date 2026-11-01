@@ -8,6 +8,11 @@
 
 我是 **OCCAT**，这是我做的本地实时字幕工具，提供 Windows 版和 macOS 原生预览版。你可以把电脑正在播放的声音，或者麦克风里的说话声，显示成悬浮字幕；需要的时候，也可以把英文、日文、韩文翻译成中文。看视频、听课、玩游戏、看直播，或者开个人会议时，都可以用它辅助阅读。
 
+## 0.1.16 更新
+
+- 黑夜模式背景调整为 #141414；黑夜与白天模式加入 pattern.css 的 pattern-dots-sm 小圆点纹理，并去掉卡片轮廓线。字幕外观整理为原文与翻译两个独立的自定义区域。自定义主题及已有字幕样式保留。
+
+
 ## 0.1.15 更新
 
 - 取消临时识别字幕和等待提示文字的自动调暗，原文与译文的默认文字不透明度均为100%。
@@ -44,7 +49,7 @@
 - 五个 Feather 矢量图标入口、悬浮名称提示和单一滑动游标；支持 Tab 键盘导航、Ctrl+1～5 切页及关闭页面动效。
 - 暂停、预览、隐藏字幕、窗口穿透、待机、托盘入口和软件内公开版本更新检查（含预览版）；设置页支持鼠标滚轮和触控板滚动。
 
-这次改动与修正的具体内容放在 [0.1.15 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.15)。
+这次改动与修正的具体内容放在 [0.1.16 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.16)。
 
 ## 0.1.11 更新
 
@@ -79,16 +84,16 @@
 
 ## 下载与安装
 
-**[打开 0.1.15 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.15)**。这是 **prerelease 预发布版本**；[上一版 0.1.14](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.14) 保留供回退，其他旧版也保留在 Releases。
+**[打开 0.1.16 公开测试版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.16)**。这是 **prerelease 预发布版本**；[上一版 0.1.15](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.15) 保留供回退，其他旧版也保留在 Releases。
 
 安装版和免安装版**选一个即可**，不用下载整个仓库或所有 ZIP：
 
 | 文件 | 选择方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.15-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.15/OCCAT-Live-Caption-0.1.15-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.15-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.15/OCCAT-Live-Caption-0.1.15-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.15/SHA256SUMS.txt) | 可选，用于核对本版 Windows 附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.15-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
+| [OCCAT-Live-Caption-0.1.16-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/OCCAT-Live-Caption-0.1.16-windows-x64-setup.exe) | 安装版，统一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.16-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/OCCAT-Live-Caption-0.1.16-windows-x64-portable.zip) | 免安装版，完整解压后运行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/SHA256SUMS.txt) | 可选，用于核对本版 Windows 附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.16-Third-Party-Notices.zip` | 第三方对应源码与许可材料，普通运行无需逐个下载 |
 
 1. 使用 **Windows 10/11 x64**，并具备 Microsoft Visual C++ x64 运行库 **14.44.35211 或更新版**。安装器发现运行库缺失或过旧时，会在确认后从微软官方下载、校验签名并打开安装界面。请按提示确认微软许可及管理员授权，完成后自动继续字幕安装；需要联网，不会自动重启。微软提示必须重启时，请保存工作、自行重启，再运行字幕安装器。免安装版同样需要先具备运行库。
 2. 安装版双击 EXE，选择简体中文、繁體中文、英文、日文或韩文并按向导完成；免安装版请完整解压后启动，不要单独取出 EXE。安装包没有商业代码签名，请核对下载来源与 SHA-256。
@@ -96,7 +101,7 @@
 4. 需要翻译时，在“识别与翻译”下载或导入兼容的 **M2M100** 模型，再开启“实时翻译”；只看原文时保持关闭。
 5. 在“字幕外观”调整字幕样式，在“窗口与待机”调整位置、穿透和待机方式。底部语言菜单支持简体中文、繁體中文、English、日本語、한국어，识别语言单独设置。中日韩字幕字形在“字幕外观 → 识别原文 · 文字”设置，不随界面语言切换。
 
-本版的软件版本号为 **0.1.15**，发布标签为 **`v0.1.15`**，仍按预发布版本提供。**本版的软件内更新支持公开预览版。0.1.5 及更早版本仍只查询旧的 latest 接口，需先手动安装一次 0.1.6 或更新版；之后可在软件内检查并更新。** 旧分语言安装包用户可手动升级到上面的统一安装包；繁體中文、日文、韩文安装向导保留已审阅的英文组件条款原文。
+本版的软件版本号为 **0.1.16**，发布标签为 **`v0.1.16`**，仍按预发布版本提供。**本版的软件内更新支持公开预览版。0.1.5 及更早版本仍只查询旧的 latest 接口，需先手动安装一次 0.1.6 或更新版；之后可在软件内检查并更新。** 旧分语言安装包用户可手动升级到上面的统一安装包；繁體中文、日文、韩文安装向导保留已审阅的英文组件条款原文。
 
 按用户安装，已有设置优先。安装版和免安装版均把设置、下载模型和字幕记录保存到 `%LOCALAPPDATA%/OCCATLiveCaption`，卸载保留用户数据；免安装版不会把设置放在解压目录里。
 
@@ -104,22 +109,22 @@
 
 ## macOS 预览版下载
 
-0.1.15本轮十二组共272项回归通过，其中5项字幕颜色检查，并保留既有十一组至少267项覆盖；Windows五语安装/启动/卸载及0.1.14→0.1.15覆盖升级、Mac两架构原生构建与独立材料核验通过。实体收音硬件、干净系统及长期运行仍需实测。
+0.1.16本轮十三组共298项回归通过，其中26项页面外观与5项字幕颜色检查，并保留既有十二组至少272项覆盖；Windows五语安装/启动/卸载及0.1.15→0.1.16覆盖升级、Mac两架构原生构建与独立材料核验通过。实体收音硬件、干净系统及长期运行仍需实测。
 
 **需要 macOS 14 或更新版本。** 按处理器选择一个 DMG：
 
 | Mac 类型 | 下载 |
 | --- | --- |
-| Apple 芯片（M1 及更新机型） | [OCCATLiveCaption-0.1.15-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.15/OCCATLiveCaption-0.1.15-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.15-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.15/OCCATLiveCaption-0.1.15-macOS-x86_64.dmg) |
+| Apple 芯片（M1 及更新机型） | [OCCATLiveCaption-0.1.16-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/OCCATLiveCaption-0.1.16-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.16-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/OCCATLiveCaption-0.1.16-macOS-x86_64.dmg) |
 
-打开 DMG，将应用拖到“应用程序”。此预览包采用 **ad-hoc 签名，未经 Apple 公证**；首次尝试打开后，macOS 可能要求在“系统设置 → 隐私与安全性”对该应用选择“仍要打开”。请使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.15/SHA256SUMS-macOS.txt) 核对 Mac 附件。后续更新在 Mac 版中打开 Releases 下载页，下载新 DMG 并替换应用；设置、模型和字幕记录保存在 `~/Library/Application Support/OCCATLiveCaption`。
+打开 DMG，将应用拖到“应用程序”。此预览包采用 **ad-hoc 签名，未经 Apple 公证**；首次尝试打开后，macOS 可能要求在“系统设置 → 隐私与安全性”对该应用选择“仍要打开”。请使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/SHA256SUMS-macOS.txt) 核对 Mac 附件。后续更新在 Mac 版中打开 Releases 下载页，下载新 DMG 并替换应用；设置、模型和字幕记录保存在 `~/Library/Application Support/OCCATLiveCaption`。
 
 Mac 版使用 **CPU 推理**，新用户仍默认首次下载 **large-v3-turbo（约 1.6 GB）**，不内置模型，也不会自动改选 Base；其他模型按需下载。大模型在 CPU 上的速度取决于硬件，预览包不保证实时性能。
 
 声音来源使用 CoreAudio 输入，开始采集时需允许麦克风权限。播放中的系统声音需要自行安装并配置 **BlackHole 等虚拟输入**，软件不捆绑或安装音频驱动。步骤见 [macOS 声音来源设置](docs/macos-audio.md)。
 
-0.1.15本轮十二组共272项回归通过，其中5项字幕颜色检查，并保留既有十一组至少267项覆盖；Windows五语安装/启动/卸载及0.1.14→0.1.15覆盖升级、Mac两架构原生构建与独立材料核验通过。实体收音硬件、干净系统及长期运行仍需实测。
+0.1.16本轮十三组共298项回归通过，其中26项页面外观与5项字幕颜色检查，并保留既有十二组至少272项覆盖；Windows五语安装/启动/卸载及0.1.15→0.1.16覆盖升级、Mac两架构原生构建与独立材料核验通过。实体收音硬件、干净系统及长期运行仍需实测。
 
 Mac 预览包内置思源黑体、思源宋体及日语／韩语地区思源字体，其他字体可从本地导入。
 
@@ -131,7 +136,7 @@ Mac 预览包内置思源黑体、思源宋体及日语／韩语地区思源字�
 
 ## 验证范围与使用说明
 
-0.1.15本轮十二组共272项回归通过，其中5项字幕颜色检查，并保留既有十一组至少267项覆盖；Windows五语安装/启动/卸载及0.1.14→0.1.15覆盖升级、Mac两架构原生构建与独立材料核验通过。实体收音硬件、干净系统及长期运行仍需实测。
+0.1.16本轮十三组共298项回归通过，其中26项页面外观与5项字幕颜色检查，并保留既有十二组至少272项覆盖；Windows五语安装/启动/卸载及0.1.15→0.1.16覆盖升级、Mac两架构原生构建与独立材料核验通过。实体收音硬件、干净系统及长期运行仍需实测。
 
 **尚未在缺少运行库的干净 Windows 环境实测，仍属于预发布版本。** 我没有把这些检查当作所有 GPU、多屏、音频设备和系统组合的保证。
 
