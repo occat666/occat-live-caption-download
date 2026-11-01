@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "release": {
-    "tag_name": "v0.1.16",
+    "tag_name": "v0.1.17",
     "draft": false,
     "prerelease": true,
     "assets": [
       {
-        "name": "OCCAT-Live-Caption-0.1.16-windows-x64-setup.exe",
+        "name": "OCCAT-Live-Caption-0.1.17-windows-x64-setup.exe",
         "state": "uploaded",
-        "size": 426735643,
-        "digest": "sha256:38873e80c868eb4b41a97e99f3d6a6dc6c5a660e34b9159b0fea416a795e3299",
-        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/OCCAT-Live-Caption-0.1.16-windows-x64-setup.exe"
+        "size": 426739876,
+        "digest": "sha256:0a4f8fe5204a8caf25bdd2bf3ae8c96a8c6f7053075610a603e1272d69388b3c",
+        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.17/OCCAT-Live-Caption-0.1.17-windows-x64-setup.exe"
       },
       {
         "name": "SHA256SUMS.txt",
         "state": "uploaded",
         "size": 958,
-        "digest": "sha256:292f693c3299d6359c4ac863353b5a56ef84bbd652c7c8131a390aad2e9bbf94",
-        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.16/SHA256SUMS.txt"
+        "digest": "sha256:6f92577e6c46e3f0c47f4502bf71d05ff928eac08185d00769c88b8cb1eff2ab",
+        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.17/SHA256SUMS.txt"
       }
     ]
   }
