@@ -6,7 +6,14 @@
   <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="貓貓本地即時字幕專案封面" width="640">
 </p>
 
-我是 **OCCAT**，這是我做的本機即時字幕工具，提供 Windows 版與 macOS 原生預覽版。你可以把電腦正在播放的聲音，或者麥克風裡的說話聲，顯示成浮動字幕；需要的時候，也可以把英文、日文、韓文翻譯成中文。看影片、聽課、玩遊戲、看直播，或者開個人會議時，都可以用它輔助閱讀。
+我是 **OCCAT**，這是我做的本機即時字幕工具，提供 Windows 版與 macOS 原生預覽版。你可以把電腦正在播放的聲音，或者麥克風裡的說話聲，顯示成浮動字幕；需要的時候，也可以在中文（简体）、中文（繁体）、英語、日語、韓語之間選擇翻譯目標。看影片、聽課、玩遊戲、看直播，或者開個人會議時，都可以用它輔助閱讀。
+
+## 0.1.19 更新
+
+- 開啟翻譯時，統一預覽同時顯示原文與譯文的文字及背景樣式，無須等待模型。內容語言提供中文（简体）和中文（繁体），共用同一中文識別模型；翻譯目標可選中文（简体）、中文（繁体）、英語、日語、韓語。支援中文、英語、日語、韓語互譯，中文簡繁在本機轉換，同源同目標直接顯示；既有相容M2M100模型無須重複下載。
+
+0.1.19本輪十七組共543項回歸通過，其中多語言209項，逐組保留舊十六組至少334項覆蓋（獨立背景23、Windows原生視窗8、平面外觀5、頁面外觀26、字幕顏色5項）。Windows五語安裝/啟動/移除、0.1.18→0.1.19覆蓋升級及Mac兩架構核驗通過。雙語預覽與翻譯路由在兩平台凍結程式通過；Windows最終EXE以既有M2M100 CPU模型驗證20個顯示方向（18次跨語言推理、2次中文簡繁本地轉換）及目標快取隔離。此夾具不代表一般準確率或效能；Mac未重跑該大型模型矩陣。實體音訊及長期使用仍須實測。
+
 
 ## 0.1.18 更新
 
@@ -52,14 +59,14 @@
 - 系統聲音和麥克風輸入；按辨識模型能力選擇中文、英文、日文、韓文或自動判斷，以浮動字幕顯示。
 - 獨立的即時翻譯開關，可同時保留原文；辨識引擎、翻譯和模型管理集中在「辨識與翻譯」。
 - 模型說明與推薦提示、官方和鏡像下載入口、一鍵下載、斷點續傳、檔案驗證及本地模型匯入。
-- 字幕字型、字重、字級、顏色、描邊、陰影、位置與底襯可調；可以儲存外觀版本，按需要恢復。字幕字形可選簡體中文、繁體中文、日語（日本字形）、韓語（韓文字形）或保留原文；簡繁轉換僅影響中文，日語、韓語使用內建地區思源字型並保留來源文字，不會將內容翻譯成日語或韓語。
-- 简体中文、繁體中文、English、日本語、한국어 五種頁面語言與安裝語言；介面語言、字幕字形、語音辨識語言分別儲存。
+- 字幕字型、字重、字級、顏色、描邊、陰影、位置與底襯可調；可以儲存外觀版本，按需要恢復。字幕字形可選中文（簡體）、中文（繁體）、日語（日本字形）、韓語（韓文字形）或保留原文；原文字形設定只處理原文顯示，不改變獨立翻譯目標；日語、韓語原文使用內建地區思源字型。
+- 中文（简体）、中文（繁体）、English、日本語、한국어 五種頁面語言與安裝語言；介面語言、字幕字形、語音辨識語言分別儲存。
 - 介面提供 HarmonyOS Sans、MiSans、思源黑體、思源宋體，按各自原生字重選擇；也支援本地 TTF、OTF、TTC 字型匯入。
 - 黑夜、白天、跟隨系統和自訂主題；自訂背景與玻璃透明度、模糊、壓暗設定同步。預設導覽圖示跟隨文字色，按下或選取使用主題色。
 - 五個 Feather 向量圖示入口、浮動名稱提示和單一滑動遊標；支援 Tab 鍵盤導覽、Ctrl+1～5 切頁及關閉頁面動效。
 - 暫停、預覽、隱藏字幕、視窗穿透、待機、系統匣入口和軟體內公開版本更新檢查（含預覽版）；設定頁支援滑鼠滾輪和觸控板滾動。
 
-這次改動與修正的具體內容放在 [0.1.18 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.18)。
+這次改動與修正的具體內容放在 [0.1.19 發行說明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.19)。
 
 ## 0.1.11 更新
 
@@ -94,24 +101,24 @@
 
 ## 下載與安裝
 
-**[開啟 0.1.18 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.18)**。這是 **prerelease 預發行版本**；[上一版 0.1.17](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.17) 保留，方便回復舊版，其他舊版也保留在 Releases。
+**[開啟 0.1.19 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.19)**。這是 **prerelease 預發行版本**；[上一版 0.1.18](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.18) 保留，方便回復舊版，其他舊版也保留在 Releases。
 
 安裝版和免安裝版**選一個即可**，不用下載整個倉庫或所有 ZIP：
 
 | 檔案 | 選擇方式 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.18-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCAT-Live-Caption-0.1.18-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.18-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCAT-Live-Caption-0.1.18-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/SHA256SUMS.txt) | 可選，用於核對本版 Windows 附件 |
-| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.18-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
+| [OCCAT-Live-Caption-0.1.19-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCAT-Live-Caption-0.1.19-windows-x64-setup.exe) | 安裝版，統一提供简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.19-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCAT-Live-Caption-0.1.19-windows-x64-portable.zip) | 免安裝版，完整解壓縮後執行 `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/SHA256SUMS.txt) | 可選，用於核對本版 Windows 附件 |
+| `CorrespondingSources-*.zip`、`Sources-Sherpa-ASR-*.zip`、`OCCAT-Live-Caption-0.1.19-Third-Party-Notices.zip` | 第三方對應原始碼與授權材料，一般使用時不必逐一下載 |
 
 1. 使用 **Windows 10/11 x64**，並具備 Microsoft Visual C++ x64 執行階段程式庫 **14.44.35211 或更新版**。安裝器發現執行階段程式庫缺失或過舊時，會在確認後從微軟官方下載、驗證數位簽章並開啟安裝介面。請按提示確認微軟授權及管理員授權，完成後自動繼續字幕安裝；需要連線至網路，不會自動重新啟動。微軟提示必須重新啟動時，請儲存工作、自行重新啟動，再執行字幕安裝器。免安裝版同樣需要先具備執行階段程式庫。
 2. 安裝版按兩下 EXE，選擇簡體中文、繁體中文、英文、日文或韓文並依精靈完成安裝；免安裝版請完整解壓縮後啟動，不要單獨取出 EXE。安裝套件沒有商業程式碼簽章，請核對下載來源與 SHA-256。
 3. 啟動「貓貓本地即時字幕」，選擇實際播放聲音的系統裝置或麥克風。新使用者預設使用 **Whisper large-v3-turbo**，首次使用需連線下載約 **1.6 GB** 並完成驗證；下載支援續傳和來源切換，完整快取後優先從本機載入，可離線使用。其他 8 個辨識模型按需下載，也可匯入相容的本地模型；升級不覆蓋已有模型選擇。
 4. 需要翻譯時，在「辨識與翻譯」下載或匯入相容的 **M2M100** 模型，再開啟「即時翻譯」；只看原文時保持關閉。
-5. 在「字幕外觀」調整字幕樣式，在「視窗與待機」調整位置、穿透和待機方式。底部語言選單支援简体中文、繁體中文、English、日本語、한국어，辨識語言單獨設定。中日韓字幕字形在「字幕外觀 → 辨識原文 · 文字」設定，不隨介面語言切換。
+5. 在「字幕外觀」調整字幕樣式，在「視窗與待機」調整位置、穿透和待機方式。底部語言選單支援中文（简体）、中文（繁体）、English、日本語、한국어，辨識語言單獨設定。中日韓字幕字形在「字幕外觀 → 字幕自訂 → 文字」設定，不隨介面語言切換。
 
-本版的軟體版本號為 **0.1.18**，發行標籤為 **`v0.1.18`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6 或更新版；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
+本版的軟體版本號為 **0.1.19**，發行標籤為 **`v0.1.19`**，仍按預發行版本提供。**本版的軟體內更新支援公開預覽版。0.1.5 及更早版本仍只查詢舊的 latest 介面，需先手動安裝一次 0.1.6 或更新版；之後可在軟體內檢查並更新。** 舊分語言安裝套件使用者可手動升級到上面的統一安裝套件；繁體中文、日文、韓文安裝精靈保留已審閱的英文元件條款原文。
 
 按使用者安裝，已有設定優先。安裝版和免安裝版均把設定、下載模型和字幕記錄儲存到 `%LOCALAPPDATA%/OCCATLiveCaption`，解除安裝保留使用者資料；免安裝版不會把設定放在解壓縮目錄裡。
 
@@ -119,22 +126,20 @@
 
 ## macOS 預覽版下載
 
-0.1.18本輪十六組共334項回歸通過，其中獨立背景23項、Windows原生視窗8項，並保留舊十四組至少303項（平面外觀5、頁面外觀26、字幕顏色5項）覆蓋；Windows五語安裝/啟動/移除、0.1.17→0.1.18覆蓋升級與Mac兩架構核驗通過。共用獨立背景在兩平台通過；Windows原生視窗路徑僅在Windows核驗，Mac不冒充該路徑實測。實體音訊、系統動畫視覺與長期使用仍須實測。
 
 **需要 macOS 14 或更新版本。** 依處理器選擇一個 DMG：
 
 | Mac 類型 | 下載 |
 | --- | --- |
-| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.18-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCATLiveCaption-0.1.18-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.18-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCATLiveCaption-0.1.18-macOS-x86_64.dmg) |
+| Apple 晶片（M1 及更新機型） | [OCCATLiveCaption-0.1.19-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCATLiveCaption-0.1.19-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.19-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCATLiveCaption-0.1.19-macOS-x86_64.dmg) |
 
-開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
+開啟 DMG，將應用程式拖到「應用程式」資料夾。此預覽套件採用 **ad-hoc 簽章，未經 Apple 公證**；首次嘗試開啟後，macOS 可能要求在「系統設定 → 隱私權與安全性」針對此應用程式選擇「強制打開」。請使用同版 Release 的 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/SHA256SUMS-macOS.txt) 核對 Mac 附件。Mac 版的更新入口會開啟 Releases 下載頁；下載新 DMG 並替換應用程式，設定、模型與字幕記錄保存在 `~/Library/Application Support/OCCATLiveCaption`。
 
 Mac 版使用 **CPU 推論**，新使用者仍預設在首次使用時下載 **large-v3-turbo（約 1.6 GB）**，不內建模型，也不會自動改選 Base；其他模型按需下載。大型模型的 CPU 速度取決於硬體，預覽套件不保證即時效能。
 
 音訊來源採用 CoreAudio 輸入，開始擷取時需要允許麥克風權限。播放中的系統聲音需要自行安裝並設定 **BlackHole 等虛擬輸入**，軟體不隨附或安裝音訊驅動程式。步驟見 [macOS 聲音來源設定（簡體中文）](docs/macos-audio.md)。
 
-0.1.18本輪十六組共334項回歸通過，其中獨立背景23項、Windows原生視窗8項，並保留舊十四組至少303項（平面外觀5、頁面外觀26、字幕顏色5項）覆蓋；Windows五語安裝/啟動/移除、0.1.17→0.1.18覆蓋升級與Mac兩架構核驗通過。共用獨立背景在兩平台通過；Windows原生視窗路徑僅在Windows核驗，Mac不冒充該路徑實測。實體音訊、系統動畫視覺與長期使用仍須實測。
 
 Mac 預覽套件內建思源黑體、思源宋體及日語／韓語地區思源字型，其他字型可從本機匯入。
 
@@ -146,7 +151,6 @@ Mac 預覽套件內建思源黑體、思源宋體及日語／韓語地區思源�
 
 ## 驗證範圍與使用說明
 
-0.1.18本輪十六組共334項回歸通過，其中獨立背景23項、Windows原生視窗8項，並保留舊十四組至少303項（平面外觀5、頁面外觀26、字幕顏色5項）覆蓋；Windows五語安裝/啟動/移除、0.1.17→0.1.18覆蓋升級與Mac兩架構核驗通過。共用獨立背景在兩平台通過；Windows原生視窗路徑僅在Windows核驗，Mac不冒充該路徑實測。實體音訊、系統動畫視覺與長期使用仍須實測。
 
 **尚未在缺少執行階段程式庫的乾淨 Windows 環境實測，仍屬於預發行版本。** 我沒有把這些檢查當作所有 GPU、多螢幕、音訊裝置和系統組合的保證。
 

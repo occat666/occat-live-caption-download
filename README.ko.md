@@ -6,7 +6,14 @@
   <img src="assets/project-cover-eff03bbe0e0a.jpg" alt="고양이 로컬 실시간 자막 프로젝트 표지" width="640">
 </p>
 
-안녕하세요, **OCCAT**입니다. 제가 만든 Windows용 로컬 실시간 자막 도구와 macOS 네이티브 미리 보기 버전을 소개합니다. 컴퓨터에서 재생되는 소리나 마이크로 입력한 음성을 화면 위에 떠 있는 자막으로 표시합니다. 필요할 때는 영어, 일본어, 한국어를 중국어로 번역할 수도 있습니다. 동영상 시청, 강의 수강, 게임, 라이브 방송 시청, 개인적으로 참여하는 회의 등에서 내용을 읽고 이해하는 데 활용할 수 있습니다.
+안녕하세요, **OCCAT**입니다. 제가 만든 Windows용 로컬 실시간 자막 도구와 macOS 네이티브 미리 보기 버전을 소개합니다. 컴퓨터에서 재생되는 소리나 마이크로 입력한 음성을 화면 위에 떠 있는 자막으로 표시합니다. 필요할 때는 중국어·영어·일본어·한국어 사이에서 번역 대상을 선택하고 중국어는 간체 또는 번체로 표시할 수도 있습니다. 동영상 시청, 강의 수강, 게임, 라이브 방송 시청, 개인적으로 참여하는 회의 등에서 내용을 읽고 이해하는 데 활용할 수 있습니다.
+
+## 0.1.19 업데이트
+
+- 번역을 켜면 미리보기에 원문과 번역 스타일이 함께 표시됩니다. 간체와 번체 중국어는 같은 음성 인식 모델을 사용하며, 두 중국어 표기와 영어·일본어·한국어 사이에서 번역 대상을 선택할 수 있습니다. 중국어 문자 변환은 로컬에서 처리하고 입력과 대상 언어가 같으면 바로 표시합니다. 기존 호환 M2M100 모델은 다시 다운로드할 필요가 없습니다.
+
+0.1.19는 다국어 209개를 포함한 17개 그룹 543개 회귀를 통과했으며 기존 16개 그룹 최소 334개를 각 그룹별로 유지합니다(독립 배경 23개, Windows 기본 창 8개, 평면 모양 5개, 화면 외관 26개, 자막 색상 5개). Windows 5개 설치 언어, 실제 0.1.18→0.1.19 업데이트와 Mac 두 아키텍처 검증도 통과했습니다. 두 플랫폼의 동결 앱에서 이중 언어 미리보기와 번역 경로를 검증했으며 Windows 최종 EXE는 기존 M2M100 CPU 모델로 20개 표시 방향(18회 언어 간 추론과 2회 중국어 문자 변환) 및 대상별 캐시 분리를 확인했습니다. 정확도나 성능 벤치마크가 아니며 Mac에서 대형 모델 행렬을 반복하지 않았습니다. 실제 오디오 및 장시간 사용은 추가 확인이 필요합니다.
+
 
 ## 0.1.18 업데이트
 
@@ -60,14 +67,14 @@
 - 시스템 오디오와 마이크 입력을 지원합니다. 인식 모델의 지원 범위에 따라 중국어, 영어, 일본어, 한국어 또는 자동 감지를 선택하고, 결과를 플로팅 자막으로 표시할 수 있습니다.
 - 실시간 번역을 별도로 켜고 끌 수 있으며 원문도 함께 표시할 수 있습니다. 인식 엔진, 번역, 모델 관리는 “识别与翻译”(인식 및 번역) 페이지에 모았습니다.
 - 모델 설명과 추천 안내, 공식·미러 다운로드 경로, 원클릭 다운로드, 이어받기, 파일 검증, 로컬 모델 가져오기를 제공합니다.
-- 자막 글꼴, 굵기, 크기, 색상, 외곽선, 그림자, 위치와 배경을 조절하고 모양 설정을 저장·복원할 수 있습니다. 자막 글리프는 중국어 간체, 중국어 번체, 일본 글리프, 한국 글리프, 원문 유지의 다섯 가지입니다. 간체·번체 변환은 중국어에만 적용합니다. 일본어·한국어는 내장된 지역별 Source Han 글꼴로 원문을 표시하며, 내용을 일본어나 한국어로 번역하지 않습니다.
-- 화면과 설치 프로그램은 简体中文, 繁體中文, English, 日本語, 한국어의 다섯 가지 언어를 지원합니다. 화면 언어, 자막 글리프, 음성 인식 언어는 각각 따로 저장합니다.
+- 자막 글꼴, 굵기, 크기, 색상, 외곽선, 그림자, 위치와 배경을 조절하고 모양 설정을 저장·복원할 수 있습니다. 자막 글리프는 중국어 간체, 중국어 번체, 일본 글리프, 한국 글리프, 원문 유지의 다섯 가지입니다. 이 글리프 설정은 원문 표시에만 적용되며 별도로 선택한 번역 대상을 변경하지 않습니다. 일본어·한국어 원문에는 내장된 지역별 Source Han 글꼴을 사용합니다.
+- 화면과 설치 프로그램은 中文（简体）, 中文（繁体）, English, 日本語, 한국어의 다섯 가지 언어를 지원합니다. 화면 언어, 자막 글리프, 음성 인식 언어는 각각 따로 저장합니다.
 - 화면 글꼴로 HarmonyOS Sans, MiSans, Source Han Sans(思源黑体), Source Han Serif(思源宋体)를 제공하며, 각 글꼴에서 원래 제공하는 굵기를 선택할 수 있습니다. 로컬 TTF, OTF, TTC 글꼴 가져오기도 지원합니다.
 - 어두운 테마, 밝은 테마, 시스템 설정 따르기, 사용자 지정 테마를 제공합니다. 사용자 지정 배경에는 유리 효과의 투명도, 흐림, 어둡게 하기 설정이 함께 적용됩니다. 기본 상태의 탐색 아이콘은 글자 색상을 따르고, 누르거나 선택한 아이콘은 테마 강조 색상을 사용합니다.
 - 다섯 개의 Feather 벡터 탐색 아이콘, 이름 툴팁, 하나의 움직이는 선택 표시를 제공합니다. Tab 키 탐색, Ctrl+1～5 페이지 전환, 화면 애니메이션 끄기를 지원합니다.
 - 일시 정지, 미리 보기, 자막 숨기기, 마우스 클릭 통과, 대기 모드, 트레이 메뉴, 미리 보기 버전을 포함한 앱 내 공개 버전 업데이트 확인 기능이 있습니다. 설정 페이지는 마우스 휠과 터치패드 스크롤을 지원합니다.
 
-이번 변경 및 수정 사항은 [0.1.18 릴리스 노트](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.18)에서 확인할 수 있습니다.
+이번 변경 및 수정 사항은 [0.1.19 릴리스 노트](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.19)에서 확인할 수 있습니다.
 
 ## 0.1.10 업데이트
 
@@ -95,24 +102,24 @@
 
 ## 다운로드 및 설치
 
-**[0.1.18 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.18)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.17](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.17)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
+**[0.1.19 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.19)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.18](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.18)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
 
 설치형과 무설치형 중 **하나만 선택하면 됩니다**. 저장소 전체나 모든 ZIP 파일을 다운로드할 필요는 없습니다.
 
 | 파일 | 용도 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.18-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCAT-Live-Caption-0.1.18-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
-| [OCCAT-Live-Caption-0.1.18-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCAT-Live-Caption-0.1.18-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/SHA256SUMS.txt) | 이번 버전의 Windows 첨부 파일용 체크섬(선택 사항) |
-| `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.18-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
+| [OCCAT-Live-Caption-0.1.19-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCAT-Live-Caption-0.1.19-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
+| [OCCAT-Live-Caption-0.1.19-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCAT-Live-Caption-0.1.19-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/SHA256SUMS.txt) | 이번 버전의 Windows 첨부 파일용 체크섬(선택 사항) |
+| `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.19-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
 
 1. **Windows 10/11 x64**와 **14.44.35211 이상**의 Microsoft Visual C++ x64 런타임이 필요합니다. 런타임이 없거나 너무 오래된 경우, 설치 프로그램은 사용자 확인을 받은 뒤 Microsoft 공식 경로에서 다운로드하고 서명을 검증한 다음 런타임 설치 화면을 엽니다. 안내에 따라 Microsoft 라이선스와 관리자 권한 요청을 확인하면, 런타임 설치 후 자막 프로그램 설치가 자동으로 계속됩니다. 인터넷 연결이 필요하며 Windows를 자동으로 다시 시작하지 않습니다. Microsoft 설치 프로그램에서 다시 시작을 요구하면 작업을 저장하고 직접 다시 시작한 후 자막 설치 프로그램을 다시 실행하세요. 무설치형도 이 런타임을 먼저 갖추어야 합니다.
 2. 설치형은 EXE를 두 번 클릭한 뒤 중국어 간체, 중국어 번체, 영어, 일본어, 한국어 중 하나를 선택하고 안내에 따라 설치하세요. 무설치형은 압축을 완전히 푼 후 실행해야 하며, EXE 파일만 따로 꺼내 실행하면 안 됩니다. 설치 프로그램에는 상용 코드 서명이 없으므로 다운로드 출처와 SHA-256을 확인하세요.
 3. “猫猫本地实时字幕”를 실행하고 실제 소리를 재생하는 시스템 장치나 마이크를 선택하세요. 새 사용자의 기본 모델은 **Whisper large-v3-turbo**이며, 처음 사용할 때 인터넷에 연결하여 약 **1.6 GB**를 다운로드하고 파일을 검증해야 합니다. 이어받기와 다운로드 경로 전환을 지원합니다. 완성된 캐시는 로컬에서 우선 불러오며 오프라인으로 사용할 수 있습니다. 나머지 8개 인식 모델은 필요할 때 다운로드하거나 호환되는 로컬 모델을 가져오세요. 업데이트는 저장된 모델 선택을 덮어쓰지 않습니다.
 4. 번역이 필요하면 “识别与翻译”(인식 및 번역)에서 호환되는 **M2M100** 모델을 다운로드하거나 가져온 다음 “实时翻译”(실시간 번역)를 켜세요. 원문만 보려면 꺼 둡니다.
-5. “字幕外观”(자막 모양)에서 자막 스타일을, “窗口与待机”(창 및 대기)에서 위치, 마우스 클릭 통과, 대기 방식을 조절하세요. 하단 언어 메뉴는 简体中文, 繁體中文, English, 日本語, 한국어를 지원하며, 인식 언어는 별도로 설정합니다. 중국어·일본어·한국어 자막 글리프는 “字幕外观 → 识别原文 · 文字”(자막 모양 → 인식 원문 · 텍스트)에서 설정하며 화면 언어를 바꾸어도 함께 바뀌지 않습니다.
+5. “字幕外观”(자막 모양)에서 자막 스타일을, “窗口与待机”(창 및 대기)에서 위치, 마우스 클릭 통과, 대기 방식을 조절하세요. 하단 언어 메뉴는 中文（简体）, 中文（繁体）, English, 日本語, 한국어를 지원하며, 인식 언어는 별도로 설정합니다. 중국어·일본어·한국어 자막 글리프는 “字幕外观 → 字幕自定义 → 文字”(자막 모양 → 자막 사용자 설정 → 글자)에서 설정하며 화면 언어를 바꾸어도 함께 바뀌지 않습니다.
 
-이번 소프트웨어 버전은 **0.1.18**, 릴리스 태그는 **`v0.1.18`**이며, 여전히 사전 공개 버전으로 제공합니다. **이번 버전은 앱에서 공개 미리 보기 업데이트를 지원합니다. 0.1.5 이하 버전은 기존 latest API만 조회하므로 0.1.6 이상을 한 번 수동으로 설치해야 합니다. 이후에는 앱에서 확인하고 업데이트할 수 있습니다.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
+이번 소프트웨어 버전은 **0.1.19**, 릴리스 태그는 **`v0.1.19`**이며, 여전히 사전 공개 버전으로 제공합니다. **이번 버전은 앱에서 공개 미리 보기 업데이트를 지원합니다. 0.1.5 이하 버전은 기존 latest API만 조회하므로 0.1.6 이상을 한 번 수동으로 설치해야 합니다. 이후에는 앱에서 확인하고 업데이트할 수 있습니다.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
 
 사용자별로 설치하며 기존 설정을 우선 유지합니다. 설치형과 무설치형 모두 설정, 다운로드한 모델, 자막 기록을 `%LOCALAPPDATA%/OCCATLiveCaption`에 저장하며, 제거 후에도 사용자 데이터는 남습니다. 무설치형도 압축을 푼 폴더에 설정을 저장하지 않습니다.
 
@@ -120,22 +127,20 @@
 
 ## macOS 미리 보기 다운로드
 
-0.1.18는 독립 배경 23개와 Windows 기본 창 8개를 포함한 16개 그룹 334개 회귀를 통과했으며 기존 14개 그룹 최소 303개(평면 모양 5개, 화면 외관 26개, 자막 색상 5개)를 유지합니다. Windows 5개 설치 언어, 실제 0.1.17→0.1.18 업데이트와 Mac 두 아키텍처 검증도 통과했습니다. 독립 배경은 두 플랫폼에서, Windows 기본 창 경로는 Windows에서만 검증했습니다. 실제 오디오, 애니메이션 모양 및 장시간 사용은 추가 확인이 필요합니다.
 
 **macOS 14 이상이 필요합니다.** 프로세서에 맞는 DMG 하나를 선택하세요.
 
 | Mac 종류 | 다운로드 |
 | --- | --- |
-| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.18-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCATLiveCaption-0.1.18-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.18-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/OCCATLiveCaption-0.1.18-macOS-x86_64.dmg) |
+| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.19-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCATLiveCaption-0.1.19-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.19-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/OCCATLiveCaption-0.1.19-macOS-x86_64.dmg) |
 
-DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.18/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
+DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.19/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
 
 Mac 버전은 **CPU 추론**을 사용합니다. 새 사용자는 여전히 처음 사용할 때 기본 모델인 **large-v3-turbo(약 1.6 GB)**를 다운로드합니다. 모델을 포함하거나 Base로 자동 변경하지 않으며 다른 모델은 필요할 때 다운로드합니다. 대형 모델의 CPU 처리 속도는 하드웨어에 따라 달라 실시간 성능을 보장하지 않습니다.
 
 오디오는 CoreAudio 입력을 사용하며 캡처를 시작할 때 마이크 권한이 필요합니다. 재생 중인 시스템 소리를 받으려면 사용자가 직접 **BlackHole 등의 가상 입력을 설치하고 설정**해야 합니다. 앱은 오디오 드라이버를 포함하거나 설치하지 않습니다. [macOS 오디오 설정(중국어)](docs/macos-audio.md)을 참고하세요.
 
-0.1.18는 독립 배경 23개와 Windows 기본 창 8개를 포함한 16개 그룹 334개 회귀를 통과했으며 기존 14개 그룹 최소 303개(평면 모양 5개, 화면 외관 26개, 자막 색상 5개)를 유지합니다. Windows 5개 설치 언어, 실제 0.1.17→0.1.18 업데이트와 Mac 두 아키텍처 검증도 통과했습니다. 독립 배경은 두 플랫폼에서, Windows 기본 창 경로는 Windows에서만 검증했습니다. 실제 오디오, 애니메이션 모양 및 장시간 사용은 추가 확인이 필요합니다.
 
 Mac 미리 보기에는 Source Han Sans, Source Han Serif 및 일본어·한국어 지역별 Source Han Sans 글꼴이 포함됩니다. 다른 글꼴은 로컬에서 가져올 수 있습니다.
 
@@ -147,7 +152,6 @@ Mac 미리 보기에는 Source Han Sans, Source Han Serif 및 일본어·한국�
 
 ## 검증 범위 및 사용 안내
 
-0.1.18는 독립 배경 23개와 Windows 기본 창 8개를 포함한 16개 그룹 334개 회귀를 통과했으며 기존 14개 그룹 최소 303개(평면 모양 5개, 화면 외관 26개, 자막 색상 5개)를 유지합니다. Windows 5개 설치 언어, 실제 0.1.17→0.1.18 업데이트와 Mac 두 아키텍처 검증도 통과했습니다. 독립 배경은 두 플랫폼에서, Windows 기본 창 경로는 Windows에서만 검증했습니다. 실제 오디오, 애니메이션 모양 및 장시간 사용은 추가 확인이 필요합니다.
 
 **런타임이 없는 깨끗한 Windows 환경에서는 아직 실제로 테스트하지 않았으며, 여전히 사전 공개 버전입니다.** 이러한 확인을 모든 GPU, 다중 모니터, 오디오 장치, 시스템 조합에 대한 보장으로 여기지는 않습니다.
 
