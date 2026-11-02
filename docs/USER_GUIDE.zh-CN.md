@@ -67,7 +67,7 @@ python -m venv .venv
 
 ## 许可证
 
-自有代码采用根目录 [MIT](../LICENSE)，作者 OCCAT；思源黑体保留 Adobe 版权并按 OFL 1.1 分发，其他第三方组件保留各自许可。详见公开的 [第三方许可与素材说明](../THIRD_PARTY_NOTICE_PUBLIC.md) 及 [组件替换说明](../LIBRARY_REPLACEMENT.zh-CN.md)，原始许可与对应源码随发行附件保留。
+自有代码采用根目录 [MIT](../LICENSE)，作者 OCCAT；思源黑体保留 Adobe 版权并按 OFL 1.1 分发，其他第三方组件保留各自许可。详见公开的 [第三方许可与素材说明](https://github.com/occat666/occat-live-caption-download/blob/main/THIRD_PARTY_NOTICE_PUBLIC.md) 及 [组件替换说明](https://github.com/occat666/occat-live-caption-download/blob/main/LIBRARY_REPLACEMENT.zh-CN.md)，原始许可与对应源码随发行附件保留。
 
 ---
 
@@ -217,7 +217,7 @@ macOS 的启动过渡结束后，先绘制真实窗口，再撤下覆盖画面�
 
 ## 安装、测试与发布
 
-安装与下载请以根目录 [README](../README.md) 为准；本版完成的验证范围和实机限制见 [0.1.19 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.19)。历史版本保留供回退，不能替代本版的验证证明。
+安装与下载请以根目录 [README](../README.md) 为准；本版完成的验证范围和实机限制见 [0.1.20 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.20)。历史版本保留供回退，不能替代本版的验证证明。
 
 
 
