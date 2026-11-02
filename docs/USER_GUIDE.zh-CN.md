@@ -1,6 +1,6 @@
 # 使用与实现详解
 
-本文保存现有详细使用说明；发布状态、许可证结论和安装验证范围以根目录 README 与发布检查文档为准。
+本文保存现有详细使用说明；发布状态、许可证结论和安装验证范围以根目录 README 与同版发布说明为准。
 
 ## 单安装包与五种界面语言
 
@@ -44,24 +44,9 @@
 
 ## 快速开始
 
-```powershell
-# 1. 克隆仓库
-git clone https://github.com/<你的用户名>/live-caption.git
-cd live-caption
+从 [当前版本下载页](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.21) 下载 Windows 安装器或便携包；macOS 用户选择与 Apple 芯片或 Intel 匹配的 DMG。安装与声音来源设置见 [README](../README.md)。应用开发源码仓库保持 Private，普通用户无需克隆源码、安装 Python 或运行开发命令。
 
-# 2. 创建虚拟环境并安装依赖
-python -m venv .venv
-.\.venv\Scripts\pip install -r requirements-runtime-lock.txt
-
-# 3. 下载语音识别模型（首次运行必需）
-.\.venv\Scripts\python.exe -X utf8 download_models.py whisper
-
-# 可选：准备中、英、日、韩互译共用的本地翻译模型
-.\.venv\Scripts\python.exe -X utf8 download_models.py translation
-
-# 4. 启动
-.\.venv\Scripts\pythonw.exe -X utf8 main.py
-```
+启动后选择实际播放声音的设备或麦克风，等待默认识别模型下载并加载。需要翻译时，在“实时翻译”中下载推荐模型、选择目标语言并开启翻译。
 
 也可直接在“识别与翻译 → 实时翻译”下载推荐模型或导入兼容的本地包，无需用户安装 PyTorch、Transformers 或运行转换命令。一个 M2M100 模型提供中、英、日、韩直接互译，中文目标可选简体或繁体，不再分别安装 Argos 语言包或通过英文中转。完整格式和限制见 [翻译模型说明](translation-models.md)；识别语言的能力限制见 [识别语言说明](recognition-languages.md)。
 
@@ -115,7 +100,7 @@ macOS 的启动过渡结束后，先绘制真实窗口，再撤下覆盖画面�
 
 后台猫形字幕图标用播放/暂停标记区分运行状态；与桌面、窗口和底部入口保持同一单色造型。选择退出时使用电源标记，随后移除图标并结束程序。Windows 可能将新通知图标收入右下角的上箭头区域，其显示位置由系统管理。
 
-窗口底部显示 `v版本号 · OCCAT`，GitHub 按钮打开公开下载项目，“自动更新”点击后后台检查、下载并校验新版，再启动安装向导。源码运行不自动替换开发目录；暂无正式版本时明确提示。需要每次启动自动检查时，可在「高级设置 → 软件更新」打开「打开软件时自动检查并安装更新」，默认关闭；已公开的预发布版也在更新检查范围内，草稿不参与。细节见[更新机制](AUTO_UPDATE.zh-CN.md)。
+Windows 安装版点击底部“检查更新”，先阅读更新说明及随新版提供的条款，确认后下载并校验，保存设置后自动覆盖安装，成功后重新启动。高级设置的“自动检查更新”默认关闭，启用后启动时及每小时只检查元数据，确认前不下载、不安装。模型与配置保留；便携版使用普通安装向导。macOS 仍通过发布页面下载并替换应用。
 
 开启实时翻译后，“预览字幕”同时展示原文与译文两套样式，使用示例文字，不加载翻译模型。预览时即使选择了仅译文或最多一行，也会临时展示两套，结束后恢复原来的排版；隐藏字幕时预览也保持隐藏。明确的单角色样式预览仍可只展示对应角色。
 
@@ -217,7 +202,7 @@ macOS 的启动过渡结束后，先绘制真实窗口，再撤下覆盖画面�
 
 ## 安装、测试与发布
 
-安装与下载请以根目录 [README](../README.md) 为准；本版完成的验证范围和实机限制见 [0.1.20 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.20)。历史版本保留供回退，不能替代本版的验证证明。
+安装与下载请以根目录 [README](../README.md) 为准；本版完成的验证范围和实机限制见 [0.1.21 发布说明](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.21)。历史版本保留供回退，不能替代本版的验证证明。
 
 
 
