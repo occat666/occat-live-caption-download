@@ -1,41 +1,41 @@
 {
   "schema_version": 1,
   "release": {
-    "tag_name": "v0.1.24",
+    "tag_name": "v0.1.25",
     "draft": false,
     "prerelease": true,
     "assets": [
       {
-        "name": "OCCAT-Live-Caption-0.1.24-windows-x64-setup.exe",
+        "name": "OCCAT-Live-Caption-0.1.25-windows-x64-setup.exe",
         "state": "uploaded",
-        "size": 426911488,
-        "digest": "sha256:d5379e7070318322600384b7a566c6af6adb6079ffddd997ad9e8dbd2a6c9518",
-        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/OCCAT-Live-Caption-0.1.24-windows-x64-setup.exe"
+        "size": 426928014,
+        "digest": "sha256:51451800a9b45366f64574bf3c7974a79b749459a0bb08e253143835352705a9",
+        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/OCCAT-Live-Caption-0.1.25-windows-x64-setup.exe"
       },
       {
         "name": "SHA256SUMS.txt",
         "state": "uploaded",
         "size": 1132,
-        "digest": "sha256:fcf132de15a1d84279aca5c0f45ae06fdb7bf0bcefcfb820bfcc76e9797c33f5",
-        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/SHA256SUMS.txt"
+        "digest": "sha256:6ee28cfd062e8a2205699ec0266e75f6e6d1c1ce3893b271d978145b1c4bd4ba",
+        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/SHA256SUMS.txt"
       }
     ],
-    "body": "# 猫猫本地实时字幕 0.1.24\n\n## 更新内容\n\n- 实时记录与悬浮字幕共用原文、译文两组外观设置；文字和背景可分别自定义。\n- 移除主面板顶部重复的「字幕设置」按钮，使用左侧已有入口；保留两种显示模式及记录窗口内的设置入口。\n- 保留实时记录的逐句原文与译文、置顶、回看、复制和500条会话历史；样式变化不重启识别、不清空历史。\n\n## 验证范围\n\n二十二组共890项实际回归通过，包含28项实时记录外观专项、20项显示模式专项、101项字幕阅读与历史专项、129项软件内更新专项、30项日文幻觉专项、209项多语言、23项独立背景、8项Windows原生窗口、5项平面外观、26项页面外观、5项字幕颜色和35项背景/文字特效检查；逐组保留上版二十一组至少862项覆盖。全部日志绑定本轮最终源码。Windows与实际覆盖升级通过二十项相关冻结检查；Mac通过十八项，均包含caption_transcript_appearance与其12项真实子检查、caption_output_modes与其12项真实子检查、caption_reading_history与其16项真实子检查、japanese_pause_hallucinations、multilingual_caption_preview和multilingual_translation_routes。Windows原生窗口与consented_in_app_update仅在Windows验证。\n\nWindows最终EXE使用既有完整large-v3-turbo CPU模型，验证三条8秒强制日文合成非语音（静音、种子白噪声、220/440/880Hz谐波）均无字幕，并另用Base CPU保留David语音合成英文谢幕，真实执行word_timestamps复核。报告绑定fixture、模型、程序和源码；未复现用户原片。\n\nWindows最终EXE使用既有M2M100 CPU模型实际验证20个有序显示方向（18次跨语言推理、2次中文简繁本地转换），检查源语言token、目标prefix、结束符、重复请求缓存及跨目标缓存隔离；模型、最终程序与源码均有hash绑定。此夹具只证明这些路径已运行，不代表一般翻译准确率或性能。Mac验证共享预览和路由，不冒充已重复大模型推理矩阵。\n\nWindows软件内更新另通过真实隔离Inno覆盖安装：最终更新助手向仍运行的0.1.23冻结进程确认就绪、等待旧进程结束、对同版已验签安装器执行覆盖安装并自动启动0.1.24冻结程序，重启后的二十项检查全部通过，配置与模型哨兵保持一致。测试只对助手副本加入隔离安装标识和离线重启检查参数，生产助手原模板及两处固定差异逐字节绑定；不触及用户安装，不能替代干净系统实测。签名绑定安装器版本、文件名、大小、SHA-256及同版许可摘要；许可正文逐字节等于最终安装包原始中英文条款加固定分隔标签。\n\nWindows五语安装、启动、卸载，以及另一条实际0.1.23→0.1.24含空格目录覆盖升级通过，配置和模型保留；最终打包程序通过正常/低音量Base语音及三类非语音夹具。Mac两架构从同一新源码构建，GUI、实际CPU tiny.en、HTTPS、签名、DMG、第三方许可和对应源码核验通过；复用的native缓存经过逐项核验与新隔离环境测试。\n\n实体音频、干净Windows、实体Mac权限/BlackHole/Spaces/全屏及长期运行仍需实测。\n\n## 下载与许可\n\nWindows、Apple芯片与Intel Mac下载包；应用源码保留Private，历史版本与第三方许可保留。\n"
+    "body": "# 猫猫本地实时字幕 0.1.25\n\n## 更新内容\n\n- 实时记录窗口背景默认60%不透明度，可用窗口内「窗口背景」滑杆或「字幕设置」内「实时记录背景不透明度」调节10%至100%，减少遮挡直播、电影画面。\n- 调节窗口背景不改变文字自身透明度；原文与译文的字幕背景仍可分别开启、关闭与调整。\n- 保留逐句原文与译文、置顶、回看、复制及500条会话历史；调整外观不重启识别、不清空历史。\n\n## 验证范围\n\n二十三组共922项实际回归通过，包含32项实时记录透明背景专项、28项实时记录外观专项、20项显示模式专项、101项字幕阅读与历史专项、129项软件内更新专项、30项日文幻觉专项、209项多语言、23项独立背景、8项Windows原生窗口、5项平面外观、26项页面外观、5项字幕颜色和35项背景/文字特效检查；逐组保留上版二十二组至少890项覆盖。全部日志绑定本轮最终源码。Windows与实际覆盖升级通过二十一项相关冻结检查；Mac通过十九项，均包含caption_transcript_transparency与其12项真实子检查、caption_transcript_appearance与其12项真实子检查、caption_output_modes与其12项真实子检查、caption_reading_history与其16项真实子检查、japanese_pause_hallucinations、multilingual_caption_preview和multilingual_translation_routes。Windows原生窗口与consented_in_app_update仅在Windows验证。\n\nWindows最终EXE使用既有完整large-v3-turbo CPU模型，验证三条8秒强制日文合成非语音（静音、种子白噪声、220/440/880Hz谐波）均无字幕，并另用Base CPU保留David语音合成英文谢幕，真实执行word_timestamps复核。报告绑定fixture、模型、程序和源码；未复现用户原片。\n\nWindows最终EXE使用既有M2M100 CPU模型实际验证20个有序显示方向（18次跨语言推理、2次中文简繁本地转换），检查源语言token、目标prefix、结束符、重复请求缓存及跨目标缓存隔离；模型、最终程序与源码均有hash绑定。此夹具只证明这些路径已运行，不代表一般翻译准确率或性能。Mac验证共享预览和路由，不冒充已重复大模型推理矩阵。\n\nWindows软件内更新另通过真实隔离Inno覆盖安装：最终更新助手向仍运行的0.1.24冻结进程确认就绪、等待旧进程结束、对同版已验签安装器执行覆盖安装并自动启动0.1.25冻结程序，重启后的二十一项检查全部通过，配置与模型哨兵保持一致。测试只对助手副本加入隔离安装标识和离线重启检查参数，生产助手原模板及两处固定差异逐字节绑定；不触及用户安装，不能替代干净系统实测。签名绑定安装器版本、文件名、大小、SHA-256及同版许可摘要；许可正文逐字节等于最终安装包原始中英文条款加固定分隔标签。\n\nWindows五语安装、启动、卸载，以及另一条实际0.1.24→0.1.25含空格目录覆盖升级通过，配置和模型保留；最终打包程序通过正常/低音量Base语音及三类非语音夹具。Mac两架构从同一新源码构建，GUI、实际CPU tiny.en、HTTPS、签名、DMG、第三方许可和对应源码核验通过；复用的native缓存经过逐项核验与新隔离环境测试。\n\n实体音频、干净Windows、实体Mac权限/BlackHole/Spaces/全屏及长期运行仍需实测。\n\n## 下载与许可\n\nWindows、Apple芯片与Intel Mac下载包；应用源码保留Private，历史版本与第三方许可保留。\n"
   },
   "signed_update": {
     "signature": {
       "name": "UPDATE-SIGNATURE.json",
       "state": "uploaded",
       "size": 1057,
-      "digest": "sha256:a3650d84487cd37ac30ec266051922c0d17080540593d6a026b87fcee7d9fbef",
-      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/UPDATE-SIGNATURE.json"
+      "digest": "sha256:d2988a8a62098331650c02bf6f0f67c6a54490eb6a06df70265bc08f847e43bc",
+      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/UPDATE-SIGNATURE.json"
     },
     "terms": {
       "name": "UPDATE-LICENSES.txt",
       "state": "uploaded",
       "size": 207096,
       "digest": "sha256:19d77eb12375416f15e7df7ed608130057f055fc63a5ecf2e177d25493a89c35",
-      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/UPDATE-LICENSES.txt"
+      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/UPDATE-LICENSES.txt"
     }
   }
 }

@@ -8,6 +8,12 @@
 
 I'm **OCCAT**, and this is my local live caption tool for Windows, with a native macOS preview. It turns audio playing on your computer, or speech from your microphone, into floating captions. You can also translate between Chinese, English, Japanese and Korean, choosing Simplified or Traditional Chinese for Chinese output when you need it. You can use it while watching videos, taking courses, playing games, watching streams or joining personal meetings.
 
+## 0.1.25 Update
+
+- Live transcript gains an adjustable translucent window background so the video behind it remains visible. Window background opacity does not dim the text; original and translated caption backgrounds remain independently adjustable. History, always-on-top, scrollback and copying remain available. Recognition model behavior is unchanged.
+
+This 0.1.25 build passed 922 tests across twenty-three groups, including 129 in-app update, 30 Japanese hallucination and 209 multilingual tests, retaining every previous group and at least 890 tests across twenty-two groups (23 independent-background, 8 Windows native-window, 5 flat-appearance, 26 panel-appearance and 5 caption-color tests). Five Windows installer languages, a real 0.1.24 to 0.1.25 upgrade and both native Mac builds passed verification. Frozen bilingual preview and translation routing passed on both platforms. The final Windows EXE used the existing M2M100 CPU model for 20 display directions: 18 cross-language inferences and 2 local Chinese script conversions, with target-cache isolation. This is not a translation accuracy or performance benchmark; the large-model matrix was not repeated on Mac. Physical audio and long-running use still need testing. Translucent transcript backgrounds passed 32 tests and 12 real subchecks on each frozen platform. Transcript appearance passed 28 tests and 12 real subchecks on each frozen platform. Output modes passed 20 tests. Both frozen platforms executed 12 floating-caption/live-transcript subchecks while retaining the 16 reading/history subchecks. Caption reading/history passed 101 tests covering dwell time, 500 original/translation entries, late translations and optional scrolling. The build passed 21 Windows and 19 Mac frozen checks. The final Windows EXE additionally checked three eight-second Japanese synthetic non-speech inputs with Turbo CPU and preserved the generated David English signoff using Base CPU and actual word alignment. The original user clip has not been reproduced. A real isolated Inno round trip also verified the final update helper acknowledging the live old frozen app, waiting for its exit, applying the signed installer and automatically restarting the new frozen app, with settings and model sentinels preserved. This uses an isolated install identity and offline restart-check arguments; it does not touch the user installation or certify every Windows environment.
+
 ## 0.1.24 Update
 
 - Live transcript uses the same separate original and translation appearance settings as floating captions, including text and backgrounds. History, always-on-top and scrollback remain available. Remove the duplicate Caption settings button at the top of the main panel; use the left navigation. Recognition model behavior is unchanged.
@@ -98,7 +104,7 @@ This 0.1.19 build passed 543 tests across seventeen groups, including 209 multil
 - Five Feather vector icon entries with floating names and one moving indicator, Tab navigation, Ctrl+1–5 page shortcuts and optional interface motion.
 - Pause, preview, hide, click-through, standby, tray access, in-app public-release update checks including previews, mouse-wheel scrolling and direct touchpad input.
 
-Changes and fixes belong in the [0.1.22 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.22).
+Changes and fixes belong in the [0.1.25 release notes](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.25).
 
 ## What's new in 0.1.11
 
@@ -133,15 +139,15 @@ Changes and fixes belong in the [0.1.22 release notes](https://github.com/occat6
 
 ## Download and install
 
-**[Open the 0.1.24 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.24)**. This is a **prerelease**. [The previous 0.1.23](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.23) remains available for rollback; other earlier releases are also retained.
+**[Open the 0.1.25 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.25)**. This is a **prerelease**. [The previous 0.1.24](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.24) remains available for rollback; other earlier releases are also retained.
 
 Choose **either the installer or the portable archive**. You do not need the entire repository or every ZIP:
 
 | File | Purpose |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.24-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/OCCAT-Live-Caption-0.1.24-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
-| [OCCAT-Live-Caption-0.1.24-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/OCCAT-Live-Caption-0.1.24-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/SHA256SUMS.txt) | Optional checksums for this version’s Windows assets |
+| [OCCAT-Live-Caption-0.1.25-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/OCCAT-Live-Caption-0.1.25-windows-x64-setup.exe) | One installer with 简体中文 / 繁體中文 / English / 日本語 / 한국어 |
+| [OCCAT-Live-Caption-0.1.25-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/OCCAT-Live-Caption-0.1.25-windows-x64-portable.zip) | Extract the complete archive and run `OCCATLiveCaption.exe` |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/SHA256SUMS.txt) | Optional checksums for this version’s Windows assets |
 | Corresponding-source and Third-Party-Notices ZIPs | Library sources and license materials; not required for ordinary use |
 
 1. Use **Windows 10/11 x64** with Microsoft Visual C++ x64 Runtime **14.44.35211 or newer**. If it is missing or outdated, setup asks before downloading it directly from Microsoft, verifies Microsoft's signature and opens the runtime installer. Confirm the Microsoft license and Windows administrator prompt; caption setup continues after a successful runtime check. This download needs internet access. Setup never restarts Windows automatically: save your work, restart and rerun setup if Microsoft requires a restart. The portable version also needs this runtime.
@@ -150,7 +156,7 @@ Choose **either the installer or the portable archive**. You do not need the ent
 4. For translation, download or import a compatible **M2M100** model from Recognition and translation, then enable real-time translation. Leave it off for original captions only.
 5. Adjust caption styling in Caption appearance and positioning, click-through and standby options in Window and standby. The footer language menu supports 中文（简体）, 中文（繁体）, English, 日本語 and 한국어; recognition language is a separate setting. Choose Chinese/Japanese/Korean caption glyphs under Caption appearance → Caption customization → Text; changing interface language does not change them.
 
-The software version is **0.1.24**, with release tag **`v0.1.24`**. It remains a prerelease. **This version supports public preview updates in the app. Version 0.1.5 and earlier still query only the old latest endpoint and need one manual installation of 0.1.6 or later; later checks and updates can then run in the app.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
+The software version is **0.1.25**, with release tag **`v0.1.25`**. It remains a prerelease. **This version supports public preview updates in the app. Version 0.1.5 and earlier still query only the old latest endpoint and need one manual installation of 0.1.6 or later; later checks and updates can then run in the app.** Users of the older separate-language installers can upgrade manually with the unified installer above. Traditional Chinese, Japanese and Korean setup retain the reviewed original English component terms.
 
 Installation is per user and preserves existing preferences. Both versions store settings, downloaded models and caption records under `%LOCALAPPDATA%/OCCATLiveCaption`; uninstall retains that data. The portable version does not store preferences alongside the extracted EXE.
 
@@ -163,10 +169,10 @@ Installation is per user and preserves existing preferences. Both versions store
 
 | Mac processor | Download |
 | --- | --- |
-| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.24-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/OCCATLiveCaption-0.1.24-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.24-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/OCCATLiveCaption-0.1.24-macOS-x86_64.dmg) |
+| Apple silicon (M1 and later) | [OCCATLiveCaption-0.1.25-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/OCCATLiveCaption-0.1.25-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.25-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/OCCATLiveCaption-0.1.25-macOS-x86_64.dmg) |
 
-Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.24/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
+Open the DMG and drag the app to Applications. This preview is **ad-hoc signed and is not Apple-notarized**. After your first attempt to open it, macOS may require Open Anyway for this app in System Settings → Privacy & Security. Verify the Mac assets with [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.25/SHA256SUMS-macOS.txt) from the same Release. The Mac update entry opens the Releases download page; download a new DMG and replace the app. Settings, models and caption records reside in `~/Library/Application Support/OCCATLiveCaption`.
 
 The Mac preview uses **CPU inference**. New users still download **large-v3-turbo (about 1.6 GB)** on first use; no model is bundled and the app does not automatically switch to Base. Other models remain optional downloads. CPU speed for large models depends on hardware; real-time performance is not guaranteed.
 
