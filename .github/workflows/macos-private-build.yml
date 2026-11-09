@@ -5,7 +5,7 @@ on:
       source_commit:
         description: Reviewed immutable private source commit
         required: true
-        default: '69c9565c85bad9c78dffaa4dd4ea7ec0517818df'
+        default: '136b89d45fdd00afa25897861f42334d493132bb'
       stage:
         description: Native Mac validation scope
         type: choice
