@@ -8,6 +8,12 @@
 
 안녕하세요, **OCCAT**입니다. 제가 만든 Windows용 로컬 실시간 자막 도구와 macOS 네이티브 미리 보기 버전을 소개합니다. 컴퓨터에서 재생되는 소리나 마이크로 입력한 음성을 화면 위에 떠 있는 자막으로 표시합니다. 필요할 때는 중국어·영어·일본어·한국어 사이에서 번역 대상을 선택하고 중국어는 간체 또는 번체로 표시할 수도 있습니다. 동영상 시청, 강의 수강, 게임, 라이브 방송 시청, 개인적으로 참여하는 회의 등에서 내용을 읽고 이해하는 데 활용할 수 있습니다.
 
+## 0.1.27 업데이트
+
+- 모드 선택을 아이콘으로 바꾸고 중복 설명과 동작을 정리했습니다. 실시간 기록은 기본 창과 같은 모양을 사용하며 최소화·고정 아이콘과 Windows 작업 표시줄 식별을 수정했습니다. 사용하지 않는 글꼴 두께와 이전 컨트롤을 제거하고 중국어 유지보수 설명, 모델 다운로드와 로컬 입력 보호 및 보안 의존성 업데이트를 추가했습니다. 반투명 배경, 원문·번역의 독립 스타일 및 최신 여러 줄 자막 표시를 유지하며 인식 모델 동작은 변경하지 않습니다.
+
+0.1.27는 앱 내 업데이트 129개, 일본어 환각 30개와 다국어 209개를 포함한 24개 그룹 946개 회귀를 통과했으며 기존 23개 그룹 최소 922개를 각 그룹별로 유지합니다(독립 배경 23개, Windows 기본 창 8개, 평면 모양 5개, 화면 외관 26개, 자막 색상 5개). Windows 5개 설치 언어, 실제 0.1.26→0.1.27 업데이트와 Mac 두 아키텍처 검증도 통과했습니다. 두 플랫폼의 동결 앱에서 이중 언어 미리보기와 번역 경로를 검증했으며 Windows 최종 EXE는 기존 M2M100 CPU 모델로 20개 표시 방향(18회 언어 간 추론과 2회 중국어 문자 변환) 및 대상별 캐시 분리를 확인했습니다. 정확도나 성능 벤치마크가 아니며 Mac에서 대형 모델 행렬을 반복하지 않았습니다. 실제 오디오 및 장시간 사용은 추가 확인이 필요합니다. 최신 여러 줄 자막 표시 24개 및 각 동결 플랫폼의 실제 표시 하위 검사 12개를 통과했습니다. 기록 투명 배경 32개 및 각 동결 플랫폼의 실제 투명 배경 하위 검사 12개를 통과했습니다. 기록 모양 28개 및 각 동결 플랫폼의 실제 모양 하위 검사 12개를 통과했습니다. 출력 모드 20개를 통과했으며 두 동결 앱에서 플로팅 자막·실시간 기록 하위 검사 12개를 실제 실행했습니다. 기존 읽기·기록 하위 검사 16개도 유지했습니다. 자막 읽기·기록 101개에서 유지 시간, 원문·번역 500개, 늦은 번역 및 선택 스크롤을 검증했습니다. Windows 22개·Mac 20개 동결 검사도 통과했습니다. 최종 Windows EXE는 Turbo CPU로 8초 일본어 지정 합성 비음성 3개가 자막을 만들지 않는지 확인하고, Base CPU 및 실제 단어 정렬로 David 합성 영어 마무리 발화를 보존했습니다. 사용자의 원본 영상은 재현하지 않았습니다. 실제 격리 Inno 업데이트에서도 최종 도우미가 실행 중인 이전 동결 앱을 확인하고 종료를 기다린 뒤 서명된 설치 프로그램을 적용하여 새 동결 앱을 자동 재시작하며 설정과 모델 표식을 보존하는지 검증했습니다. 격리 설치 ID와 오프라인 재시작 검사 인수를 사용하며 사용자 설치에는 접근하지 않습니다. 모든 Windows 환경을 보증하지는 않습니다. 모드 아이콘, 창 식별, 글꼴, 입력 경계 및 시작 호환성에 대한 별도 유지보수 검사 224개도 통과했습니다. Python 함수 1666개에 중국어 유지보수 설명이 있습니다. 의존성 공지 검사에서 알려진 취약점을 찾지 못했지만 완전한 보안을 보장하지는 않습니다.
+
 ## 0.1.26 업데이트
 
 - 실시간 기록에서 여러 줄 자막의 아래쪽이 잘리는 문제를 수정합니다. 최신 항목을 따라갈 때 늦은 번역, 창 크기 또는 글자 스타일 변경 후에도 마지막 줄을 표시합니다. 이전 기록을 읽을 때는 위치를 유지하고 최신으로 돌아가기로 추적을 재개합니다. 반투명 배경과 원문·번역의 독립 스타일을 유지하며 인식 모델 동작은 변경하지 않습니다.
@@ -146,15 +152,15 @@
 
 ## 다운로드 및 설치
 
-**[0.1.26 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.26)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.25](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.25)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
+**[0.1.27 공개 테스트 버전 열기](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.27)**. 이 버전은 **prerelease(사전 공개 버전)**입니다. 이전 버전으로 돌아갈 수 있도록 [이전 0.1.26](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.26)를 유지하고 있으며, 그 밖의 과거 버전도 Releases에 남아 있습니다.
 
 설치형과 무설치형 중 **하나만 선택하면 됩니다**. 저장소 전체나 모든 ZIP 파일을 다운로드할 필요는 없습니다.
 
 | 파일 | 용도 |
 | --- | --- |
-| [OCCAT-Live-Caption-0.1.26-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.26/OCCAT-Live-Caption-0.1.26-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
-| [OCCAT-Live-Caption-0.1.26-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.26/OCCAT-Live-Caption-0.1.26-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
-| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.26/SHA256SUMS.txt) | 이번 버전의 Windows 첨부 파일용 체크섬(선택 사항) |
+| [OCCAT-Live-Caption-0.1.27-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.27/OCCAT-Live-Caption-0.1.27-windows-x64-setup.exe) | 简体中文 / 繁體中文 / English / 日本語 / 한국어를 모두 제공하는 설치 프로그램 |
+| [OCCAT-Live-Caption-0.1.27-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.27/OCCAT-Live-Caption-0.1.27-windows-x64-portable.zip) | 무설치형. 압축을 완전히 푼 다음 `OCCATLiveCaption.exe` 실행 |
+| [SHA256SUMS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.27/SHA256SUMS.txt) | 이번 버전의 Windows 첨부 파일용 체크섬(선택 사항) |
 | `CorrespondingSources-*.zip`, `Sources-Sherpa-ASR-*.zip`, `OCCAT-Live-Caption-0.1.26-Third-Party-Notices.zip` | 제삼자 구성 요소의 대응 소스 코드와 라이선스 자료. 일반적인 실행에는 개별 다운로드 불필요 |
 
 1. **Windows 10/11 x64**와 **14.44.35211 이상**의 Microsoft Visual C++ x64 런타임이 필요합니다. 런타임이 없거나 너무 오래된 경우, 설치 프로그램은 사용자 확인을 받은 뒤 Microsoft 공식 경로에서 다운로드하고 서명을 검증한 다음 런타임 설치 화면을 엽니다. 안내에 따라 Microsoft 라이선스와 관리자 권한 요청을 확인하면, 런타임 설치 후 자막 프로그램 설치가 자동으로 계속됩니다. 인터넷 연결이 필요하며 Windows를 자동으로 다시 시작하지 않습니다. Microsoft 설치 프로그램에서 다시 시작을 요구하면 작업을 저장하고 직접 다시 시작한 후 자막 설치 프로그램을 다시 실행하세요. 무설치형도 이 런타임을 먼저 갖추어야 합니다.
@@ -163,7 +169,7 @@
 4. 번역이 필요하면 “识别与翻译”(인식 및 번역)에서 호환되는 **M2M100** 모델을 다운로드하거나 가져온 다음 “实时翻译”(실시간 번역)를 켜세요. 원문만 보려면 꺼 둡니다.
 5. “字幕外观”(자막 모양)에서 자막 스타일을, “窗口与待机”(창 및 대기)에서 위치, 마우스 클릭 통과, 대기 방식을 조절하세요. 하단 언어 메뉴는 中文（简体）, 中文（繁体）, English, 日本語, 한국어를 지원하며, 인식 언어는 별도로 설정합니다. 중국어·일본어·한국어 자막 글리프는 “字幕外观 → 字幕自定义 → 文字”(자막 모양 → 자막 사용자 설정 → 글자)에서 설정하며 화면 언어를 바꾸어도 함께 바뀌지 않습니다.
 
-이번 소프트웨어 버전은 **0.1.26**, 릴리스 태그는 **`v0.1.26`**이며, 여전히 사전 공개 버전으로 제공합니다. **이번 버전은 앱에서 공개 미리 보기 업데이트를 지원합니다. 0.1.5 이하 버전은 기존 latest API만 조회하므로 0.1.6 이상을 한 번 수동으로 설치해야 합니다. 이후에는 앱에서 확인하고 업데이트할 수 있습니다.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
+이번 소프트웨어 버전은 **0.1.27**, 릴리스 태그는 **`v0.1.27`**이며, 여전히 사전 공개 버전으로 제공합니다. **이번 버전은 앱에서 공개 미리 보기 업데이트를 지원합니다. 0.1.5 이하 버전은 기존 latest API만 조회하므로 0.1.6 이상을 한 번 수동으로 설치해야 합니다. 이후에는 앱에서 확인하고 업데이트할 수 있습니다.** 예전의 언어별 설치 프로그램을 사용 중이라면 위의 통합 설치 프로그램으로 수동 업데이트할 수 있습니다. 중국어 번체, 일본어, 한국어 설치 마법사에는 검토를 마친 구성 요소 약관의 영어 원문을 그대로 제공합니다.
 
 사용자별로 설치하며 기존 설정을 우선 유지합니다. 설치형과 무설치형 모두 설정, 다운로드한 모델, 자막 기록을 `%LOCALAPPDATA%/OCCATLiveCaption`에 저장하며, 제거 후에도 사용자 데이터는 남습니다. 무설치형도 압축을 푼 폴더에 설정을 저장하지 않습니다.
 
@@ -176,10 +182,10 @@
 
 | Mac 종류 | 다운로드 |
 | --- | --- |
-| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.26-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.26/OCCATLiveCaption-0.1.26-macOS-arm64.dmg) |
-| Intel | [OCCATLiveCaption-0.1.26-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.26/OCCATLiveCaption-0.1.26-macOS-x86_64.dmg) |
+| Apple Silicon (M1 이상) | [OCCATLiveCaption-0.1.27-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.27/OCCATLiveCaption-0.1.27-macOS-arm64.dmg) |
+| Intel | [OCCATLiveCaption-0.1.27-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.27/OCCATLiveCaption-0.1.27-macOS-x86_64.dmg) |
 
-DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.26/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
+DMG를 열고 앱을 응용 프로그램 폴더로 드래그하세요. 이 미리 보기 패키지는 **ad-hoc 서명이며 Apple 공증을 받지 않았습니다**. 처음 실행을 시도한 뒤 시스템 설정 → 개인정보 보호 및 보안에서 해당 앱의 ‘확인 없이 열기’가 필요할 수 있습니다. 같은 Release의 [SHA256SUMS-macOS.txt](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.27/SHA256SUMS-macOS.txt)로 Mac 첨부 파일을 확인하세요. Mac의 업데이트 항목은 Releases 다운로드 페이지를 엽니다. 새 DMG를 받아 앱을 교체하며 설정, 모델, 자막 기록은 `~/Library/Application Support/OCCATLiveCaption`에 보관합니다.
 
 Mac 버전은 **CPU 추론**을 사용합니다. 새 사용자는 여전히 처음 사용할 때 기본 모델인 **large-v3-turbo(약 1.6 GB)**를 다운로드합니다. 모델을 포함하거나 Base로 자동 변경하지 않으며 다른 모델은 필요할 때 다운로드합니다. 대형 모델의 CPU 처리 속도는 하드웨어에 따라 달라 실시간 성능을 보장하지 않습니다.
 
