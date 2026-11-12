@@ -6,16 +6,16 @@
 
 ## 下載
 
-目前版本為 [0.1.28 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.28)。Windows 安裝版與免安裝版擇一下載；Mac 依晶片類型選擇。
+目前版本為 [0.1.29 公開測試版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.29)。Windows 安裝版與免安裝版擇一下載；Mac 依晶片類型選擇。
 
 | 版本 | 下載檔案 |
 | --- | --- |
-| Windows 安裝版 | [OCCAT-Live-Caption-0.1.28-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCAT-Live-Caption-0.1.28-windows-x64-setup.exe) |
-| Windows 免安裝版 | [OCCAT-Live-Caption-0.1.28-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCAT-Live-Caption-0.1.28-windows-x64-portable.zip) |
-| Mac · Apple 晶片 | [OCCATLiveCaption-0.1.28-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCATLiveCaption-0.1.28-macOS-arm64.dmg) |
-| Mac · Intel | [OCCATLiveCaption-0.1.28-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCATLiveCaption-0.1.28-macOS-x86_64.dmg) |
+| Windows 安裝版 | [OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe) |
+| Windows 免安裝版 | [OCCAT-Live-Caption-0.1.29-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-portable.zip) |
+| Mac · Apple 晶片 | [OCCATLiveCaption-0.1.29-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCATLiveCaption-0.1.29-macOS-arm64.dmg) |
+| Mac · Intel | [OCCATLiveCaption-0.1.29-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCATLiveCaption-0.1.29-macOS-x86_64.dmg) |
 
-[Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
+[Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
 ## 主要功能
 

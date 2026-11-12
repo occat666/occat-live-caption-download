@@ -1,41 +1,41 @@
 {
   "schema_version": 1,
   "release": {
-    "tag_name": "v0.1.28",
+    "tag_name": "v0.1.29",
     "draft": false,
     "prerelease": true,
     "assets": [
       {
-        "name": "OCCAT-Live-Caption-0.1.28-windows-x64-setup.exe",
+        "name": "OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe",
         "state": "uploaded",
-        "size": 294142151,
-        "digest": "sha256:4028eecc871749d1a0f4c838d06e9defde7dfb3e3863de03320d9b4954f6e993",
-        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCAT-Live-Caption-0.1.28-windows-x64-setup.exe"
+        "size": 294159798,
+        "digest": "sha256:8708f526dccff774c819950a3873f4767306e76d8a55edcc81a12f3f752ac012",
+        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe"
       },
       {
         "name": "SHA256SUMS.txt",
         "state": "uploaded",
         "size": 1132,
-        "digest": "sha256:2b6a7a38b8e0e19d8fd1a21688558910c6f28487822a566959c3b20474ec5889",
-        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/SHA256SUMS.txt"
+        "digest": "sha256:dc68a628bbbd934acebaeea22820833ee2b3171caa05942b42f59e06ec8bf138",
+        "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/SHA256SUMS.txt"
       }
     ],
-    "body": "# 猫猫本地实时字幕 0.1.28\n\n## 下载\n\n- [Windows 安装版](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCAT-Live-Caption-0.1.28-windows-x64-setup.exe) · [免安装版](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCAT-Live-Caption-0.1.28-windows-x64-portable.zip)\n- [Mac · Apple 芯片](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCATLiveCaption-0.1.28-macOS-arm64.dmg) · [Mac · Intel](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/OCCATLiveCaption-0.1.28-macOS-x86_64.dmg)\n\n## 更新\n\n- 统一圆角侧栏和主内容底色，修正边角黑边、按钮悬停与提示框边缘。\n- Windows 增加桌面高斯磨砂底衬，可调节模糊程度；内容卡片使用原创无缝 CRT 纹理。\n- 自定义背景按一张完整图片裁切到侧栏和内容框，窗口缩放后保持位置一致。\n- 白天底色调整为 #e5e5e5，默认主题色为克莱因蓝 #002fa7；黑夜默认主题色为 #1df7c6。\n\n## 验证范围\n\n- 1197 项回归检查通过；Windows 五语安装、启动、卸载及 0.1.27→0.1.28 覆盖更新、自动重启通过，测试配置与模型文件保持不变。\n- Windows 最终程序完成本地识别、翻译及非语音过滤检查；Mac 两种芯片版本完成构建、启动和 CPU 识别验证。\n\n此版本为公开测试版。全新 Windows 环境、实体音频设备、Mac 权限及长期使用仍需实机验证。旧版保留在 [Releases](https://github.com/occat666/occat-live-caption-download/releases)。\n"
+    "body": "# 猫猫本地实时字幕 0.1.29\n\n## 下载\n\n- [Windows 安装版](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe) · [免安装版](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-portable.zip)\n- [Mac · Apple 芯片](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCATLiveCaption-0.1.29-macOS-arm64.dmg) · [Mac · Intel](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCATLiveCaption-0.1.29-macOS-x86_64.dmg)\n\n## 更新\n\n- 缩小侧栏与主面板间距，对齐上下边缘，降低外层磨砂背板的模糊与覆盖程度。\n- 为主面板、模块和按钮增加柔和阴影，自定义图片界面也保留清晰层次。\n- 实时记录采用统一的无缝 CRT 纹理，字幕模式按钮沿用侧栏的提示与按压动效。\n- 修复按钮、阴影被裁切和边缘黑线，以及颜色选择弹窗关闭后可能异常退出的问题。\n\n## 验证范围\n\n- 1249 项回归检查通过；Windows 五语安装、启动、卸载及 0.1.28→0.1.29 覆盖更新、自动重启通过，测试配置与模型文件保持不变。\n- Windows 最终程序完成本地识别、翻译及非语音过滤检查；Mac 两种芯片版本完成构建、启动和 CPU 识别验证。\n\n此版本为公开测试版。全新 Windows 环境、实体音频设备、Mac 权限及长期使用仍需实机验证。0.1.28 与其他旧版保留在 [Releases](https://github.com/occat666/occat-live-caption-download/releases)。\n"
   },
   "signed_update": {
     "signature": {
       "name": "UPDATE-SIGNATURE.json",
       "state": "uploaded",
       "size": 1057,
-      "digest": "sha256:d20ab94a504080f40697a37be5d309de0014e1efe863427557d7fb662c88ded1",
-      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/UPDATE-SIGNATURE.json"
+      "digest": "sha256:c28bf020b730f0058db74a38128cd748197d703f4d20b8b5772958c7c08bdd85",
+      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/UPDATE-SIGNATURE.json"
     },
     "terms": {
       "name": "UPDATE-LICENSES.txt",
       "state": "uploaded",
       "size": 207096,
       "digest": "sha256:19d77eb12375416f15e7df7ed608130057f055fc63a5ecf2e177d25493a89c35",
-      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.28/UPDATE-LICENSES.txt"
+      "browser_download_url": "https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/UPDATE-LICENSES.txt"
     }
   }
 }
