@@ -6,16 +6,16 @@ A local live caption tool for system audio or microphone speech, with floating c
 
 ## Download
 
-Current release: [0.1.29 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.29). Choose either Windows package, or the Mac package for the appropriate processor.
+Current release: [0.1.30 public preview](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.30). Choose either Windows package, or the Mac package for the appropriate processor.
 
 | Edition | Download |
 | --- | --- |
-| Windows installer | [OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-setup.exe) |
-| Windows portable | [OCCAT-Live-Caption-0.1.29-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCAT-Live-Caption-0.1.29-windows-x64-portable.zip) |
-| Mac · Apple silicon | [OCCATLiveCaption-0.1.29-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCATLiveCaption-0.1.29-macOS-arm64.dmg) |
-| Mac · Intel | [OCCATLiveCaption-0.1.29-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/OCCATLiveCaption-0.1.29-macOS-x86_64.dmg) |
+| Windows installer | [OCCAT-Live-Caption-0.1.30-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCAT-Live-Caption-0.1.30-windows-x64-setup.exe) |
+| Windows portable | [OCCAT-Live-Caption-0.1.30-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCAT-Live-Caption-0.1.30-windows-x64-portable.zip) |
+| Mac · Apple silicon | [OCCATLiveCaption-0.1.30-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCATLiveCaption-0.1.30-macOS-arm64.dmg) |
+| Mac · Intel | [OCCATLiveCaption-0.1.30-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCATLiveCaption-0.1.30-macOS-x86_64.dmg) |
 
-[Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
+[Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
 ## Features
 

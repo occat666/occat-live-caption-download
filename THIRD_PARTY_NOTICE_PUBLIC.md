@@ -22,7 +22,7 @@ The Windows release provides HarmonyOS Sans, MiSans, Source Han Sans and Source 
 
 This release draws navigation and window-control glyphs from the unmodified official Feather v4.29.0 SVG set. The 13 original SVG files, their source manifest and SHA-256 values, and the original MIT license are included under _internal/licenses/feather/ in the notice archive and the installed application. Feather icons are rendered as Qt vector paths at runtime; no network icon loading or additional icon runtime is added.
 
-The CRT card and live-transcript texture is procedurally drawn by the project with fixed-seed grain, scratches and seamless vertical lines; no game screenshots or external texture images are shipped. Historical pattern.css source and attribution remain bundled under `licenses/pattern-css/` for the earlier small-dot implementation; its upstream README and package metadata declare MIT, and the preserved notice records the absence of a separate upstream LICENSE file. No CSS runtime is added.
+The card and live-transcript texture is procedurally drawn by the project as seamless horizontal lines, without grain or scratches; no game screenshots or external texture images are shipped. Historical pattern.css source and attribution remain bundled under `licenses/pattern-css/` for the earlier small-dot implementation; its upstream README and package metadata declare MIT, and the preserved notice records the absence of a separate upstream LICENSE file. No CSS runtime is added.
 
 The installer does not bundle an ASR model by default. New users download and verify Whisper large-v3-turbo on first use; the other eight recognition models are optional. Downloaded models retain their own model licenses and notices. Upgrades preserve existing model selections and cached files. / 安装包默认不附带识别模型；新用户首次使用下载并校验 Whisper large-v3-turbo，其他八个识别模型按需下载。下载模型保留各自许可与通知，升级保留已有选择与缓存。
 
@@ -36,6 +36,6 @@ Original installed-wheel licenses, pinned Adobe SC/Serif/JP/KR font licenses, an
 
 Matching same-version Mac corresponding-source assets:
 
-- [CorrespondingSources-Qt-6.9.3-macOS.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/CorrespondingSources-Qt-6.9.3-macOS.zip)
-- [CorrespondingSources-macOS-arm64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/CorrespondingSources-macOS-arm64.zip)
-- [CorrespondingSources-macOS-x86_64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.29/CorrespondingSources-macOS-x86_64.zip)
+- [CorrespondingSources-Qt-6.9.3-macOS.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/CorrespondingSources-Qt-6.9.3-macOS.zip)
+- [CorrespondingSources-macOS-arm64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/CorrespondingSources-macOS-arm64.zip)
+- [CorrespondingSources-macOS-x86_64.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/CorrespondingSources-macOS-x86_64.zip)
