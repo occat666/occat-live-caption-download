@@ -17,6 +17,12 @@
 
 [Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
+## 화면 예시
+
+![0.1.31 사용자 지정 배경의 인식 및 번역 화면](assets/screenshots/recognition-translation-custom-0.1.31.png)
+
+0.1.31 · 사용자 지정 배경 예시.
+
 ## 주요 기능
 
 - 화면 자막과 실시간 기록을 전환하고 이전 자막을 확인하거나 복사할 수 있습니다.

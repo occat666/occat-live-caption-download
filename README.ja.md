@@ -17,6 +17,12 @@
 
 [Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
+## 画面例
+
+![0.1.31 カスタム背景の認識・翻訳画面](assets/screenshots/recognition-translation-custom-0.1.31.png)
+
+0.1.31 · カスタム背景の例。
+
 ## 主な機能
 
 - フローティング字幕とリアルタイム履歴を切り替え、過去の字幕の確認やコピーが可能。

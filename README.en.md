@@ -17,6 +17,12 @@ Current release: [0.1.31 public preview](https://github.com/occat666/occat-live-
 
 [Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
+## Interface example
+
+![0.1.31 recognition and translation interface with a custom background](assets/screenshots/recognition-translation-custom-0.1.31.png)
+
+0.1.31 · Custom background example.
+
 ## Features
 
 - Floating captions or a live transcript with scrollback and copying.

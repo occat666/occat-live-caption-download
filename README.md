@@ -17,6 +17,12 @@
 
 [Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
+## 界面示例
+
+![0.1.31 识别与翻译界面（自定义背景）](assets/screenshots/recognition-translation-custom-0.1.31.png)
+
+0.1.31 · 自定义背景示例。
+
 ## 主要功能
 
 - 悬浮字幕与实时记录两种模式，支持回看、复制字幕历史。
