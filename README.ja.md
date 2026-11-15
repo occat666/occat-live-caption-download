@@ -6,16 +6,16 @@
 
 ## ダウンロード
 
-現在のバージョンは [0.1.30 公開テスト版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.30)です。Windows はどちらか一方、Mac はプロセッサに対応するファイルを選択してください。
+現在のバージョンは [0.1.31 公開テスト版](https://github.com/occat666/occat-live-caption-download/releases/tag/v0.1.31)です。Windows はどちらか一方、Mac はプロセッサに対応するファイルを選択してください。
 
 | 種類 | ファイル |
 | --- | --- |
-| Windows インストーラー | [OCCAT-Live-Caption-0.1.30-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCAT-Live-Caption-0.1.30-windows-x64-setup.exe) |
-| Windows ポータブル版 | [OCCAT-Live-Caption-0.1.30-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCAT-Live-Caption-0.1.30-windows-x64-portable.zip) |
-| Mac · Apple シリコン | [OCCATLiveCaption-0.1.30-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCATLiveCaption-0.1.30-macOS-arm64.dmg) |
-| Mac · Intel | [OCCATLiveCaption-0.1.30-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/OCCATLiveCaption-0.1.30-macOS-x86_64.dmg) |
+| Windows インストーラー | [OCCAT-Live-Caption-0.1.31-windows-x64-setup.exe](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/OCCAT-Live-Caption-0.1.31-windows-x64-setup.exe) |
+| Windows ポータブル版 | [OCCAT-Live-Caption-0.1.31-windows-x64-portable.zip](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/OCCAT-Live-Caption-0.1.31-windows-x64-portable.zip) |
+| Mac · Apple シリコン | [OCCATLiveCaption-0.1.31-macOS-arm64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/OCCATLiveCaption-0.1.31-macOS-arm64.dmg) |
+| Mac · Intel | [OCCATLiveCaption-0.1.31-macOS-x86_64.dmg](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/OCCATLiveCaption-0.1.31-macOS-x86_64.dmg) |
 
-[Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.30/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
+[Windows SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS.txt) · [macOS SHA-256](https://github.com/occat666/occat-live-caption-download/releases/download/v0.1.31/SHA256SUMS-macOS.txt) · [Releases](https://github.com/occat666/occat-live-caption-download/releases)
 
 ## 主な機能
 
